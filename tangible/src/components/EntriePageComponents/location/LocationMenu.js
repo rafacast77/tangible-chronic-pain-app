@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   FormControl,
   FormLabel,
@@ -8,8 +8,28 @@ import {
 } from "@material-ui/core";
 
 const LocationMenu = (props) => {
+  const [locationSelected, setLocationSelected] = useState(false);
+
   const handleChange = (event) => {
-    console.log("object");
+    let puHttptLocation;
+    props.listLocation.map((location) => {
+      if (location.locationName === event.target.name) {
+        location.selected = !location.selected;
+        puHttptLocation = location;
+      }
+    });
+    setLocationSelected(!locationSelected);
+    console.log(puHttptLocation.fireBaseId === "-Mf2pAq5UbZJt_IJxfY_");
+    fetch(
+      `https://tangible-47447-default-rtdb.europe-west1.firebasedatabase.app/pain-locations/${puHttptLocation.fireBaseId}.json`,
+      {
+        method: "PUT",
+        body: JSON.stringify(puHttptLocation),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
   };
   return (
     <FormControl component="fieldset">
@@ -24,6 +44,7 @@ const LocationMenu = (props) => {
                 <Checkbox
                   onChange={handleChange}
                   name={location.locationName}
+                  checked={location.selected}
                 />
               }
             />

@@ -18,8 +18,7 @@ const LocationList = (props) => {
 
     //TODO here after every change I need to update the global pain entry object which will be sent
     // To firebase
-    console.log(entryLocations);
-    props.sendToParent(entryLocations);
+    props.updateLocation(entryLocations);
   }, []);
 
   return (

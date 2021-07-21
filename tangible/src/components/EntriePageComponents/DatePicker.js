@@ -16,30 +16,48 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: theme.spacing(1),
     marginRight: theme.spacing(1),
     margin: "1rem 0",
-    width: 200,
+    width: 340,
   },
 }));
 
-const DatesPicker = () => {
-  const [value, onChange] = useState(new Date());
+const DatesPicker = (props) => {
+  const [date, setDate] = useState(new Date());
+  const [time, setTime] = useState("7:30");
+  const [dateTime, setDateTime] = useState({ date, time });
 
-  const changeHandler = (e) => {
-    console.log(e);
+  const currentTime = new Date().toLocaleTimeString().substr(0, 5);
+
+  const dateChangeHandler = (e) => {
+    setDate(e);
+    setDateTime((prevState) => {
+      return { ...prevState, date: e };
+    });
+  };
+
+  const timeChangeHandler = (event) => {
+    setTime(event.target.value);
+    setDateTime((prevState) => {
+      return { ...prevState, time: event.target.value };
+    });
   };
 
   const classes = useStyles();
+
+  props.getDateTime(dateTime);
 
   return (
     <Card>
       <h1>Hello Conor Mcgregor! </h1>
       <p>Which part of your leg hurts today?</p>
-      <Calendar onChange={changeHandler} value={value} isOpen={true} />
+      <Calendar onChange={dateChangeHandler} value={date} />
+
       <TextField
         id="time"
         label="Alarm clock"
         type="time"
-        defaultValue="07:30"
+        defaultValue={`${currentTime}`}
         className={classes.textField}
+        onChange={timeChangeHandler}
         InputLabelProps={{
           shrink: true,
         }}
@@ -51,4 +69,4 @@ const DatesPicker = () => {
   );
 };
 
-export default DatesPicker;
+export default React.memo(DatesPicker);

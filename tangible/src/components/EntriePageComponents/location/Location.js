@@ -4,21 +4,14 @@ import { Button } from "@material-ui/core";
 import Card from "../../ui/Card";
 import LocationMenu from "./LocationMenu";
 
-const Location = () => {
+const Location = (props) => {
   const [locationMenu, setLocationMenu] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
   const [listPainLocations, setListPainLocations] = useState([]);
-  const [painEntry, setPainEntry] = useState({ date: "", painLocation: [] });
 
   function clickHandler() {
     setLocationMenu(!locationMenu);
   }
-
-  const sendToParent = (entryLocations) => {
-    setPainEntry((prevState) => {
-      return { ...prevState, painLocation: entryLocations };
-    });
-  };
 
   useEffect(() => {
     setIsLoading(true);
@@ -31,7 +24,7 @@ const Location = () => {
 
         for (const key in data) {
           const location = {
-            id: key,
+            fireBaseId: key,
             ...data[key],
           };
           listLocations.push(location);
@@ -52,7 +45,7 @@ const Location = () => {
     <Card>
       <LocationList
         listLocation={listPainLocations}
-        sendToParent={sendToParent}
+        updateLocation={props.updateLocation}
       />
       {locationMenu && <LocationMenu listLocation={listPainLocations} />}
       <Button onClick={clickHandler}>Click me</Button>
