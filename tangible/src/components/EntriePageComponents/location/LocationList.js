@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from "react";
+import React, { useCallback } from "react";
 import {
   FormControl,
   FormLabel,
@@ -6,34 +6,35 @@ import {
   FormControlLabel,
   FormGroup,
 } from "@material-ui/core";
+const entryPainLocations = [];
 const LocationList = (props) => {
-  const entryLocations = [];
-
-  const handleChange = useCallback((event) => {
-    if (entryLocations.indexOf(event.target.name) === -1) {
-      entryLocations.push(event.target.name);
+  // Updates the pain locations list that is sent to PainEntries.js
+  const painLocationCheckboxHandler = useCallback((event) => {
+    if (entryPainLocations.indexOf(event.target.name) === -1) {
+      entryPainLocations.push(event.target.name);
     } else {
-      entryLocations.splice(entryLocations.indexOf(event.target.name), 1);
+      entryPainLocations.splice(
+        entryPainLocations.indexOf(event.target.name),
+        1
+      );
     }
-
-    //TODO here after every change I need to update the global pain entry object which will be sent
-    // To firebase
-    props.updateLocation(entryLocations);
-  }, []);
+    // Sends updated list to PainEntries for submition
+    props.getPainLocation(entryPainLocations);
+  }, [props]);
 
   return (
     <FormControl component="fieldset">
       <FormLabel component="legend">Location</FormLabel>
       <FormGroup aria-label="location" name="location1">
-        {props.listLocation.map((location) => {
+        {props.listPainLocations.map((location) => {
           if (location.selected) {
             return (
               <FormControlLabel
-                key={location.id}
+                key={location.fireBaseId}
                 label={location.locationName}
                 control={
                   <Checkbox
-                    onChange={handleChange}
+                    onChange={painLocationCheckboxHandler}
                     name={location.locationName}
                   />
                 }

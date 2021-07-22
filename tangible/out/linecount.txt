@@ -1,0 +1,104 @@
+===============================================================================
+EXTENSION NAME : linecount
+EXTENSION VERSION : 0.1.7
+-------------------------------------------------------------------------------
+count time : 2021-07-22 21:20:31
+count workspace : c:\Users\rafae\OneDrive\Desktop\Master Project\Master Project\tangible-chronic-pain-app\tangible
+total files : 53
+total code lines : 34517
+total comment lines : 100
+total blank lines : 226
+
+.gitignore, code is 18, comment is 1, blank is 5.
+c:\Users\rafae\OneDrive\Desktop\Master Project\Dummy test\crash-course\.gitignore, code is 18, comment is 1, blank is 5.
+c:\Users\rafae\OneDrive\Desktop\Master Project\Dummy test\crash-course\package-lock.json, code is 16314, comment is 0, blank is 0.
+c:\Users\rafae\OneDrive\Desktop\Master Project\Dummy test\crash-course\package.json, code is 36, comment is 0, blank is 3.
+c:\Users\rafae\OneDrive\Desktop\Master Project\Dummy test\crash-course\public\favicon.ico, it is a binary file.
+c:\Users\rafae\OneDrive\Desktop\Master Project\Dummy test\crash-course\public\index.html, code is 20, comment is 23, blank is 0.
+c:\Users\rafae\OneDrive\Desktop\Master Project\Dummy test\crash-course\public\logo192.png, it is a binary file.
+c:\Users\rafae\OneDrive\Desktop\Master Project\Dummy test\crash-course\public\logo512.png, it is a binary file.
+c:\Users\rafae\OneDrive\Desktop\Master Project\Dummy test\crash-course\public\manifest.json, code is 25, comment is 0, blank is 0.
+c:\Users\rafae\OneDrive\Desktop\Master Project\Dummy test\crash-course\public\robots.txt, code is 3, comment is 1, blank is 0.
+c:\Users\rafae\OneDrive\Desktop\Master Project\Dummy test\crash-course\README.md, code is 38, comment is 12, blank is 32.
+c:\Users\rafae\OneDrive\Desktop\Master Project\Dummy test\crash-course\src\App.js, code is 23, comment is 1, blank is 3.
+c:\Users\rafae\OneDrive\Desktop\Master Project\Dummy test\crash-course\src\components\layout\Layout.js, code is 12, comment is 0, blank is 2.
+c:\Users\rafae\OneDrive\Desktop\Master Project\Dummy test\crash-course\src\components\layout\Layout.module.css, code is 5, comment is 0, blank is 0.
+c:\Users\rafae\OneDrive\Desktop\Master Project\Dummy test\crash-course\src\components\layout\MainNavigation.js, code is 24, comment is 0, blank is 1.
+c:\Users\rafae\OneDrive\Desktop\Master Project\Dummy test\crash-course\src\components\layout\MainNavigation.module.css, code is 44, comment is 0, blank is 6.
+c:\Users\rafae\OneDrive\Desktop\Master Project\Dummy test\crash-course\src\components\meetups\MeetupItem.js, code is 23, comment is 0, blank is 2.
+c:\Users\rafae\OneDrive\Desktop\Master Project\Dummy test\crash-course\src\components\meetups\MeetupItem.module.css, code is 42, comment is 0, blank is 7.
+c:\Users\rafae\OneDrive\Desktop\Master Project\Dummy test\crash-course\src\components\meetups\MeetupList.js, code is 21, comment is 0, blank is 2.
+c:\Users\rafae\OneDrive\Desktop\Master Project\Dummy test\crash-course\src\components\meetups\MeetupList.module.css, code is 5, comment is 0, blank is 0.
+c:\Users\rafae\OneDrive\Desktop\Master Project\Dummy test\crash-course\src\components\meetups\NewMeetupForm.js, code is 49, comment is 1, blank is 6.
+c:\Users\rafae\OneDrive\Desktop\Master Project\Dummy test\crash-course\src\components\meetups\NewMeetupForm.module.css, code is 40, comment is 0, blank is 6.
+c:\Users\rafae\OneDrive\Desktop\Master Project\Dummy test\crash-course\src\index.css, code is 67, comment is 0, blank is 10.
+c:\Users\rafae\OneDrive\Desktop\Master Project\Dummy test\crash-course\src\index.js, code is 11, comment is 0, blank is 1.
+c:\Users\rafae\OneDrive\Desktop\Master Project\Dummy test\crash-course\src\pages\AllMeetups.js, code is 31, comment is 0, blank is 1.
+c:\Users\rafae\OneDrive\Desktop\Master Project\Dummy test\crash-course\src\pages\Favorites.js, code is 5, comment is 0, blank is 2.
+c:\Users\rafae\OneDrive\Desktop\Master Project\Dummy test\crash-course\src\pages\NewMeetup.js, code is 11, comment is 0, blank is 1.
+package-lock.json, code is 16657, comment is 0, blank is 0.
+package.json, code is 41, comment is 0, blank is 3.
+public\index.html, code is 21, comment is 10, blank is 0.
+public\manifest.json, code is 25, comment is 0, blank is 0.
+public\robots.txt, code is 3, comment is 1, blank is 0.
+README.md, code is 38, comment is 12, blank is 32.
+src\App.js, code is 27, comment is 0, blank is 5.
+src\components\EntriePageComponents\DatePicker.js, code is 65, comment is 1, blank is 10.
+src\components\EntriePageComponents\location\AddNewLocation.js, code is 35, comment is 0, blank is 3.
+src\components\EntriePageComponents\location\EditLocation.js, code is 29, comment is 0, blank is 3.
+src\components\EntriePageComponents\location\Location.js, code is 157, comment is 22, blank is 19.
+src\components\EntriePageComponents\location\LocationList.js, code is 46, comment is 2, blank is 2.
+src\components\EntriePageComponents\location\LocationMenu.js, code is 94, comment is 6, blank is 6.
+src\components\EntriePageComponents\PainScale.js, code is 118, comment is 0, blank is 9.
+src\components\layout\Layout.js, code is 12, comment is 0, blank is 2.
+src\components\layout\Layout.module.css, code is 3, comment is 0, blank is 0.
+src\components\layout\MainNavigation.js, code is 27, comment is 0, blank is 1.
+src\components\layout\MainNavigation.module.css, code is 44, comment is 0, blank is 6.
+src\components\ui\Card.js, code is 10, comment is 0, blank is 1.
+src\components\ui\Card.module.css, code is 7, comment is 0, blank is 0.
+src\index.css, code is 68, comment is 0, blank is 11.
+src\index.js, code is 11, comment is 0, blank is 1.
+src\pages\Home.js, code is 9, comment is 0, blank is 2.
+src\pages\PainEntries.js, code is 67, comment is 6, blank is 11.
+src\pages\profile.js, code is 9, comment is 0, blank is 2.
+src\pages\Stats.js, code is 9, comment is 0, blank is 2.
+===============================================================================
+===============================================================================
+EXTENSION NAME : linecount
+EXTENSION VERSION : 0.1.7
+-------------------------------------------------------------------------------
+count time : 2021-07-22 21:21:20
+count workspace : c:\Users\rafae\OneDrive\Desktop\Master Project\Master Project\tangible-chronic-pain-app\tangible
+total files : 27
+total code lines : 17650
+total comment lines : 61
+total blank lines : 136
+
+.gitignore, code is 18, comment is 1, blank is 5.
+package-lock.json, code is 16657, comment is 0, blank is 0.
+package.json, code is 41, comment is 0, blank is 3.
+public\index.html, code is 21, comment is 10, blank is 0.
+public\manifest.json, code is 25, comment is 0, blank is 0.
+public\robots.txt, code is 3, comment is 1, blank is 0.
+README.md, code is 38, comment is 12, blank is 32.
+src\App.js, code is 27, comment is 0, blank is 5.
+src\components\EntriePageComponents\DatePicker.js, code is 65, comment is 1, blank is 10.
+src\components\EntriePageComponents\location\AddNewLocation.js, code is 35, comment is 0, blank is 3.
+src\components\EntriePageComponents\location\EditLocation.js, code is 29, comment is 0, blank is 3.
+src\components\EntriePageComponents\location\Location.js, code is 157, comment is 22, blank is 19.
+src\components\EntriePageComponents\location\LocationList.js, code is 46, comment is 2, blank is 2.
+src\components\EntriePageComponents\location\LocationMenu.js, code is 94, comment is 6, blank is 6.
+src\components\EntriePageComponents\PainScale.js, code is 118, comment is 0, blank is 9.
+src\components\layout\Layout.js, code is 12, comment is 0, blank is 2.
+src\components\layout\Layout.module.css, code is 3, comment is 0, blank is 0.
+src\components\layout\MainNavigation.js, code is 27, comment is 0, blank is 1.
+src\components\layout\MainNavigation.module.css, code is 44, comment is 0, blank is 6.
+src\components\ui\Card.js, code is 10, comment is 0, blank is 1.
+src\components\ui\Card.module.css, code is 7, comment is 0, blank is 0.
+src\index.css, code is 68, comment is 0, blank is 11.
+src\index.js, code is 11, comment is 0, blank is 1.
+src\pages\Home.js, code is 9, comment is 0, blank is 2.
+src\pages\PainEntries.js, code is 67, comment is 6, blank is 11.
+src\pages\profile.js, code is 9, comment is 0, blank is 2.
+src\pages\Stats.js, code is 9, comment is 0, blank is 2.
+===============================================================================

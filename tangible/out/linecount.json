@@ -1,0 +1,510 @@
+{
+    "extension": "linecount",
+    "version": "0.1.7",
+    "workspace": "c:\\Users\\rafae\\OneDrive\\Desktop\\Master Project\\Master Project\\tangible-chronic-pain-app\\tangible",
+    "linecount": [
+        {
+            "version": "0.1.7",
+            "counttime": "2021-07-22 21:20:31",
+            "filesum": 53,
+            "codesum": 34517,
+            "commentsum": 100,
+            "blanksum": 226,
+            "filelist": [
+                {
+                    "blank": 5,
+                    "code": 18,
+                    "comment": 1,
+                    "filename": ".gitignore"
+                },
+                {
+                    "blank": 5,
+                    "code": 18,
+                    "comment": 1,
+                    "filename": "c:\\Users\\rafae\\OneDrive\\Desktop\\Master Project\\Dummy test\\crash-course\\.gitignore"
+                },
+                {
+                    "blank": 0,
+                    "code": 16314,
+                    "comment": 0,
+                    "filename": "c:\\Users\\rafae\\OneDrive\\Desktop\\Master Project\\Dummy test\\crash-course\\package-lock.json"
+                },
+                {
+                    "blank": 3,
+                    "code": 36,
+                    "comment": 0,
+                    "filename": "c:\\Users\\rafae\\OneDrive\\Desktop\\Master Project\\Dummy test\\crash-course\\package.json"
+                },
+                {
+                    "filename": "c:\\Users\\rafae\\OneDrive\\Desktop\\Master Project\\Dummy test\\crash-course\\public\\favicon.ico",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 0,
+                    "code": 20,
+                    "comment": 23,
+                    "filename": "c:\\Users\\rafae\\OneDrive\\Desktop\\Master Project\\Dummy test\\crash-course\\public\\index.html"
+                },
+                {
+                    "filename": "c:\\Users\\rafae\\OneDrive\\Desktop\\Master Project\\Dummy test\\crash-course\\public\\logo192.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "c:\\Users\\rafae\\OneDrive\\Desktop\\Master Project\\Dummy test\\crash-course\\public\\logo512.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 0,
+                    "code": 25,
+                    "comment": 0,
+                    "filename": "c:\\Users\\rafae\\OneDrive\\Desktop\\Master Project\\Dummy test\\crash-course\\public\\manifest.json"
+                },
+                {
+                    "blank": 0,
+                    "code": 3,
+                    "comment": 1,
+                    "filename": "c:\\Users\\rafae\\OneDrive\\Desktop\\Master Project\\Dummy test\\crash-course\\public\\robots.txt"
+                },
+                {
+                    "blank": 32,
+                    "code": 38,
+                    "comment": 12,
+                    "filename": "c:\\Users\\rafae\\OneDrive\\Desktop\\Master Project\\Dummy test\\crash-course\\README.md"
+                },
+                {
+                    "blank": 3,
+                    "code": 23,
+                    "comment": 1,
+                    "filename": "c:\\Users\\rafae\\OneDrive\\Desktop\\Master Project\\Dummy test\\crash-course\\src\\App.js"
+                },
+                {
+                    "blank": 2,
+                    "code": 12,
+                    "comment": 0,
+                    "filename": "c:\\Users\\rafae\\OneDrive\\Desktop\\Master Project\\Dummy test\\crash-course\\src\\components\\layout\\Layout.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 5,
+                    "comment": 0,
+                    "filename": "c:\\Users\\rafae\\OneDrive\\Desktop\\Master Project\\Dummy test\\crash-course\\src\\components\\layout\\Layout.module.css"
+                },
+                {
+                    "blank": 1,
+                    "code": 24,
+                    "comment": 0,
+                    "filename": "c:\\Users\\rafae\\OneDrive\\Desktop\\Master Project\\Dummy test\\crash-course\\src\\components\\layout\\MainNavigation.js"
+                },
+                {
+                    "blank": 6,
+                    "code": 44,
+                    "comment": 0,
+                    "filename": "c:\\Users\\rafae\\OneDrive\\Desktop\\Master Project\\Dummy test\\crash-course\\src\\components\\layout\\MainNavigation.module.css"
+                },
+                {
+                    "blank": 2,
+                    "code": 23,
+                    "comment": 0,
+                    "filename": "c:\\Users\\rafae\\OneDrive\\Desktop\\Master Project\\Dummy test\\crash-course\\src\\components\\meetups\\MeetupItem.js"
+                },
+                {
+                    "blank": 7,
+                    "code": 42,
+                    "comment": 0,
+                    "filename": "c:\\Users\\rafae\\OneDrive\\Desktop\\Master Project\\Dummy test\\crash-course\\src\\components\\meetups\\MeetupItem.module.css"
+                },
+                {
+                    "blank": 2,
+                    "code": 21,
+                    "comment": 0,
+                    "filename": "c:\\Users\\rafae\\OneDrive\\Desktop\\Master Project\\Dummy test\\crash-course\\src\\components\\meetups\\MeetupList.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 5,
+                    "comment": 0,
+                    "filename": "c:\\Users\\rafae\\OneDrive\\Desktop\\Master Project\\Dummy test\\crash-course\\src\\components\\meetups\\MeetupList.module.css"
+                },
+                {
+                    "blank": 6,
+                    "code": 49,
+                    "comment": 1,
+                    "filename": "c:\\Users\\rafae\\OneDrive\\Desktop\\Master Project\\Dummy test\\crash-course\\src\\components\\meetups\\NewMeetupForm.js"
+                },
+                {
+                    "blank": 6,
+                    "code": 40,
+                    "comment": 0,
+                    "filename": "c:\\Users\\rafae\\OneDrive\\Desktop\\Master Project\\Dummy test\\crash-course\\src\\components\\meetups\\NewMeetupForm.module.css"
+                },
+                {
+                    "blank": 10,
+                    "code": 67,
+                    "comment": 0,
+                    "filename": "c:\\Users\\rafae\\OneDrive\\Desktop\\Master Project\\Dummy test\\crash-course\\src\\index.css"
+                },
+                {
+                    "blank": 1,
+                    "code": 11,
+                    "comment": 0,
+                    "filename": "c:\\Users\\rafae\\OneDrive\\Desktop\\Master Project\\Dummy test\\crash-course\\src\\index.js"
+                },
+                {
+                    "blank": 1,
+                    "code": 31,
+                    "comment": 0,
+                    "filename": "c:\\Users\\rafae\\OneDrive\\Desktop\\Master Project\\Dummy test\\crash-course\\src\\pages\\AllMeetups.js"
+                },
+                {
+                    "blank": 2,
+                    "code": 5,
+                    "comment": 0,
+                    "filename": "c:\\Users\\rafae\\OneDrive\\Desktop\\Master Project\\Dummy test\\crash-course\\src\\pages\\Favorites.js"
+                },
+                {
+                    "blank": 1,
+                    "code": 11,
+                    "comment": 0,
+                    "filename": "c:\\Users\\rafae\\OneDrive\\Desktop\\Master Project\\Dummy test\\crash-course\\src\\pages\\NewMeetup.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 16657,
+                    "comment": 0,
+                    "filename": "package-lock.json"
+                },
+                {
+                    "blank": 3,
+                    "code": 41,
+                    "comment": 0,
+                    "filename": "package.json"
+                },
+                {
+                    "blank": 0,
+                    "code": 21,
+                    "comment": 10,
+                    "filename": "public\\index.html"
+                },
+                {
+                    "blank": 0,
+                    "code": 25,
+                    "comment": 0,
+                    "filename": "public\\manifest.json"
+                },
+                {
+                    "blank": 0,
+                    "code": 3,
+                    "comment": 1,
+                    "filename": "public\\robots.txt"
+                },
+                {
+                    "blank": 32,
+                    "code": 38,
+                    "comment": 12,
+                    "filename": "README.md"
+                },
+                {
+                    "blank": 5,
+                    "code": 27,
+                    "comment": 0,
+                    "filename": "src\\App.js"
+                },
+                {
+                    "blank": 10,
+                    "code": 65,
+                    "comment": 1,
+                    "filename": "src\\components\\EntriePageComponents\\DatePicker.js"
+                },
+                {
+                    "blank": 3,
+                    "code": 35,
+                    "comment": 0,
+                    "filename": "src\\components\\EntriePageComponents\\location\\AddNewLocation.js"
+                },
+                {
+                    "blank": 3,
+                    "code": 29,
+                    "comment": 0,
+                    "filename": "src\\components\\EntriePageComponents\\location\\EditLocation.js"
+                },
+                {
+                    "blank": 19,
+                    "code": 157,
+                    "comment": 22,
+                    "filename": "src\\components\\EntriePageComponents\\location\\Location.js"
+                },
+                {
+                    "blank": 2,
+                    "code": 46,
+                    "comment": 2,
+                    "filename": "src\\components\\EntriePageComponents\\location\\LocationList.js"
+                },
+                {
+                    "blank": 6,
+                    "code": 94,
+                    "comment": 6,
+                    "filename": "src\\components\\EntriePageComponents\\location\\LocationMenu.js"
+                },
+                {
+                    "blank": 9,
+                    "code": 118,
+                    "comment": 0,
+                    "filename": "src\\components\\EntriePageComponents\\PainScale.js"
+                },
+                {
+                    "blank": 2,
+                    "code": 12,
+                    "comment": 0,
+                    "filename": "src\\components\\layout\\Layout.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 3,
+                    "comment": 0,
+                    "filename": "src\\components\\layout\\Layout.module.css"
+                },
+                {
+                    "blank": 1,
+                    "code": 27,
+                    "comment": 0,
+                    "filename": "src\\components\\layout\\MainNavigation.js"
+                },
+                {
+                    "blank": 6,
+                    "code": 44,
+                    "comment": 0,
+                    "filename": "src\\components\\layout\\MainNavigation.module.css"
+                },
+                {
+                    "blank": 1,
+                    "code": 10,
+                    "comment": 0,
+                    "filename": "src\\components\\ui\\Card.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 7,
+                    "comment": 0,
+                    "filename": "src\\components\\ui\\Card.module.css"
+                },
+                {
+                    "blank": 11,
+                    "code": 68,
+                    "comment": 0,
+                    "filename": "src\\index.css"
+                },
+                {
+                    "blank": 1,
+                    "code": 11,
+                    "comment": 0,
+                    "filename": "src\\index.js"
+                },
+                {
+                    "blank": 2,
+                    "code": 9,
+                    "comment": 0,
+                    "filename": "src\\pages\\Home.js"
+                },
+                {
+                    "blank": 11,
+                    "code": 67,
+                    "comment": 6,
+                    "filename": "src\\pages\\PainEntries.js"
+                },
+                {
+                    "blank": 2,
+                    "code": 9,
+                    "comment": 0,
+                    "filename": "src\\pages\\profile.js"
+                },
+                {
+                    "blank": 2,
+                    "code": 9,
+                    "comment": 0,
+                    "filename": "src\\pages\\Stats.js"
+                }
+            ]
+        },
+        {
+            "version": "0.1.7",
+            "counttime": "2021-07-22 21:21:20",
+            "filesum": 27,
+            "codesum": 17650,
+            "commentsum": 61,
+            "blanksum": 136,
+            "filelist": [
+                {
+                    "blank": 5,
+                    "code": 18,
+                    "comment": 1,
+                    "filename": ".gitignore"
+                },
+                {
+                    "blank": 0,
+                    "code": 16657,
+                    "comment": 0,
+                    "filename": "package-lock.json"
+                },
+                {
+                    "blank": 3,
+                    "code": 41,
+                    "comment": 0,
+                    "filename": "package.json"
+                },
+                {
+                    "blank": 0,
+                    "code": 21,
+                    "comment": 10,
+                    "filename": "public\\index.html"
+                },
+                {
+                    "blank": 0,
+                    "code": 25,
+                    "comment": 0,
+                    "filename": "public\\manifest.json"
+                },
+                {
+                    "blank": 0,
+                    "code": 3,
+                    "comment": 1,
+                    "filename": "public\\robots.txt"
+                },
+                {
+                    "blank": 32,
+                    "code": 38,
+                    "comment": 12,
+                    "filename": "README.md"
+                },
+                {
+                    "blank": 5,
+                    "code": 27,
+                    "comment": 0,
+                    "filename": "src\\App.js"
+                },
+                {
+                    "blank": 10,
+                    "code": 65,
+                    "comment": 1,
+                    "filename": "src\\components\\EntriePageComponents\\DatePicker.js"
+                },
+                {
+                    "blank": 3,
+                    "code": 35,
+                    "comment": 0,
+                    "filename": "src\\components\\EntriePageComponents\\location\\AddNewLocation.js"
+                },
+                {
+                    "blank": 3,
+                    "code": 29,
+                    "comment": 0,
+                    "filename": "src\\components\\EntriePageComponents\\location\\EditLocation.js"
+                },
+                {
+                    "blank": 19,
+                    "code": 157,
+                    "comment": 22,
+                    "filename": "src\\components\\EntriePageComponents\\location\\Location.js"
+                },
+                {
+                    "blank": 2,
+                    "code": 46,
+                    "comment": 2,
+                    "filename": "src\\components\\EntriePageComponents\\location\\LocationList.js"
+                },
+                {
+                    "blank": 6,
+                    "code": 94,
+                    "comment": 6,
+                    "filename": "src\\components\\EntriePageComponents\\location\\LocationMenu.js"
+                },
+                {
+                    "blank": 9,
+                    "code": 118,
+                    "comment": 0,
+                    "filename": "src\\components\\EntriePageComponents\\PainScale.js"
+                },
+                {
+                    "blank": 2,
+                    "code": 12,
+                    "comment": 0,
+                    "filename": "src\\components\\layout\\Layout.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 3,
+                    "comment": 0,
+                    "filename": "src\\components\\layout\\Layout.module.css"
+                },
+                {
+                    "blank": 1,
+                    "code": 27,
+                    "comment": 0,
+                    "filename": "src\\components\\layout\\MainNavigation.js"
+                },
+                {
+                    "blank": 6,
+                    "code": 44,
+                    "comment": 0,
+                    "filename": "src\\components\\layout\\MainNavigation.module.css"
+                },
+                {
+                    "blank": 1,
+                    "code": 10,
+                    "comment": 0,
+                    "filename": "src\\components\\ui\\Card.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 7,
+                    "comment": 0,
+                    "filename": "src\\components\\ui\\Card.module.css"
+                },
+                {
+                    "blank": 11,
+                    "code": 68,
+                    "comment": 0,
+                    "filename": "src\\index.css"
+                },
+                {
+                    "blank": 1,
+                    "code": 11,
+                    "comment": 0,
+                    "filename": "src\\index.js"
+                },
+                {
+                    "blank": 2,
+                    "code": 9,
+                    "comment": 0,
+                    "filename": "src\\pages\\Home.js"
+                },
+                {
+                    "blank": 11,
+                    "code": 67,
+                    "comment": 6,
+                    "filename": "src\\pages\\PainEntries.js"
+                },
+                {
+                    "blank": 2,
+                    "code": 9,
+                    "comment": 0,
+                    "filename": "src\\pages\\profile.js"
+                },
+                {
+                    "blank": 2,
+                    "code": 9,
+                    "comment": 0,
+                    "filename": "src\\pages\\Stats.js"
+                }
+            ]
+        }
+    ]
+}

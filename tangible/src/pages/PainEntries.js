@@ -1,24 +1,61 @@
-import React, { useState, useCallback } from "react";
+import React, { useState, useCallback, useEffect } from "react";
 import DatePicker from "../components/EntriePageComponents/DatePicker";
+import PainScale from "../components/EntriePageComponents/PainScale";
 import { Button } from "@material-ui/core";
 import { Container } from "@material-ui/core";
 import Location from "../components/EntriePageComponents/location/Location";
 
 const PainEntries = () => {
-  const [painEntry, setPainEntry] = useState({ date: {}, painLocation: [] });
+  // -----------STATES-------------
+  const [painEntry, setPainEntry] = useState({
+    date: {},
+    painLocation: [],
+    painScale: "",
+    medicine: {},
+    treatment: {},
+    comments: "",
+  });
+  // -----------STATES-------------
 
-  const updateLocation = (entryLocations) => {
+  // -----------UPDATE HANDLERS-------------
+
+  const updateDateTimeHandler = useCallback((EntryDateAndTime) => {
+    setPainEntry((prevState) => {
+      return { ...prevState, date: EntryDateAndTime };
+    });
+    // console.log(EntryDateAndTime, "Date and time object");
+  }, []);
+
+  const updatePainLocationHandler = (entryLocations) => {
     setPainEntry((prevState) => {
       return { ...prevState, painLocation: entryLocations };
     });
   };
 
-  const dateTimeHandler = useCallback((dateAndTime) => {
-    console.log(dateAndTime, "Date and time object");
+  const updatePainScaleHandler = (entryPainScale) => {
     setPainEntry((prevState) => {
-      return { ...prevState, date: dateAndTime };
+      return { ...prevState, painScale: entryPainScale };
     });
-  }, []);
+  };
+
+  const updatePainMedicationHandler = (entryMedicine) => {
+    setPainEntry((prevState) => {
+      return { ...prevState, medicine: entryMedicine };
+    });
+  };
+
+  const updatePainTreatmentHandler = (entryTreatment) => {
+    setPainEntry((prevState) => {
+      return { ...prevState, treatment: entryTreatment };
+    });
+  };
+
+  const updatePainCommentsHandler = (entryComments) => {
+    setPainEntry((prevState) => {
+      return { ...prevState, comments: entryComments };
+    });
+  };
+  // -----------UPDATE HANDLERS-------------
 
   // Sends the painEntry to firebase
   function sendPainEntryToFirebase(painEntry) {
@@ -36,8 +73,9 @@ const PainEntries = () => {
 
   return (
     <Container maxWidth="lg">
-      <Location updateLocation={updateLocation} />
-      <DatePicker getDateTime={dateTimeHandler} />
+      <DatePicker getDateTime={updateDateTimeHandler} />
+      <Location getPainLocation={updatePainLocationHandler} />
+      <PainScale getPainScaleValue={updatePainScaleHandler} />
       <Button onClick={() => sendPainEntryToFirebase(painEntry)}>Submit</Button>
     </Container>
   );

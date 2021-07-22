@@ -72,6 +72,8 @@ h2 {
   top: 0;
   left: 0;
 }
-/* {
-  "mode":"full","isactive": false;
-} */
+
+.react-calendar__tile--now {
+  background: #f2f2f2 !important;
+  color: black !important;
+}

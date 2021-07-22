@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Calendar from "react-calendar";
 import { TextField } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
-
+import Grid from "@material-ui/core/Grid";
 import Card from "../ui/Card";
 import "react-calendar/dist/Calendar.css";
 
@@ -21,16 +21,17 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const DatesPicker = (props) => {
-  const [date, setDate] = useState(new Date());
-  const [time, setTime] = useState("7:30");
-  const [dateTime, setDateTime] = useState({ date, time });
-
   const currentTime = new Date().toLocaleTimeString().substr(0, 5);
 
+  const [date, setDate] = useState(new Date());
+  const [time, setTime] = useState(`${currentTime}`);
+  const [dateTime, setDateTime] = useState({ date, time });
+
   const dateChangeHandler = (e) => {
-    setDate(e);
+    const offsetDate = new Date(e.getTime() - e.getTimezoneOffset() * 60000);
+    setDate(offsetDate);
     setDateTime((prevState) => {
-      return { ...prevState, date: e };
+      return { ...prevState, date: offsetDate };
     });
   };
 
@@ -47,24 +48,26 @@ const DatesPicker = (props) => {
 
   return (
     <Card>
-      <h1>Hello Conor Mcgregor! </h1>
-      <p>Which part of your leg hurts today?</p>
-      <Calendar onChange={dateChangeHandler} value={date} />
+      <Grid container direction="column" alignItems="center">
+        <h1>Hello Conor Mcgregor! </h1>
+        <p>Which part of your leg hurts today?</p>
+        <Calendar utcOffset={0} onChange={dateChangeHandler} value={date} />
 
-      <TextField
-        id="time"
-        label="Alarm clock"
-        type="time"
-        defaultValue={`${currentTime}`}
-        className={classes.textField}
-        onChange={timeChangeHandler}
-        InputLabelProps={{
-          shrink: true,
-        }}
-        inputProps={{
-          step: 300, // 5 min
-        }}
-      />
+        <TextField
+          id="time"
+          label="Alarm clock"
+          type="time"
+          defaultValue={`${currentTime}`}
+          className={classes.textField}
+          onChange={timeChangeHandler}
+          InputLabelProps={{
+            shrink: true,
+          }}
+          inputProps={{
+            step: 300, // 5 min
+          }}
+        />
+      </Grid>
     </Card>
   );
 };
