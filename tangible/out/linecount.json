@@ -5,212 +5,17 @@
     "linecount": [
         {
             "version": "0.1.7",
-            "counttime": "2021-07-22 21:20:31",
-            "filesum": 53,
-            "codesum": 34517,
-            "commentsum": 100,
-            "blanksum": 226,
+            "counttime": "2021-07-22 21:34:04",
+            "filesum": 21,
+            "codesum": 865,
+            "commentsum": 38,
+            "blanksum": 101,
             "filelist": [
                 {
                     "blank": 5,
                     "code": 18,
                     "comment": 1,
                     "filename": ".gitignore"
-                },
-                {
-                    "blank": 5,
-                    "code": 18,
-                    "comment": 1,
-                    "filename": "c:\\Users\\rafae\\OneDrive\\Desktop\\Master Project\\Dummy test\\crash-course\\.gitignore"
-                },
-                {
-                    "blank": 0,
-                    "code": 16314,
-                    "comment": 0,
-                    "filename": "c:\\Users\\rafae\\OneDrive\\Desktop\\Master Project\\Dummy test\\crash-course\\package-lock.json"
-                },
-                {
-                    "blank": 3,
-                    "code": 36,
-                    "comment": 0,
-                    "filename": "c:\\Users\\rafae\\OneDrive\\Desktop\\Master Project\\Dummy test\\crash-course\\package.json"
-                },
-                {
-                    "filename": "c:\\Users\\rafae\\OneDrive\\Desktop\\Master Project\\Dummy test\\crash-course\\public\\favicon.ico",
-                    "isbinaryfile": true,
-                    "blank": 0,
-                    "code": 0,
-                    "comment": 0
-                },
-                {
-                    "blank": 0,
-                    "code": 20,
-                    "comment": 23,
-                    "filename": "c:\\Users\\rafae\\OneDrive\\Desktop\\Master Project\\Dummy test\\crash-course\\public\\index.html"
-                },
-                {
-                    "filename": "c:\\Users\\rafae\\OneDrive\\Desktop\\Master Project\\Dummy test\\crash-course\\public\\logo192.png",
-                    "isbinaryfile": true,
-                    "blank": 0,
-                    "code": 0,
-                    "comment": 0
-                },
-                {
-                    "filename": "c:\\Users\\rafae\\OneDrive\\Desktop\\Master Project\\Dummy test\\crash-course\\public\\logo512.png",
-                    "isbinaryfile": true,
-                    "blank": 0,
-                    "code": 0,
-                    "comment": 0
-                },
-                {
-                    "blank": 0,
-                    "code": 25,
-                    "comment": 0,
-                    "filename": "c:\\Users\\rafae\\OneDrive\\Desktop\\Master Project\\Dummy test\\crash-course\\public\\manifest.json"
-                },
-                {
-                    "blank": 0,
-                    "code": 3,
-                    "comment": 1,
-                    "filename": "c:\\Users\\rafae\\OneDrive\\Desktop\\Master Project\\Dummy test\\crash-course\\public\\robots.txt"
-                },
-                {
-                    "blank": 32,
-                    "code": 38,
-                    "comment": 12,
-                    "filename": "c:\\Users\\rafae\\OneDrive\\Desktop\\Master Project\\Dummy test\\crash-course\\README.md"
-                },
-                {
-                    "blank": 3,
-                    "code": 23,
-                    "comment": 1,
-                    "filename": "c:\\Users\\rafae\\OneDrive\\Desktop\\Master Project\\Dummy test\\crash-course\\src\\App.js"
-                },
-                {
-                    "blank": 2,
-                    "code": 12,
-                    "comment": 0,
-                    "filename": "c:\\Users\\rafae\\OneDrive\\Desktop\\Master Project\\Dummy test\\crash-course\\src\\components\\layout\\Layout.js"
-                },
-                {
-                    "blank": 0,
-                    "code": 5,
-                    "comment": 0,
-                    "filename": "c:\\Users\\rafae\\OneDrive\\Desktop\\Master Project\\Dummy test\\crash-course\\src\\components\\layout\\Layout.module.css"
-                },
-                {
-                    "blank": 1,
-                    "code": 24,
-                    "comment": 0,
-                    "filename": "c:\\Users\\rafae\\OneDrive\\Desktop\\Master Project\\Dummy test\\crash-course\\src\\components\\layout\\MainNavigation.js"
-                },
-                {
-                    "blank": 6,
-                    "code": 44,
-                    "comment": 0,
-                    "filename": "c:\\Users\\rafae\\OneDrive\\Desktop\\Master Project\\Dummy test\\crash-course\\src\\components\\layout\\MainNavigation.module.css"
-                },
-                {
-                    "blank": 2,
-                    "code": 23,
-                    "comment": 0,
-                    "filename": "c:\\Users\\rafae\\OneDrive\\Desktop\\Master Project\\Dummy test\\crash-course\\src\\components\\meetups\\MeetupItem.js"
-                },
-                {
-                    "blank": 7,
-                    "code": 42,
-                    "comment": 0,
-                    "filename": "c:\\Users\\rafae\\OneDrive\\Desktop\\Master Project\\Dummy test\\crash-course\\src\\components\\meetups\\MeetupItem.module.css"
-                },
-                {
-                    "blank": 2,
-                    "code": 21,
-                    "comment": 0,
-                    "filename": "c:\\Users\\rafae\\OneDrive\\Desktop\\Master Project\\Dummy test\\crash-course\\src\\components\\meetups\\MeetupList.js"
-                },
-                {
-                    "blank": 0,
-                    "code": 5,
-                    "comment": 0,
-                    "filename": "c:\\Users\\rafae\\OneDrive\\Desktop\\Master Project\\Dummy test\\crash-course\\src\\components\\meetups\\MeetupList.module.css"
-                },
-                {
-                    "blank": 6,
-                    "code": 49,
-                    "comment": 1,
-                    "filename": "c:\\Users\\rafae\\OneDrive\\Desktop\\Master Project\\Dummy test\\crash-course\\src\\components\\meetups\\NewMeetupForm.js"
-                },
-                {
-                    "blank": 6,
-                    "code": 40,
-                    "comment": 0,
-                    "filename": "c:\\Users\\rafae\\OneDrive\\Desktop\\Master Project\\Dummy test\\crash-course\\src\\components\\meetups\\NewMeetupForm.module.css"
-                },
-                {
-                    "blank": 10,
-                    "code": 67,
-                    "comment": 0,
-                    "filename": "c:\\Users\\rafae\\OneDrive\\Desktop\\Master Project\\Dummy test\\crash-course\\src\\index.css"
-                },
-                {
-                    "blank": 1,
-                    "code": 11,
-                    "comment": 0,
-                    "filename": "c:\\Users\\rafae\\OneDrive\\Desktop\\Master Project\\Dummy test\\crash-course\\src\\index.js"
-                },
-                {
-                    "blank": 1,
-                    "code": 31,
-                    "comment": 0,
-                    "filename": "c:\\Users\\rafae\\OneDrive\\Desktop\\Master Project\\Dummy test\\crash-course\\src\\pages\\AllMeetups.js"
-                },
-                {
-                    "blank": 2,
-                    "code": 5,
-                    "comment": 0,
-                    "filename": "c:\\Users\\rafae\\OneDrive\\Desktop\\Master Project\\Dummy test\\crash-course\\src\\pages\\Favorites.js"
-                },
-                {
-                    "blank": 1,
-                    "code": 11,
-                    "comment": 0,
-                    "filename": "c:\\Users\\rafae\\OneDrive\\Desktop\\Master Project\\Dummy test\\crash-course\\src\\pages\\NewMeetup.js"
-                },
-                {
-                    "blank": 0,
-                    "code": 16657,
-                    "comment": 0,
-                    "filename": "package-lock.json"
-                },
-                {
-                    "blank": 3,
-                    "code": 41,
-                    "comment": 0,
-                    "filename": "package.json"
-                },
-                {
-                    "blank": 0,
-                    "code": 21,
-                    "comment": 10,
-                    "filename": "public\\index.html"
-                },
-                {
-                    "blank": 0,
-                    "code": 25,
-                    "comment": 0,
-                    "filename": "public\\manifest.json"
-                },
-                {
-                    "blank": 0,
-                    "code": 3,
-                    "comment": 1,
-                    "filename": "public\\robots.txt"
-                },
-                {
-                    "blank": 32,
-                    "code": 38,
-                    "comment": 12,
-                    "filename": "README.md"
                 },
                 {
                     "blank": 5,
@@ -336,53 +141,17 @@
         },
         {
             "version": "0.1.7",
-            "counttime": "2021-07-22 21:21:20",
-            "filesum": 27,
-            "codesum": 17650,
-            "commentsum": 61,
-            "blanksum": 136,
+            "counttime": "2021-07-24 16:29:26",
+            "filesum": 26,
+            "codesum": 1235,
+            "commentsum": 66,
+            "blanksum": 135,
             "filelist": [
                 {
                     "blank": 5,
                     "code": 18,
                     "comment": 1,
                     "filename": ".gitignore"
-                },
-                {
-                    "blank": 0,
-                    "code": 16657,
-                    "comment": 0,
-                    "filename": "package-lock.json"
-                },
-                {
-                    "blank": 3,
-                    "code": 41,
-                    "comment": 0,
-                    "filename": "package.json"
-                },
-                {
-                    "blank": 0,
-                    "code": 21,
-                    "comment": 10,
-                    "filename": "public\\index.html"
-                },
-                {
-                    "blank": 0,
-                    "code": 25,
-                    "comment": 0,
-                    "filename": "public\\manifest.json"
-                },
-                {
-                    "blank": 0,
-                    "code": 3,
-                    "comment": 1,
-                    "filename": "public\\robots.txt"
-                },
-                {
-                    "blank": 32,
-                    "code": 38,
-                    "comment": 12,
-                    "filename": "README.md"
                 },
                 {
                     "blank": 5,
@@ -409,14 +178,14 @@
                     "filename": "src\\components\\EntriePageComponents\\location\\EditLocation.js"
                 },
                 {
-                    "blank": 19,
+                    "blank": 18,
                     "code": 157,
                     "comment": 22,
                     "filename": "src\\components\\EntriePageComponents\\location\\Location.js"
                 },
                 {
                     "blank": 2,
-                    "code": 46,
+                    "code": 49,
                     "comment": 2,
                     "filename": "src\\components\\EntriePageComponents\\location\\LocationList.js"
                 },
@@ -425,6 +194,36 @@
                     "code": 94,
                     "comment": 6,
                     "filename": "src\\components\\EntriePageComponents\\location\\LocationMenu.js"
+                },
+                {
+                    "blank": 3,
+                    "code": 35,
+                    "comment": 0,
+                    "filename": "src\\components\\EntriePageComponents\\medication\\AddNewMedication.js"
+                },
+                {
+                    "blank": 3,
+                    "code": 33,
+                    "comment": 0,
+                    "filename": "src\\components\\EntriePageComponents\\medication\\EditMedication.js"
+                },
+                {
+                    "blank": 18,
+                    "code": 157,
+                    "comment": 22,
+                    "filename": "src\\components\\EntriePageComponents\\medication\\Medication.js"
+                },
+                {
+                    "blank": 2,
+                    "code": 46,
+                    "comment": 2,
+                    "filename": "src\\components\\EntriePageComponents\\medication\\MedicationList.js"
+                },
+                {
+                    "blank": 7,
+                    "code": 94,
+                    "comment": 4,
+                    "filename": "src\\components\\EntriePageComponents\\medication\\MedicationMenu.js"
                 },
                 {
                     "blank": 9,
@@ -487,8 +286,8 @@
                     "filename": "src\\pages\\Home.js"
                 },
                 {
-                    "blank": 11,
-                    "code": 67,
+                    "blank": 13,
+                    "code": 69,
                     "comment": 6,
                     "filename": "src\\pages\\PainEntries.js"
                 },

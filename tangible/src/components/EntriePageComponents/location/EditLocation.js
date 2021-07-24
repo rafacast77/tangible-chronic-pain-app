@@ -4,7 +4,7 @@ import { FormControl, InputLabel, Input, Button } from "@material-ui/core";
 const EditLocation = (props) => {
   const locationToEditInput = useRef();
 
-  const editApplyHandler = (event) => {
+  const editApplyHandler = () => {
     props.painLocationToEdit.locationName = locationToEditInput.current.value;
     props.editLocationName(props.painLocationToEdit);
     props.toLocationMenu();

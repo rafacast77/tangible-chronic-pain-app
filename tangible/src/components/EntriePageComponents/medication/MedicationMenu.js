@@ -22,54 +22,53 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const LocationMenu = (props) => {
+const MedicationMenu = (props) => {
   const classes = useStyles();
-  //---STATE---
-  //---STATE---
-  // Selects or De-selects the pain locations shown in locationList.js
-  const SelectedPainLocationHandler = (event) => {
-    props.listPainLocations.map((location) => {
-      if (location.locationName === event.target.name) {
-        location.selected = !location.selected;
-        props.getSelectedLocation(location);
+
+  // Selects or De-selects the  medications shown in medicationList.js
+  const SelectedMedicationHandler = (event) => {
+    props.listMedications.map((medication) => {
+      if (medication.medicationName === event.target.name) {
+        medication.selected = !medication.selected;
+        props.getSelectedMedication(medication);
       }
     });
   };
-  // Edits a current location in locationMenu.js
-  const editPainLocationHandler = (locationToEdit) => {
-    props.swaptoLocationEdit(locationToEdit);   
+  // Edits a current medication in MedicationMenu.js
+  const editMedicationHandler = (medicationToEdit) => {
+    props.swaptoMedicationEdit(medicationToEdit);
   };
 
-  // Deletes a pain location in the locationMenu.js
-  const deletePainLocationHandler = (locationToDelete) => {
-    props.getLocationToDelete(locationToDelete);
+  // Deletes a  medication in the MedicationMenu.js
+  const deleteMedicationHandler = (medicationToDelete) => {
+    props.getMedicationToDelete(medicationToDelete);
   };
 
-  // Deletes a pain location in the locationMenu.js
-  const addPainLocationHandler = () => {
-    props.swapToAddNewLocation();
+  // Deletes a  medication in the MedicationMenu.js
+  const addMedicationHandler = () => {
+    props.swapToAddNewMedication();
   };
 
   return (
     <FormControl component="fieldset">
-      <FormLabel component="legend">Location Menu</FormLabel>
-      <FormGroup aria-label="location" name="location1">
-        {props.listPainLocations.map((location) => {
+      <FormLabel component="legend">Medication Menu</FormLabel>
+      <FormGroup aria-label="medication" name="medication1">
+        {props.listMedications.map((medication) => {
           return (
             <ButtonGroup
-              key={location.fireBaseId}
+              key={medication.fireBaseId}
               variant="contained"
               color="primary"
               aria-label="split button"
             >
               <FormControlLabel
-                label={location.locationName}
+                label={medication.medicationName}
                 control={
                   <Switch
                     p={0.5}
-                    onChange={SelectedPainLocationHandler}
-                    name={location.locationName}
-                    checked={location.selected}
+                    onChange={SelectedMedicationHandler}
+                    name={medication.medicationName}
+                    checked={medication.selected}
                   />
                 }
               />
@@ -77,14 +76,14 @@ const LocationMenu = (props) => {
               <IconButton
                 aria-label="delete"
                 className={classes.margin}
-                onClick={() => editPainLocationHandler(location)}
+                onClick={() => editMedicationHandler(medication)}
               >
                 <BorderColorTwoToneIcon fontSize="medium" color="primary" />
               </IconButton>
               <IconButton
                 aria-label="delete"
                 className={classes.margin}
-                onClick={() => deletePainLocationHandler(location)}
+                onClick={() => deleteMedicationHandler(medication)}
               >
                 <DeleteTwoTone fontSize="medium" color="secondary" />
               </IconButton>
@@ -95,7 +94,7 @@ const LocationMenu = (props) => {
       <Button
         size="large"
         variant="contained"
-        onClick={addPainLocationHandler}
+        onClick={addMedicationHandler}
         color="primary"
       >
         Add New
@@ -103,4 +102,4 @@ const LocationMenu = (props) => {
     </FormControl>
   );
 };
-export default LocationMenu;
+export default MedicationMenu;

@@ -12,7 +12,7 @@ const AddNewLocation = (props) => {
     props.addNewLocation(location);
     props.toLocationMenu();
   };
-
+    
   return (
     <FormControl>
       <InputLabel htmlFor="my-input">Add New Location</InputLabel>

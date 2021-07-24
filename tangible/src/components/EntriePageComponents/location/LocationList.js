@@ -9,18 +9,21 @@ import {
 const entryPainLocations = [];
 const LocationList = (props) => {
   // Updates the pain locations list that is sent to PainEntries.js
-  const painLocationCheckboxHandler = useCallback((event) => {
-    if (entryPainLocations.indexOf(event.target.name) === -1) {
-      entryPainLocations.push(event.target.name);
-    } else {
-      entryPainLocations.splice(
-        entryPainLocations.indexOf(event.target.name),
-        1
-      );
-    }
-    // Sends updated list to PainEntries for submition
-    props.getPainLocation(entryPainLocations);
-  }, [props]);
+  const painLocationCheckboxHandler = useCallback(
+    (event) => {
+      if (entryPainLocations.indexOf(event.target.name) === -1) {
+        entryPainLocations.push(event.target.name);
+      } else {
+        entryPainLocations.splice(
+          entryPainLocations.indexOf(event.target.name),
+          1
+        );
+      }
+      // Sends updated list to PainEntries for submition
+      props.getPainLocation(entryPainLocations);
+    },
+    [props]
+  );
 
   return (
     <FormControl component="fieldset">

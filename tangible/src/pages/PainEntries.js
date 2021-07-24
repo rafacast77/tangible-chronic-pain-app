@@ -4,6 +4,7 @@ import PainScale from "../components/EntriePageComponents/PainScale";
 import { Button } from "@material-ui/core";
 import { Container } from "@material-ui/core";
 import Location from "../components/EntriePageComponents/location/Location";
+import Medication from "../components/EntriePageComponents/medication/Medication";
 
 const PainEntries = () => {
   // -----------STATES-------------
@@ -15,6 +16,7 @@ const PainEntries = () => {
     treatment: {},
     comments: "",
   });
+
   // -----------STATES-------------
 
   // -----------UPDATE HANDLERS-------------
@@ -38,7 +40,7 @@ const PainEntries = () => {
     });
   };
 
-  const updatePainMedicationHandler = (entryMedicine) => {
+  const updateMedicationHandler = (entryMedicine) => {
     setPainEntry((prevState) => {
       return { ...prevState, medicine: entryMedicine };
     });
@@ -76,6 +78,8 @@ const PainEntries = () => {
       <DatePicker getDateTime={updateDateTimeHandler} />
       <Location getPainLocation={updatePainLocationHandler} />
       <PainScale getPainScaleValue={updatePainScaleHandler} />
+      <Medication getMedication={updateMedicationHandler} />
+
       <Button onClick={() => sendPainEntryToFirebase(painEntry)}>Submit</Button>
     </Container>
   );
