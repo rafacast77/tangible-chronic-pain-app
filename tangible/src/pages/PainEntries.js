@@ -12,7 +12,7 @@ const PainEntries = () => {
     date: {},
     painLocation: [],
     painScale: "",
-    medicine: {},
+    medicine: [],
     treatment: {},
     comments: "",
   });
@@ -25,7 +25,6 @@ const PainEntries = () => {
     setPainEntry((prevState) => {
       return { ...prevState, date: EntryDateAndTime };
     });
-    // console.log(EntryDateAndTime, "Date and time object");
   }, []);
 
   const updatePainLocationHandler = (entryLocations) => {

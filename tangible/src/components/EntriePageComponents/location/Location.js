@@ -109,7 +109,6 @@ const Location = (props) => {
 
   // DELETE request to delete a pain locations in Firebase
   const locationToDeleteHandler = (locationToDelete) => {
-    console.log(locationToDelete.fireBaseId);
     fetch(
       `https://tangible-47447-default-rtdb.europe-west1.firebasedatabase.app/pain-locations/${locationToDelete.fireBaseId}.json`,
       { method: "DELETE" }

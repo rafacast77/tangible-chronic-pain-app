@@ -109,7 +109,6 @@ const Medication = (props) => {
 
   // DELETE request to delete a  medications in Firebase
   const medicationToDeleteHandler = (medicationToDelete) => {
-    console.log(medicationToDelete.fireBaseId);
     fetch(
       `https://tangible-47447-default-rtdb.europe-west1.firebasedatabase.app/medications/${medicationToDelete.fireBaseId}.json`,
       { method: "DELETE" }
@@ -153,8 +152,12 @@ const Medication = (props) => {
               listMedications={listMedications}
               getMedication={props.getMedication}
             />
-            <Button variant="contained" onClick={toMedicationMenuHandler}>
-              ADD LOCATIONS
+            <Button
+              color="primary"
+              variant="contained"
+              onClick={toMedicationMenuHandler}
+            >
+              ADD MEDICATIONS
             </Button>
           </>
         )}
