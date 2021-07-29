@@ -7,6 +7,11 @@ import {
   FormGroup,
 } from "@material-ui/core";
 const entryPainLocations = [];
+/**
+ * This component allows a user to choose the location of their pain.
+ * Only user selected locations appear in the list.
+ * Selected Items are sent to the painEntries.js
+ */
 const LocationList = (props) => {
   // Updates the pain locations list that is sent to PainEntries.js
   const painLocationCheckboxHandler = useCallback(
@@ -43,6 +48,8 @@ const LocationList = (props) => {
                 }
               />
             );
+          } else {
+            return null;
           }
         })}
       </FormGroup>

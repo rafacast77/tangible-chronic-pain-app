@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Calendar from "react-calendar";
 import { TextField } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
@@ -20,6 +20,11 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+/**
+ * This component allows the user to choose the date and the time
+ * when the pain episode occurred. The component is initialized
+ * with the current date and time.
+ */
 const DatesPicker = (props) => {
   const currentTime = new Date().toLocaleTimeString().substr(0, 5);
 
@@ -44,18 +49,24 @@ const DatesPicker = (props) => {
 
   const classes = useStyles();
 
-  props.getDateTime(dateTime);
+  useEffect(() => {
+    props.getDateTime(dateTime);
+  }, [props, dateTime]);
+
+  const user = "Conor McGregor";
 
   return (
     <Card>
       <Grid container direction="column" alignItems="center">
-        <h1>Hello Conor Mcgregor! </h1>
-        <p>Which part of your leg hurts today?</p>
+        <h1 style={{ marginBottom: ".5rem" }}>Hello {user}! </h1>
+        <p style={{ marginBottom: "1.2rem" }}>
+          Which part of your leg hurts today?
+        </p>
         <Calendar utcOffset={0} onChange={dateChangeHandler} value={date} />
 
         <TextField
           id="time"
-          label="Alarm clock"
+          label="Time of the pain"
           type="time"
           defaultValue={`${currentTime}`}
           className={classes.textField}

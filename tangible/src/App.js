@@ -1,16 +1,16 @@
 import { Route, Switch } from "react-router-dom";
-import Home from "./pages/Home";
+import Records from "./pages/Records";
 import PainEntries from "./pages/PainEntries";
-import Profile from "./pages/profile";
+import Profile from "./pages/Profile";
 import Stats from "./pages/Stats";
 import Layout from "./components/layout/Layout";
 
 function App() {
   return (
     <Layout>
-      <Switch>
+      <Switch fallback={<p>Loading...</p>}>
         <Route path="/" exact>
-          <Home />
+          <Records />
         </Route>
 
         <Route path="/pain-entries">

@@ -1,0 +1,22 @@
+.time-periods-container {
+  display: flex;
+  justify-content: space-around;
+  margin: 3rem 0;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  width: 100% !important;
+}
+
+.time-container p {
+  margin: 1rem 0 !important;
+}
+
+.time-periods-container > * {
+  padding: 0.4rem 3rem;
+  margin: 1rem !important;
+  border-right: 1px dotted rgb(123, 123, 123) !important;
+}
+
+.time-periods-container > *:last-child {
+  border-right: 0px !important;
+}

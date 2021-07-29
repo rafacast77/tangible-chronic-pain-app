@@ -8,13 +8,13 @@ const MainNavigation = () => {
       <nav>
         <ul>
           <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
             <Link to="/pain-entries">Pain Entries</Link>
           </li>
           <li>
             <Link to="/stats">Stats</Link>
+          </li>
+          <li>
+            <Link to="/">Records</Link>
           </li>
           <li>
             <Link to="/profile">Profile</Link>

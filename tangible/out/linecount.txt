@@ -217,3 +217,354 @@ src\pages\PainEntries.js, code is 69, comment is 6, blank is 13.
 src\pages\profile.js, code is 9, comment is 0, blank is 2.
 src\pages\Stats.js, code is 9, comment is 0, blank is 2.
 ===============================================================================
+===============================================================================
+EXTENSION NAME : linecount
+EXTENSION VERSION : 0.1.7
+-------------------------------------------------------------------------------
+count time : 2021-07-25 19:45:58
+count workspace : c:\Users\rafae\OneDrive\Desktop\Master Project\Master Project\tangible-chronic-pain-app\tangible
+total files : 31
+total code lines : 1831
+total comment lines : 97
+total blank lines : 173
+
+.gitignore, code is 18, comment is 1, blank is 5.
+src\App.js, code is 27, comment is 0, blank is 5.
+src\components\EntriePageComponents\DatePicker.js, code is 67, comment is 1, blank is 10.
+src\components\EntriePageComponents\location\AddNewLocation.js, code is 35, comment is 0, blank is 3.
+src\components\EntriePageComponents\location\EditLocation.js, code is 29, comment is 0, blank is 3.
+src\components\EntriePageComponents\location\Location.js, code is 156, comment is 22, blank is 18.
+src\components\EntriePageComponents\location\LocationList.js, code is 51, comment is 2, blank is 2.
+src\components\EntriePageComponents\location\LocationMenu.js, code is 94, comment is 6, blank is 6.
+src\components\EntriePageComponents\medication\AddNewMedication.js, code is 89, comment is 0, blank is 2.
+src\components\EntriePageComponents\medication\EditMedication.js, code is 33, comment is 0, blank is 3.
+src\components\EntriePageComponents\medication\Medication.js, code is 160, comment is 22, blank is 18.
+src\components\EntriePageComponents\medication\MedicationList.js, code is 127, comment is 5, blank is 5.
+src\components\EntriePageComponents\medication\MedicationMenu.js, code is 94, comment is 4, blank is 7.
+src\components\EntriePageComponents\PainScale.js, code is 118, comment is 0, blank is 9.
+src\components\EntriePageComponents\treatment\AddNewTreatment.js, code is 58, comment is 0, blank is 2.
+src\components\EntriePageComponents\treatment\EditTreatment.js, code is 32, comment is 0, blank is 4.
+src\components\EntriePageComponents\treatment\Treatment.js, code is 160, comment is 22, blank is 18.
+src\components\EntriePageComponents\treatment\TreatmentList.js, code is 109, comment is 4, blank is 6.
+src\components\EntriePageComponents\treatment\TreatmentMenu.js, code is 94, comment is 4, blank is 7.
+src\components\layout\Layout.js, code is 12, comment is 0, blank is 2.
+src\components\layout\Layout.module.css, code is 3, comment is 0, blank is 0.
+src\components\layout\MainNavigation.js, code is 27, comment is 0, blank is 1.
+src\components\layout\MainNavigation.module.css, code is 44, comment is 0, blank is 6.
+src\components\ui\Card.js, code is 10, comment is 0, blank is 1.
+src\components\ui\Card.module.css, code is 7, comment is 0, blank is 0.
+src\index.css, code is 68, comment is 0, blank is 11.
+src\index.js, code is 11, comment is 0, blank is 1.
+src\pages\Home.js, code is 9, comment is 0, blank is 2.
+src\pages\PainEntries.js, code is 71, comment is 4, blank is 12.
+src\pages\profile.js, code is 9, comment is 0, blank is 2.
+src\pages\Stats.js, code is 9, comment is 0, blank is 2.
+===============================================================================
+===============================================================================
+EXTENSION NAME : linecount
+EXTENSION VERSION : 0.1.7
+-------------------------------------------------------------------------------
+count time : 2021-07-25 22:16:02
+count workspace : c:\Users\rafae\OneDrive\Desktop\Master Project\Master Project\tangible-chronic-pain-app\tangible
+total files : 32
+total code lines : 1881
+total comment lines : 107
+total blank lines : 178
+
+.gitignore, code is 18, comment is 1, blank is 5.
+src\App.js, code is 27, comment is 0, blank is 5.
+src\components\EntriePageComponents\DatePicker.js, code is 67, comment is 1, blank is 10.
+src\components\EntriePageComponents\ExtraComments.js, code is 50, comment is 10, blank is 5.
+src\components\EntriePageComponents\location\AddNewLocation.js, code is 35, comment is 0, blank is 3.
+src\components\EntriePageComponents\location\EditLocation.js, code is 29, comment is 0, blank is 3.
+src\components\EntriePageComponents\location\Location.js, code is 156, comment is 22, blank is 18.
+src\components\EntriePageComponents\location\LocationList.js, code is 51, comment is 2, blank is 2.
+src\components\EntriePageComponents\location\LocationMenu.js, code is 94, comment is 6, blank is 6.
+src\components\EntriePageComponents\medication\AddNewMedication.js, code is 89, comment is 0, blank is 2.
+src\components\EntriePageComponents\medication\EditMedication.js, code is 33, comment is 0, blank is 3.
+src\components\EntriePageComponents\medication\Medication.js, code is 160, comment is 22, blank is 18.
+src\components\EntriePageComponents\medication\MedicationList.js, code is 128, comment is 5, blank is 5.
+src\components\EntriePageComponents\medication\MedicationMenu.js, code is 94, comment is 4, blank is 7.
+src\components\EntriePageComponents\PainScale.js, code is 118, comment is 0, blank is 9.
+src\components\EntriePageComponents\treatment\AddNewTreatment.js, code is 58, comment is 0, blank is 2.
+src\components\EntriePageComponents\treatment\EditTreatment.js, code is 32, comment is 0, blank is 4.
+src\components\EntriePageComponents\treatment\Treatment.js, code is 160, comment is 22, blank is 18.
+src\components\EntriePageComponents\treatment\TreatmentList.js, code is 108, comment is 4, blank is 7.
+src\components\EntriePageComponents\treatment\TreatmentMenu.js, code is 94, comment is 4, blank is 7.
+src\components\layout\Layout.js, code is 12, comment is 0, blank is 2.
+src\components\layout\Layout.module.css, code is 3, comment is 0, blank is 0.
+src\components\layout\MainNavigation.js, code is 27, comment is 0, blank is 1.
+src\components\layout\MainNavigation.module.css, code is 44, comment is 0, blank is 6.
+src\components\ui\Card.js, code is 10, comment is 0, blank is 1.
+src\components\ui\Card.module.css, code is 7, comment is 0, blank is 0.
+src\index.css, code is 68, comment is 0, blank is 11.
+src\index.js, code is 11, comment is 0, blank is 1.
+src\pages\Home.js, code is 9, comment is 0, blank is 2.
+src\pages\PainEntries.js, code is 71, comment is 4, blank is 11.
+src\pages\profile.js, code is 9, comment is 0, blank is 2.
+src\pages\Stats.js, code is 9, comment is 0, blank is 2.
+===============================================================================
+===============================================================================
+EXTENSION NAME : linecount
+EXTENSION VERSION : 0.1.7
+-------------------------------------------------------------------------------
+count time : 2021-07-27 14:34:20
+count workspace : c:\Users\rafae\OneDrive\Desktop\Master Project\Master Project\tangible-chronic-pain-app\tangible
+total files : 39
+total code lines : 2216
+total comment lines : 131
+total blank lines : 221
+
+.gitignore, code is 18, comment is 1, blank is 5.
+src\App.js, code is 27, comment is 0, blank is 5.
+src\components\EntriePageComponents\DatePicker.js, code is 67, comment is 1, blank is 10.
+src\components\EntriePageComponents\ExtraComments.js, code is 42, comment is 10, blank is 5.
+src\components\EntriePageComponents\location\AddNewLocation.js, code is 35, comment is 0, blank is 3.
+src\components\EntriePageComponents\location\EditLocation.js, code is 29, comment is 0, blank is 3.
+src\components\EntriePageComponents\location\Location.js, code is 156, comment is 22, blank is 17.
+src\components\EntriePageComponents\location\LocationList.js, code is 51, comment is 2, blank is 2.
+src\components\EntriePageComponents\location\LocationMenu.js, code is 94, comment is 6, blank is 6.
+src\components\EntriePageComponents\medication\AddNewMedication.js, code is 89, comment is 0, blank is 2.
+src\components\EntriePageComponents\medication\EditMedication.js, code is 33, comment is 0, blank is 3.
+src\components\EntriePageComponents\medication\Medication.js, code is 166, comment is 24, blank is 20.
+src\components\EntriePageComponents\medication\MedicationList.js, code is 131, comment is 5, blank is 6.
+src\components\EntriePageComponents\medication\MedicationMenu.js, code is 94, comment is 4, blank is 7.
+src\components\EntriePageComponents\PainScale.js, code is 118, comment is 0, blank is 9.
+src\components\EntriePageComponents\treatment\AddNewTreatment.js, code is 34, comment is 0, blank is 3.
+src\components\EntriePageComponents\treatment\EditTreatment.js, code is 32, comment is 0, blank is 4.
+src\components\EntriePageComponents\treatment\Treatment.js, code is 160, comment is 22, blank is 18.
+src\components\EntriePageComponents\treatment\TreatmentList.js, code is 112, comment is 4, blank is 7.
+src\components\EntriePageComponents\treatment\TreatmentMenu.js, code is 94, comment is 4, blank is 7.
+src\components\layout\Layout.js, code is 12, comment is 0, blank is 2.
+src\components\layout\Layout.module.css, code is 3, comment is 0, blank is 0.
+src\components\layout\MainNavigation.js, code is 27, comment is 0, blank is 1.
+src\components\layout\MainNavigation.module.css, code is 44, comment is 0, blank is 6.
+src\components\ProfilePageComponents\Records.js, code is 4, comment is 0, blank is 1.
+src\components\statisticsPageComponents\AffectingFactors.js, code is 46, comment is 1, blank is 3.
+src\components\statisticsPageComponents\ScaleFrequency.js, code is 64, comment is 0, blank is 6.
+src\components\statisticsPageComponents\ScaleFrequency.module.css, code is 55, comment is 0, blank is 4.
+src\components\statisticsPageComponents\statisticHelperFunctions.js, code is 32, comment is 16, blank is 7.
+src\components\statisticsPageComponents\TimePeriods.js, code is 62, comment is 0, blank is 8.
+src\components\statisticsPageComponents\TimePeriods.module.css, code is 13, comment is 0, blank is 2.
+src\components\ui\Card.js, code is 11, comment is 1, blank is 3.
+src\components\ui\Card.module.css, code is 7, comment is 0, blank is 0.
+src\index.css, code is 68, comment is 0, blank is 11.
+src\index.js, code is 11, comment is 0, blank is 1.
+src\pages\Home.js, code is 9, comment is 0, blank is 2.
+src\pages\PainEntries.js, code is 70, comment is 4, blank is 11.
+src\pages\profile.js, code is 11, comment is 0, blank is 2.
+src\pages\Stats.js, code is 85, comment is 4, blank is 9.
+===============================================================================
+===============================================================================
+EXTENSION NAME : linecount
+EXTENSION VERSION : 0.1.7
+-------------------------------------------------------------------------------
+count time : 2021-07-27 23:01:03
+count workspace : c:\Users\rafae\OneDrive\Desktop\Master Project\Master Project\tangible-chronic-pain-app\tangible
+total files : 39
+total code lines : 2287
+total comment lines : 136
+total blank lines : 231
+
+.gitignore, code is 18, comment is 1, blank is 5.
+src\App.js, code is 27, comment is 0, blank is 5.
+src\components\EntriePageComponents\DatePicker.js, code is 67, comment is 1, blank is 10.
+src\components\EntriePageComponents\ExtraComments.js, code is 42, comment is 10, blank is 5.
+src\components\EntriePageComponents\location\AddNewLocation.js, code is 35, comment is 0, blank is 3.
+src\components\EntriePageComponents\location\EditLocation.js, code is 29, comment is 0, blank is 3.
+src\components\EntriePageComponents\location\Location.js, code is 156, comment is 22, blank is 17.
+src\components\EntriePageComponents\location\LocationList.js, code is 51, comment is 2, blank is 2.
+src\components\EntriePageComponents\location\LocationMenu.js, code is 94, comment is 6, blank is 6.
+src\components\EntriePageComponents\medication\AddNewMedication.js, code is 89, comment is 0, blank is 2.
+src\components\EntriePageComponents\medication\EditMedication.js, code is 33, comment is 0, blank is 3.
+src\components\EntriePageComponents\medication\Medication.js, code is 166, comment is 24, blank is 20.
+src\components\EntriePageComponents\medication\MedicationList.js, code is 131, comment is 5, blank is 6.
+src\components\EntriePageComponents\medication\MedicationMenu.js, code is 94, comment is 4, blank is 7.
+src\components\EntriePageComponents\PainScale.js, code is 118, comment is 0, blank is 9.
+src\components\EntriePageComponents\treatment\AddNewTreatment.js, code is 34, comment is 0, blank is 3.
+src\components\EntriePageComponents\treatment\EditTreatment.js, code is 32, comment is 0, blank is 4.
+src\components\EntriePageComponents\treatment\Treatment.js, code is 160, comment is 22, blank is 18.
+src\components\EntriePageComponents\treatment\TreatmentList.js, code is 112, comment is 4, blank is 7.
+src\components\EntriePageComponents\treatment\TreatmentMenu.js, code is 94, comment is 4, blank is 7.
+src\components\layout\Layout.js, code is 12, comment is 0, blank is 2.
+src\components\layout\Layout.module.css, code is 3, comment is 0, blank is 0.
+src\components\layout\MainNavigation.js, code is 27, comment is 0, blank is 1.
+src\components\layout\MainNavigation.module.css, code is 44, comment is 0, blank is 6.
+src\components\ProfilePageComponents\Records.js, code is 4, comment is 0, blank is 1.
+src\components\statisticsPageComponents\AffectingFactors.js, code is 46, comment is 1, blank is 3.
+src\components\statisticsPageComponents\ScaleFrequency.js, code is 64, comment is 0, blank is 6.
+src\components\statisticsPageComponents\ScaleFrequency.module.css, code is 55, comment is 0, blank is 4.
+src\components\statisticsPageComponents\statisticHelperFunctions.js, code is 76, comment is 16, blank is 9.
+src\components\statisticsPageComponents\TimePeriods.js, code is 77, comment is 4, blank is 13.
+src\components\statisticsPageComponents\TimePeriods.module.css, code is 13, comment is 0, blank is 2.
+src\components\ui\Card.js, code is 11, comment is 1, blank is 3.
+src\components\ui\Card.module.css, code is 7, comment is 0, blank is 0.
+src\index.css, code is 68, comment is 0, blank is 11.
+src\index.js, code is 11, comment is 0, blank is 1.
+src\pages\Home.js, code is 9, comment is 0, blank is 2.
+src\pages\PainEntries.js, code is 70, comment is 4, blank is 11.
+src\pages\profile.js, code is 11, comment is 0, blank is 2.
+src\pages\Stats.js, code is 97, comment is 5, blank is 12.
+===============================================================================
+===============================================================================
+EXTENSION NAME : linecount
+EXTENSION VERSION : 0.1.7
+-------------------------------------------------------------------------------
+count time : 2021-07-29 13:30:27
+count workspace : c:\Users\rafae\OneDrive\Desktop\Master Project\Master Project\tangible-chronic-pain-app\tangible
+total files : 42
+total code lines : 2527
+total comment lines : 245
+total blank lines : 238
+
+.gitignore, code is 18, comment is 1, blank is 5.
+src\App.js, code is 27, comment is 0, blank is 5.
+src\components\EntriePageComponents\DatePicker.js, code is 67, comment is 6, blank is 10.
+src\components\EntriePageComponents\ExtraComments.js, code is 41, comment is 4, blank is 3.
+src\components\EntriePageComponents\location\AddNewLocation.js, code is 35, comment is 4, blank is 3.
+src\components\EntriePageComponents\location\EditLocation.js, code is 29, comment is 4, blank is 4.
+src\components\EntriePageComponents\location\Location.js, code is 156, comment is 30, blank is 17.
+src\components\EntriePageComponents\location\LocationList.js, code is 51, comment is 7, blank is 2.
+src\components\EntriePageComponents\location\LocationMenu.js, code is 94, comment is 9, blank is 6.
+src\components\EntriePageComponents\medication\AddNewMedication.js, code is 89, comment is 4, blank is 3.
+src\components\EntriePageComponents\medication\EditMedication.js, code is 33, comment is 4, blank is 4.
+src\components\EntriePageComponents\medication\Medication.js, code is 166, comment is 32, blank is 20.
+src\components\EntriePageComponents\medication\MedicationList.js, code is 131, comment is 10, blank is 6.
+src\components\EntriePageComponents\medication\MedicationMenu.js, code is 94, comment is 8, blank is 8.
+src\components\EntriePageComponents\PainEntriesPainRangeText.js, code is 74, comment is 4, blank is 2.
+src\components\EntriePageComponents\PainScale.js, code is 45, comment is 4, blank is 7.
+src\components\EntriePageComponents\treatment\AddNewTreatment.js, code is 34, comment is 4, blank is 3.
+src\components\EntriePageComponents\treatment\EditTreatment.js, code is 32, comment is 4, blank is 5.
+src\components\EntriePageComponents\treatment\Treatment.js, code is 160, comment is 30, blank is 17.
+src\components\EntriePageComponents\treatment\TreatmentList.js, code is 112, comment is 9, blank is 7.
+src\components\EntriePageComponents\treatment\TreatmentMenu.js, code is 94, comment is 8, blank is 6.
+src\components\layout\Layout.js, code is 12, comment is 0, blank is 2.
+src\components\layout\Layout.module.css, code is 3, comment is 0, blank is 0.
+src\components\layout\MainNavigation.js, code is 27, comment is 0, blank is 1.
+src\components\layout\MainNavigation.module.css, code is 41, comment is 0, blank is 6.
+src\components\profileComponents\CustomizedAccordion.js, code is 57, comment is 0, blank is 5.
+src\components\ProfilePageComponents\Records.js, code is 14, comment is 0, blank is 1.
+src\components\ProfilePageComponents\Signin.js, code is 113, comment is 1, blank is 4.
+src\components\statisticsPageComponents\AffectingFactors.js, code is 46, comment is 5, blank is 2.
+src\components\statisticsPageComponents\ScaleFrequency.js, code is 64, comment is 0, blank is 6.
+src\components\statisticsPageComponents\ScaleFrequency.module.css, code is 55, comment is 0, blank is 4.
+src\components\statisticsPageComponents\StatisticHelperFunctions.js, code is 75, comment is 26, blank is 6.
+src\components\statisticsPageComponents\TimePeriods.js, code is 85, comment is 4, blank is 13.
+src\components\statisticsPageComponents\TimePeriods.module.css, code is 19, comment is 0, blank is 3.
+src\components\ui\Card.js, code is 11, comment is 1, blank is 3.
+src\components\ui\Card.module.css, code is 7, comment is 0, blank is 0.
+src\index.css, code is 69, comment is 0, blank is 11.
+src\index.js, code is 11, comment is 0, blank is 1.
+src\pages\PainEntries.js, code is 73, comment is 4, blank is 10.
+src\pages\Profile.js, code is 50, comment is 14, blank is 2.
+src\pages\Records.js, code is 14, comment is 0, blank is 2.
+src\pages\Stats.js, code is 99, comment is 4, blank is 13.
+===============================================================================
+===============================================================================
+EXTENSION NAME : linecount
+EXTENSION VERSION : 0.1.7
+-------------------------------------------------------------------------------
+count time : 2021-07-29 13:30:46
+count workspace : c:\Users\rafae\OneDrive\Desktop\Master Project\Master Project\tangible-chronic-pain-app\tangible
+total files : 42
+total code lines : 2527
+total comment lines : 245
+total blank lines : 238
+
+.gitignore, code is 18, comment is 1, blank is 5.
+src\App.js, code is 27, comment is 0, blank is 5.
+src\components\EntriePageComponents\DatePicker.js, code is 67, comment is 6, blank is 10.
+src\components\EntriePageComponents\ExtraComments.js, code is 41, comment is 4, blank is 3.
+src\components\EntriePageComponents\location\AddNewLocation.js, code is 35, comment is 4, blank is 3.
+src\components\EntriePageComponents\location\EditLocation.js, code is 29, comment is 4, blank is 4.
+src\components\EntriePageComponents\location\Location.js, code is 156, comment is 30, blank is 17.
+src\components\EntriePageComponents\location\LocationList.js, code is 51, comment is 7, blank is 2.
+src\components\EntriePageComponents\location\LocationMenu.js, code is 94, comment is 9, blank is 6.
+src\components\EntriePageComponents\medication\AddNewMedication.js, code is 89, comment is 4, blank is 3.
+src\components\EntriePageComponents\medication\EditMedication.js, code is 33, comment is 4, blank is 4.
+src\components\EntriePageComponents\medication\Medication.js, code is 166, comment is 32, blank is 20.
+src\components\EntriePageComponents\medication\MedicationList.js, code is 131, comment is 10, blank is 6.
+src\components\EntriePageComponents\medication\MedicationMenu.js, code is 94, comment is 8, blank is 8.
+src\components\EntriePageComponents\PainEntriesPainRangeText.js, code is 74, comment is 4, blank is 2.
+src\components\EntriePageComponents\PainScale.js, code is 45, comment is 4, blank is 7.
+src\components\EntriePageComponents\treatment\AddNewTreatment.js, code is 34, comment is 4, blank is 3.
+src\components\EntriePageComponents\treatment\EditTreatment.js, code is 32, comment is 4, blank is 5.
+src\components\EntriePageComponents\treatment\Treatment.js, code is 160, comment is 30, blank is 17.
+src\components\EntriePageComponents\treatment\TreatmentList.js, code is 112, comment is 9, blank is 7.
+src\components\EntriePageComponents\treatment\TreatmentMenu.js, code is 94, comment is 8, blank is 6.
+src\components\layout\Layout.js, code is 12, comment is 0, blank is 2.
+src\components\layout\Layout.module.css, code is 3, comment is 0, blank is 0.
+src\components\layout\MainNavigation.js, code is 27, comment is 0, blank is 1.
+src\components\layout\MainNavigation.module.css, code is 41, comment is 0, blank is 6.
+src\components\profileComponents\CustomizedAccordion.js, code is 57, comment is 0, blank is 5.
+src\components\ProfilePageComponents\Records.js, code is 14, comment is 0, blank is 1.
+src\components\ProfilePageComponents\Signin.js, code is 113, comment is 1, blank is 4.
+src\components\statisticsPageComponents\AffectingFactors.js, code is 46, comment is 5, blank is 2.
+src\components\statisticsPageComponents\ScaleFrequency.js, code is 64, comment is 0, blank is 6.
+src\components\statisticsPageComponents\ScaleFrequency.module.css, code is 55, comment is 0, blank is 4.
+src\components\statisticsPageComponents\StatisticHelperFunctions.js, code is 75, comment is 26, blank is 6.
+src\components\statisticsPageComponents\TimePeriods.js, code is 85, comment is 4, blank is 13.
+src\components\statisticsPageComponents\TimePeriods.module.css, code is 19, comment is 0, blank is 3.
+src\components\ui\Card.js, code is 11, comment is 1, blank is 3.
+src\components\ui\Card.module.css, code is 7, comment is 0, blank is 0.
+src\index.css, code is 69, comment is 0, blank is 11.
+src\index.js, code is 11, comment is 0, blank is 1.
+src\pages\PainEntries.js, code is 73, comment is 4, blank is 10.
+src\pages\Profile.js, code is 50, comment is 14, blank is 2.
+src\pages\Records.js, code is 14, comment is 0, blank is 2.
+src\pages\Stats.js, code is 99, comment is 4, blank is 13.
+===============================================================================
+===============================================================================
+EXTENSION NAME : linecount
+EXTENSION VERSION : 0.1.7
+-------------------------------------------------------------------------------
+count time : 2021-07-29 13:31:51
+count workspace : c:\Users\rafae\OneDrive\Desktop\Master Project\Master Project\tangible-chronic-pain-app\tangible
+total files : 42
+total code lines : 2527
+total comment lines : 245
+total blank lines : 238
+
+.gitignore, code is 18, comment is 1, blank is 5.
+src\App.js, code is 27, comment is 0, blank is 5.
+src\components\EntriePageComponents\DatePicker.js, code is 67, comment is 6, blank is 10.
+src\components\EntriePageComponents\ExtraComments.js, code is 41, comment is 4, blank is 3.
+src\components\EntriePageComponents\location\AddNewLocation.js, code is 35, comment is 4, blank is 3.
+src\components\EntriePageComponents\location\EditLocation.js, code is 29, comment is 4, blank is 4.
+src\components\EntriePageComponents\location\Location.js, code is 156, comment is 30, blank is 17.
+src\components\EntriePageComponents\location\LocationList.js, code is 51, comment is 7, blank is 2.
+src\components\EntriePageComponents\location\LocationMenu.js, code is 94, comment is 9, blank is 6.
+src\components\EntriePageComponents\medication\AddNewMedication.js, code is 89, comment is 4, blank is 3.
+src\components\EntriePageComponents\medication\EditMedication.js, code is 33, comment is 4, blank is 4.
+src\components\EntriePageComponents\medication\Medication.js, code is 166, comment is 32, blank is 20.
+src\components\EntriePageComponents\medication\MedicationList.js, code is 131, comment is 10, blank is 6.
+src\components\EntriePageComponents\medication\MedicationMenu.js, code is 94, comment is 8, blank is 8.
+src\components\EntriePageComponents\PainEntriesPainRangeText.js, code is 74, comment is 4, blank is 2.
+src\components\EntriePageComponents\PainScale.js, code is 45, comment is 4, blank is 7.
+src\components\EntriePageComponents\treatment\AddNewTreatment.js, code is 34, comment is 4, blank is 3.
+src\components\EntriePageComponents\treatment\EditTreatment.js, code is 32, comment is 4, blank is 5.
+src\components\EntriePageComponents\treatment\Treatment.js, code is 160, comment is 30, blank is 17.
+src\components\EntriePageComponents\treatment\TreatmentList.js, code is 112, comment is 9, blank is 7.
+src\components\EntriePageComponents\treatment\TreatmentMenu.js, code is 94, comment is 8, blank is 6.
+src\components\layout\Layout.js, code is 12, comment is 0, blank is 2.
+src\components\layout\Layout.module.css, code is 3, comment is 0, blank is 0.
+src\components\layout\MainNavigation.js, code is 27, comment is 0, blank is 1.
+src\components\layout\MainNavigation.module.css, code is 41, comment is 0, blank is 6.
+src\components\profileComponents\CustomizedAccordion.js, code is 57, comment is 0, blank is 5.
+src\components\ProfilePageComponents\Records.js, code is 14, comment is 0, blank is 1.
+src\components\ProfilePageComponents\Signin.js, code is 113, comment is 1, blank is 4.
+src\components\statisticsPageComponents\AffectingFactors.js, code is 46, comment is 5, blank is 2.
+src\components\statisticsPageComponents\ScaleFrequency.js, code is 64, comment is 0, blank is 6.
+src\components\statisticsPageComponents\ScaleFrequency.module.css, code is 55, comment is 0, blank is 4.
+src\components\statisticsPageComponents\StatisticHelperFunctions.js, code is 75, comment is 26, blank is 6.
+src\components\statisticsPageComponents\TimePeriods.js, code is 85, comment is 4, blank is 13.
+src\components\statisticsPageComponents\TimePeriods.module.css, code is 19, comment is 0, blank is 3.
+src\components\ui\Card.js, code is 11, comment is 1, blank is 3.
+src\components\ui\Card.module.css, code is 7, comment is 0, blank is 0.
+src\index.css, code is 69, comment is 0, blank is 11.
+src\index.js, code is 11, comment is 0, blank is 1.
+src\pages\PainEntries.js, code is 73, comment is 4, blank is 10.
+src\pages\Profile.js, code is 50, comment is 14, blank is 2.
+src\pages\Records.js, code is 14, comment is 0, blank is 2.
+src\pages\Stats.js, code is 99, comment is 4, blank is 13.
+===============================================================================

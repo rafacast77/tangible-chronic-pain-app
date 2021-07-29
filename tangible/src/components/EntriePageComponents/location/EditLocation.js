@@ -1,6 +1,11 @@
 import React from "react";
 import { useRef } from "react";
 import { FormControl, InputLabel, Input, Button } from "@material-ui/core";
+
+/**
+ * This component allows the user to edit a new location to the
+ * list in locationMenu.js.
+ */
 const EditLocation = (props) => {
   const locationToEditInput = useRef();
 

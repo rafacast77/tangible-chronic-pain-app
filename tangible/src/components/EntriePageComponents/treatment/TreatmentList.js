@@ -5,14 +5,13 @@ import {
   Checkbox,
   FormControlLabel,
   FormGroup,
-  TextField,
   Select,
   makeStyles,
   InputLabel,
   FormHelperText,
   Button,
 } from "@material-ui/core";
-const entryMedications = [];
+const entryTreatments = [];
 const useStyles = makeStyles((theme) => ({
   formControl: {
     paddingLeft: 20,
@@ -26,22 +25,21 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 /**
- * This component allows a user to choose the medication taken after
- * their pain episode. Only user selected Medications appear in the list.
- * Selected medication are sent to the painEntries.js for submission
+ * This component allows a user to choose the treatment used to alliviate
+ * the pain. Only user selected treatment appear in the list.
+ * Selected treatment are sent to the painEntries.js for submission
  */
-const MedicationList = (props) => {
+const TreatmentList = (props) => {
   const classes = useStyles();
-  // Updates the medication list that is sent to PainEntries.js
-  const medicationCheckboxHandler = (event) => {
-    const medicationIndex = entryMedications.findIndex(
-      (med) => med.medicationName === event.target.name
+  // Updates the treatment list that is sent to PainEntries.js
+  const treatmentCheckboxHandler = (event) => {
+    const treatmentIndex = entryTreatments.findIndex(
+      (tret) => tret.treatmentName === event.target.name
     );
 
-    if (medicationIndex === -1) {
-      entryMedications.push({
-        medicationName: event.target.name,
-        dose: "",
+    if (treatmentIndex === -1) {
+      entryTreatments.push({
+        treatmentName: event.target.name,
         effect: "",
       });
       event.target.parentElement.parentElement.parentElement.nextSibling.setAttribute(
@@ -49,7 +47,7 @@ const MedicationList = (props) => {
         "display: inline;"
       );
     } else {
-      entryMedications.splice(medicationIndex, 1);
+      entryTreatments.splice(treatmentIndex, 1);
       event.target.parentElement.parentElement.parentElement.nextSibling.setAttribute(
         "style",
         "display: none;"
@@ -58,60 +56,43 @@ const MedicationList = (props) => {
   };
 
   // Adds effect after medicine to the corresponding medicine
-  const medicationEffectHandler = (event) => {
-    for (let i = 0; i < entryMedications.length; i++) {
+  const treatmentEffectHandler = (event) => {
+    for (let i = 0; i < entryTreatments.length; i++) {
       if (
-        entryMedications[i].medicationName ===
+        entryTreatments[i].treatmentName ===
         event.target.parentElement.parentElement.parentElement.previousSibling
           .innerText
       ) {
-        entryMedications[i].effect = event.target.value;
+        entryTreatments[i].effect = event.target.value;
       }
     }
   };
-  // Adds the dose to the corresponding medicine
-  const medicationDoseHandler = (event) => {
-    for (let i = 0; i < entryMedications.length; i++) {
-      if (
-        entryMedications[i].medicationName ===
-        event.target.parentElement.parentElement.parentElement.previousSibling
-          .innerText
-      ) {
-        entryMedications[i].dose = event.target.value;
-      }
-    }
-  };
+
   // swaps forward to the next page
   const toTreatmentHandler = () => {
-    // Sends updated list to PainEntries for submission
-    props.getMedication(entryMedications);
+    // Sends updated list to PainEntries for submition
+    props.getTreatment(entryTreatments);
   };
 
   return (
     <FormControl component="fieldset">
-      <FormLabel component="legend">Medication</FormLabel>
-      <FormGroup aria-label="medication" name="medication1">
-        {props.listMedications.map((medication) => {
-          if (medication.selected) {
+      <FormLabel component="legend">Treatment</FormLabel>
+      <FormGroup aria-label="treatment" name="treatment1">
+        {props.listTreatments.map((treatment) => {
+          if (treatment.selected) {
             return (
               <>
                 <FormControlLabel
-                  key={medication.fireBaseId}
-                  label={medication.medicationName}
+                  key={treatment.fireBaseId}
+                  label={treatment.treatmentName}
                   control={
                     <Checkbox
-                      onChange={medicationCheckboxHandler}
-                      name={medication.medicationName}
+                      onChange={treatmentCheckboxHandler}
+                      name={treatment.treatmentName}
                     />
                   }
                 />
                 <form style={{ display: "none" }}>
-                  <TextField
-                    label="Dose"
-                    type="number"
-                    className={classes.dose}
-                    onChange={medicationDoseHandler}
-                  />
                   <FormControl className={classes.formControl}>
                     <InputLabel className={classes.formControlTitle}>
                       Select an option
@@ -119,7 +100,7 @@ const MedicationList = (props) => {
                     <Select
                       native
                       defaultValue=""
-                      onChange={medicationEffectHandler}
+                      onChange={treatmentEffectHandler}
                     >
                       <option aria-label="None" value="" />
                       <option value={"Better"}>Better</option>
@@ -127,7 +108,7 @@ const MedicationList = (props) => {
                       <option value={"Worse"}>Worse</option>
                     </Select>
                     <FormHelperText>
-                      How do you feel after taking the medication
+                      How do you feel after the treatment
                     </FormHelperText>
                   </FormControl>
                 </form>
@@ -144,4 +125,4 @@ const MedicationList = (props) => {
   );
 };
 
-export default MedicationList;
+export default TreatmentList;

@@ -24,6 +24,11 @@ const useStyles = makeStyles((theme) => ({
     marginTop: theme.spacing(2),
   },
 }));
+
+/**
+ * This component allows the user to add a new medication to the
+ * list in medicationMenu.js.
+ */
 const AddNewMedication = (props) => {
   const classes = useStyles();
   const strengthToInput = useRef();
@@ -50,7 +55,7 @@ const AddNewMedication = (props) => {
       />
       <form>
         <TextField
-          id="filled-basic"
+          id="strength"
           label="Strength"
           inputRef={strengthToInput}
           className={classes.dose}
@@ -66,7 +71,7 @@ const AddNewMedication = (props) => {
             native
             inputRef={measureToInput}
             defaultValue=""
-            id="grouped-native-select"
+            id="measurement"
           >
             <option aria-label="None" value="" />
             <option value={"mg"}>mg</option>

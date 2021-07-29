@@ -1,0 +1,59 @@
+.pain-records-container {
+  display: flex;
+  justify-content: space-around;
+  margin: 5rem;
+}
+
+.pain-records-container > div {
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  padding: 17px;
+  background: #fff;
+  color: #000;
+  text-align: center;
+  font-size: 2.5rem;
+  user-select: none;
+}
+
+.pain-records-container > div::after {
+  content: "";
+  font-size: 1.5rem;
+  transform: translateX(-0.3rem) translateY(2rem);
+  display: block;
+}
+
+.pain-records-container > div.none {
+  background-color: rgba(6, 209, 255, 0.496);
+}
+.pain-records-container > div.none::after {
+  content: "None";
+}
+
+.pain-records-container > div.minor {
+  background-color: rgba(6, 255, 43, 0.496);
+}
+.pain-records-container > div.minor::after {
+  content: "Minor";
+}
+.pain-records-container > div.moderate {
+  background-color: rgba(255, 234, 6, 0.626);
+}
+.pain-records-container > div.moderate::after {
+  content: "Moderate";
+  transform: translateX(-1.4rem) translateY(2rem);
+}
+.pain-records-container > div.severe {
+  background-color: rgba(255, 176, 6, 0.728);
+}
+.pain-records-container > div.severe::after {
+  content: "Severe";
+  transform: translateX(-0.9rem) translateY(2rem);
+}
+.pain-records-container > div.unimaginable {
+  background-color: rgba(255, 6, 6, 0.633);
+}
+.pain-records-container > div.unimaginable::after {
+  transform: translateX(-2.9rem) translateY(2rem);
+  content: "Unimaginable";
+}

@@ -8,7 +8,9 @@ import EditLocation from "./EditLocation";
 import AddNewLocation from "./AddNewLocation";
 
 const Location = (props) => {
-  //------------------------------STATES------------------------------//
+  ////////////////////////////////////////////////////////////////////////////////
+  // STATES
+  ////////////////////////////////////////////////////////////////////////////////
   // Shows pain location main page
   const [locationScreen, setLocationScreen] = useState({
     locationList: true,
@@ -27,7 +29,9 @@ const Location = (props) => {
   // This state is used to re-render the page after selectedLocationHandler
   const [forceUpdate, setForceUpdate] = useState(0);
 
-  //------------------------------NAVIGATION FUNCTIONS------------------------------//
+  ////////////////////////////////////////////////////////////////////////////////
+  // NAVIGATION FUNCTIONS
+  ////////////////////////////////////////////////////////////////////////////////
   // Swaps between location main page and Add location menu
   const toLocationMenuHandler = () => {
     setLocationScreen({
@@ -61,7 +65,9 @@ const Location = (props) => {
     });
   };
 
-  //------------------------------HTTP REQUESTS------------------------------//
+  ////////////////////////////////////////////////////////////////////////////////
+  // HTTP REQUESTS
+  ////////////////////////////////////////////////////////////////////////////////
   // PUT request to updates the 'selected' field of locations in Firebase
   const selectedLocationHandler = (selectedLocation) => {
     fetch(
@@ -141,8 +147,9 @@ const Location = (props) => {
   useEffect(() => {
     getLocationList();
   }, []);
-
-  //------------------------------RETURN------------------------------//
+  ////////////////////////////////////////////////////////////////////////////////
+  // RETURN
+  ////////////////////////////////////////////////////////////////////////////////
   return (
     <Card>
       <Grid container direction="column" alignItems="center">

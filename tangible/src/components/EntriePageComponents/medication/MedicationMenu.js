@@ -22,12 +22,17 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+/**
+ * This component is used for the user to enable or disable existant medications.
+ * It laso contains a path to addNew, Edit and Delete medications.
+ */
+
 const MedicationMenu = (props) => {
   const classes = useStyles();
 
   // Selects or De-selects the  medications shown in medicationList.js
   const SelectedMedicationHandler = (event) => {
-    props.listMedications.map((medication) => {
+    props.listMedications.forEach((medication) => {
       if (medication.medicationName === event.target.name) {
         medication.selected = !medication.selected;
         props.getSelectedMedication(medication);

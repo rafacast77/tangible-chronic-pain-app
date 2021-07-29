@@ -2,6 +2,10 @@ import React from "react";
 import { useRef } from "react";
 import { FormControl, InputLabel, Input, Button } from "@material-ui/core";
 
+/**
+ * This component allows the user to add a new pain location to the
+ * list in locationMenu.
+ */
 const AddNewLocation = (props) => {
   const locationToAddInput = useRef();
   const applyNewLocationHandler = (event) => {

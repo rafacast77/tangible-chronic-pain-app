@@ -6,9 +6,12 @@ import MedicationMenu from "./MedicationMenu";
 import Grid from "@material-ui/core/Grid";
 import EditMedication from "./EditMedication";
 import AddNewMedication from "./AddNewMedication";
+import CircularProgress from "@material-ui/core/CircularProgress";
 
 const Medication = (props) => {
-  //------------------------------STATES------------------------------//
+  ////////////////////////////////////////////////////////////////////////////////
+  // STATES
+  ////////////////////////////////////////////////////////////////////////////////
   // Shows  medication main page
   const [medicationScreen, setMedicationScreen] = useState({
     medicationList: true,
@@ -17,6 +20,9 @@ const Medication = (props) => {
     addMedication: false,
     deleteMedication: false,
   });
+
+  // boolean for the loading component
+  const [isloading, setIsloading] = useState(true);
 
   // Ued to passes medication from medicationMenu.js to EditMedication.js
   const [medicationToEdit, setMedicationToEdit] = useState();
@@ -27,7 +33,9 @@ const Medication = (props) => {
   // This state is used to re-render the page after selectedMedicationHandler
   const [forceUpdate, setForceUpdate] = useState(0);
 
-  //------------------------------NAVIGATION FUNCTIONS------------------------------//
+  ////////////////////////////////////////////////////////////////////////////////
+  // NAVIGATION FUNCTIONS
+  ////////////////////////////////////////////////////////////////////////////////
   // Swaps between medication main page and Add medication menu
   const toMedicationMenuHandler = () => {
     setMedicationScreen({
@@ -61,7 +69,9 @@ const Medication = (props) => {
     });
   };
 
-  //------------------------------HTTP REQUESTS------------------------------//
+  ////////////////////////////////////////////////////////////////////////////////
+  // HTTP REQUESTS
+  ////////////////////////////////////////////////////////////////////////////////
   // PUT request to updates the 'selected' field of medications in Firebase
   const selectedMedicationHandler = (selectedMedication) => {
     fetch(
@@ -134,6 +144,7 @@ const Medication = (props) => {
           listMedications.push(medication);
         }
         setListMedications(listMedications);
+        setIsloading(false);
       });
   };
 
@@ -142,7 +153,14 @@ const Medication = (props) => {
     getMedicationList();
   }, []);
 
-  //------------------------------RETURN------------------------------//
+  // Shows a loader while the Fetching
+  if (isloading) {
+    return <CircularProgress />;
+  }
+
+  ////////////////////////////////////////////////////////////////////////////////
+  // RETURN
+  ////////////////////////////////////////////////////////////////////////////////
   return (
     <Card>
       <Grid container direction="column" alignItems="center">

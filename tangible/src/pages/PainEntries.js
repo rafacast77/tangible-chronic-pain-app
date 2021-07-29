@@ -1,23 +1,22 @@
-import React, { useState, useCallback, useEffect } from "react";
+import React, { useState, useCallback } from "react";
 import DatePicker from "../components/EntriePageComponents/DatePicker";
 import PainScale from "../components/EntriePageComponents/PainScale";
-import { Button } from "@material-ui/core";
 import { Container } from "@material-ui/core";
 import Location from "../components/EntriePageComponents/location/Location";
 import Medication from "../components/EntriePageComponents/medication/Medication";
-
+import Treatment from "../components/EntriePageComponents/treatment/Treatment";
+import ExtraComments from "../components/EntriePageComponents/ExtraComments";
+import Grid from "@material-ui/core/Grid";
 const PainEntries = () => {
   // -----------STATES-------------
   const [painEntry, setPainEntry] = useState({
     date: {},
     painLocation: [],
-    painScale: "",
+    painScale: 0,
     medicine: [],
-    treatment: {},
+    treatment: [],
     comments: "",
   });
-
-  // -----------STATES-------------
 
   // -----------UPDATE HANDLERS-------------
 
@@ -45,16 +44,15 @@ const PainEntries = () => {
     });
   };
 
-  const updatePainTreatmentHandler = (entryTreatment) => {
+  const updateTreatmentHandler = (entryTreatment) => {
     setPainEntry((prevState) => {
       return { ...prevState, treatment: entryTreatment };
     });
   };
 
   const updatePainCommentsHandler = (entryComments) => {
-    setPainEntry((prevState) => {
-      return { ...prevState, comments: entryComments };
-    });
+    painEntry.comments = entryComments;
+    sendPainEntryToFirebase(painEntry);
   };
   // -----------UPDATE HANDLERS-------------
 
@@ -74,12 +72,14 @@ const PainEntries = () => {
 
   return (
     <Container maxWidth="lg">
-      <DatePicker getDateTime={updateDateTimeHandler} />
-      <Location getPainLocation={updatePainLocationHandler} />
-      <PainScale getPainScaleValue={updatePainScaleHandler} />
-      <Medication getMedication={updateMedicationHandler} />
-
-      <Button onClick={() => sendPainEntryToFirebase(painEntry)}>Submit</Button>
+      <Grid>
+        <DatePicker getDateTime={updateDateTimeHandler} />
+        <Location getPainLocation={updatePainLocationHandler} />
+        <PainScale getPainScaleValue={updatePainScaleHandler} />
+        <Medication getMedication={updateMedicationHandler} />
+        <Treatment getTreatment={updateTreatmentHandler} />
+        <ExtraComments getComment={updatePainCommentsHandler} />
+      </Grid>
     </Container>
   );
 };

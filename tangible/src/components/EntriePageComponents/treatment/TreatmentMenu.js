@@ -22,57 +22,56 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 /**
- * This component is used for the user to enable or disable existant Locations.
- * It also contains a path to addNew, Edit and Delete Locations.
+ * This component is used for the user to enable or disable existant treatments.
+ * It also contains a path to addNew, Edit and Delete treatments.
  */
-const LocationMenu = (props) => {
-  // Used for styling this component
+const TreatmentMenu = (props) => {
   const classes = useStyles();
 
-  // Selects or De-selects the pain locations shown in locationList.js
-  const SelectedPainLocationHandler = (event) => {
-    props.listPainLocations.forEach((location) => {
-      if (location.locationName === event.target.name) {
-        location.selected = !location.selected;
-        props.getSelectedLocation(location);
+  // Selects or De-selects the  treatments shown in treatmentList.js
+  const SelectedTreatmentHandler = (event) => {
+    props.listTreatments.forEach((treatment) => {
+      if (treatment.treatmentName === event.target.name) {
+        treatment.selected = !treatment.selected;
+        props.getSelectedTreatment(treatment);
       }
     });
   };
-  // Edits a current location in locationMenu.js
-  const editPainLocationHandler = (locationToEdit) => {
-    props.swaptoLocationEdit(locationToEdit);
+  // Edits a current treatment in TreatmentMenu.js
+  const editTreatmentHandler = (treatmentToEdit) => {
+    props.swaptoTreatmentEdit(treatmentToEdit);
   };
 
-  // Deletes a pain location in the locationMenu.js
-  const deletePainLocationHandler = (locationToDelete) => {
-    props.getLocationToDelete(locationToDelete);
+  // Deletes a  treatment in the TreatmentMenu.js
+  const deleteTreatmentHandler = (treatmentToDelete) => {
+    props.getTreatmentToDelete(treatmentToDelete);
   };
 
-  // Deletes a pain location in the locationMenu.js
-  const addPainLocationHandler = () => {
-    props.swapToAddNewLocation();
+  // Deletes a  treatment in the TreatmentMenu.js
+  const addTreatmentHandler = () => {
+    props.swapToAddNewTreatment();
   };
 
   return (
     <FormControl component="fieldset">
-      <FormLabel component="legend">Location Menu</FormLabel>
-      <FormGroup aria-label="location" name="location1">
-        {props.listPainLocations.map((location) => {
+      <FormLabel component="legend">Treatment Menu</FormLabel>
+      <FormGroup aria-label="treatment" name="treatment1">
+        {props.listTreatments.map((treatment) => {
           return (
             <ButtonGroup
-              key={location.fireBaseId}
+              key={treatment.fireBaseId}
               variant="contained"
               color="primary"
               aria-label="split button"
             >
               <FormControlLabel
-                label={location.locationName}
+                label={treatment.treatmentName}
                 control={
                   <Switch
                     p={0.5}
-                    onChange={SelectedPainLocationHandler}
-                    name={location.locationName}
-                    checked={location.selected}
+                    onChange={SelectedTreatmentHandler}
+                    name={treatment.treatmentName}
+                    checked={treatment.selected}
                   />
                 }
               />
@@ -80,14 +79,14 @@ const LocationMenu = (props) => {
               <IconButton
                 aria-label="delete"
                 className={classes.margin}
-                onClick={() => editPainLocationHandler(location)}
+                onClick={() => editTreatmentHandler(treatment)}
               >
                 <BorderColorTwoToneIcon fontSize="medium" color="primary" />
               </IconButton>
               <IconButton
                 aria-label="delete"
                 className={classes.margin}
-                onClick={() => deletePainLocationHandler(location)}
+                onClick={() => deleteTreatmentHandler(treatment)}
               >
                 <DeleteTwoTone fontSize="medium" color="secondary" />
               </IconButton>
@@ -98,7 +97,7 @@ const LocationMenu = (props) => {
       <Button
         size="large"
         variant="contained"
-        onClick={addPainLocationHandler}
+        onClick={addTreatmentHandler}
         color="primary"
       >
         Add New
@@ -106,4 +105,4 @@ const LocationMenu = (props) => {
     </FormControl>
   );
 };
-export default LocationMenu;
+export default TreatmentMenu;
