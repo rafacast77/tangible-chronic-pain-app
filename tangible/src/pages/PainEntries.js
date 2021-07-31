@@ -131,7 +131,7 @@ const PainEntries = () => {
           >
             Back
           </Button>
-          <Typography variant="h5">{PAGESWAPTITLES[pageSwap].title}</Typography>
+          <Typography variant="h4">{PAGESWAPTITLES[pageSwap].title}</Typography>
           <Button
             size="large"
             variant="contained"

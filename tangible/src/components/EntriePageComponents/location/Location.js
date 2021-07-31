@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from "react";
 import LocationList from "./LocationList";
-import { Button } from "@material-ui/core";
-import Card from "../../ui/Card";
 import LocationMenu from "./LocationMenu";
 import Grid from "@material-ui/core/Grid";
 import EditLocation from "./EditLocation";
@@ -153,19 +151,11 @@ const Location = (props) => {
   return (
     <>
       {locationScreen.locationList && (
-        <Grid>
-          <Grid>
-            <LocationList
-              listPainLocations={listPainLocations}
-              getPainLocation={props.getPainLocation}
-            />
-          </Grid>
-          <Grid>
-            <Button variant="contained" onClick={toLocationMenuHandler}>
-              ADD LOCATIONS
-            </Button>
-          </Grid>
-        </Grid>
+        <LocationList
+          listPainLocations={listPainLocations}
+          getPainLocation={props.getPainLocation}
+          toLocationMenu={toLocationMenuHandler}
+        />
       )}
       {locationScreen.locationMenu && (
         <Grid>

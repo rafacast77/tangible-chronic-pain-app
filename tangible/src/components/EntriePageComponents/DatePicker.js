@@ -7,16 +7,22 @@ import Card from "../ui/Card";
 import "react-calendar/dist/Calendar.css";
 
 const useStyles = makeStyles((theme) => ({
-  container: {
-    display: "flex",
-    flexWrap: "wrap",
-    justifyContent: "center",
+  outerGrid: {
+    padding: theme.spacing(5),
+  },
+  timeGrid: {
+    marginTop: theme.spacing(4),
   },
   textField: {
     marginLeft: theme.spacing(1),
     marginRight: theme.spacing(1),
     margin: "1rem 0",
     width: 340,
+  },
+  calendar: {
+    height: "300px",
+    width: "550px",
+    boxShadow: "0 6px 16px rgba(0, 0, 0, 0.2)",
   },
 }));
 
@@ -53,20 +59,19 @@ const DatesPicker = (props) => {
     props.getDateTime(dateTime);
   }, [props, dateTime]);
 
-  const user = "Conor McGregor";
-
   return (
     <>
-      <Grid>
+      <Grid className={classes.outerGrid}>
         <Grid>
           <Calendar
             utcOffset={0}
+            className={classes.calendar}
             onChange={dateChangeHandler}
             value={date}
             minDate={new Date("1 Jan 2019")}
           />
         </Grid>
-        <Grid>
+        <Grid className={classes.timeGrid}>
           <TextField
             id="time"
             label="Time of the pain"

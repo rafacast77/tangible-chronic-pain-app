@@ -158,24 +158,16 @@ const Treatment = (props) => {
             listTreatments={listTreatments}
             getTreatment={props.getTreatment}
             submitMedication={props.submitMedication}
+            toTreatmentMenu={toTreatmentMenuHandler}
           />
-          <Button
-            color="primary"
-            variant="contained"
-            onClick={toTreatmentMenuHandler}
-          >
-            ADD TREATMENTS
-          </Button>
         </>
       )}
       {treatmentScreen.treatmentMenu && (
         <>
-          <Button variant="contained" onClick={toTreatmentListHandler}>
-            Back
-          </Button>
           <TreatmentMenu
             listTreatments={listTreatments}
             getSelectedTreatment={selectedTreatmentHandler}
+            toTreatmentList={toTreatmentListHandler}
             swaptoTreatmentEdit={toTreatmentEditHandler}
             swapToAddNewTreatment={toAddNewTreatmentHandler}
             getTreatmentToDelete={treatmentToDeleteHandler}

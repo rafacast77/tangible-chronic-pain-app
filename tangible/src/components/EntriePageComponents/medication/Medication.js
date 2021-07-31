@@ -165,24 +165,11 @@ const Medication = (props) => {
     <>
       {medicationScreen.medicationList && (
         <>
-          <Grid>
-            <Grid>
-              <MedicationList
-                listMedications={listMedications}
-                getMedication={props.getMedication}
-              />
-            </Grid>
-            <Grid>
-              <Button
-                color="primary"
-                variant="contained"
-                onClick={toMedicationMenuHandler}
-                size={"large"}
-              >
-                ADD MEDICATIONS
-              </Button>
-            </Grid>
-          </Grid>
+          <MedicationList
+            listMedications={listMedications}
+            getMedication={props.getMedication}
+            toMedicationMenu={toMedicationMenuHandler}
+          />
         </>
       )}
       {medicationScreen.medicationMenu && (

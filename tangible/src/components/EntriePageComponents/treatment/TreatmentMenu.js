@@ -3,10 +3,11 @@ import DeleteTwoTone from "@material-ui/icons/DeleteTwoTone";
 import { makeStyles } from "@material-ui/core/styles";
 import BorderColorTwoToneIcon from "@material-ui/icons/BorderColorTwoTone";
 import React from "react";
+import Grid from "@material-ui/core/Grid";
+
 import {
   FormControl,
   FormLabel,
-  ButtonGroup,
   Button,
   Switch,
   FormControlLabel,
@@ -19,6 +20,9 @@ const useStyles = makeStyles((theme) => ({
   },
   extendedIcon: {
     marginRight: theme.spacing(1),
+  },
+  addBack: {
+    marginTop: theme.spacing(1),
   },
 }));
 /**
@@ -58,50 +62,65 @@ const TreatmentMenu = (props) => {
       <FormGroup aria-label="treatment" name="treatment1">
         {props.listTreatments.map((treatment) => {
           return (
-            <ButtonGroup
-              key={treatment.fireBaseId}
-              variant="contained"
-              color="primary"
-              aria-label="split button"
+            <Grid
+              container
+              direction="row"
+              justifyContent="space-between"
+              alignItems="center"
             >
-              <FormControlLabel
-                label={treatment.treatmentName}
-                control={
-                  <Switch
-                    p={0.5}
-                    onChange={SelectedTreatmentHandler}
-                    name={treatment.treatmentName}
-                    checked={treatment.selected}
-                  />
-                }
-              />
-
-              <IconButton
-                aria-label="delete"
-                className={classes.margin}
-                onClick={() => editTreatmentHandler(treatment)}
-              >
-                <BorderColorTwoToneIcon fontSize="medium" color="primary" />
-              </IconButton>
-              <IconButton
-                aria-label="delete"
-                className={classes.margin}
-                onClick={() => deleteTreatmentHandler(treatment)}
-              >
-                <DeleteTwoTone fontSize="medium" color="secondary" />
-              </IconButton>
-            </ButtonGroup>
+              <Grid xs={8}>
+                <FormControlLabel
+                  label={treatment.treatmentName}
+                  control={
+                    <Switch
+                      p={0.5}
+                      onChange={SelectedTreatmentHandler}
+                      name={treatment.treatmentName}
+                      checked={treatment.selected}
+                    />
+                  }
+                />
+              </Grid>
+              <Grid xs={2}>
+                <IconButton
+                  aria-label="delete"
+                  className={classes.margin}
+                  onClick={() => editTreatmentHandler(treatment)}
+                >
+                  <BorderColorTwoToneIcon fontSize="medium" color="primary" />
+                </IconButton>
+              </Grid>
+              <Grid xs={2}>
+                <IconButton
+                  aria-label="delete"
+                  className={classes.margin}
+                  onClick={() => deleteTreatmentHandler(treatment)}
+                >
+                  <DeleteTwoTone fontSize="medium" color="secondary" />
+                </IconButton>
+              </Grid>
+            </Grid>
           );
         })}
       </FormGroup>
-      <Button
-        size="large"
-        variant="contained"
-        onClick={addTreatmentHandler}
-        color="primary"
-      >
-        Add New
-      </Button>
+      <Grid container direction="column">
+        <Button
+          size="large"
+          variant="contained"
+          onClick={addTreatmentHandler}
+          color="primary"
+          className={classes.addBack}
+        >
+          Add New
+        </Button>
+        <Button
+          variant="contained"
+          onClick={props.toTreatmentList}
+          className={classes.addBack}
+        >
+          Back
+        </Button>
+      </Grid>
     </FormControl>
   );
 };

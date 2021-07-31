@@ -23,6 +23,9 @@ const useStyles = makeStyles((theme) => ({
   dose: {
     maxWidth: 80,
   },
+  addButton: {
+    marginTop: theme.spacing(2),
+  },
 }));
 /**
  * This component allows a user to choose the treatment used to alliviate
@@ -118,6 +121,15 @@ const TreatmentList = (props) => {
           return null;
         })}
       </FormGroup>
+      <Button
+        color="primary"
+        size={"large"}
+        variant="contained"
+        onClick={props.toTreatmentMenu}
+        className={classes.addButton}
+      >
+        ADD TREATMENTS
+      </Button>
     </FormControl>
   );
 };

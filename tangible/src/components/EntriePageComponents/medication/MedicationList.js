@@ -24,6 +24,9 @@ const useStyles = makeStyles((theme) => ({
   dose: {
     maxWidth: 80,
   },
+  addButton: {
+    marginTop: theme.spacing(2),
+  },
 }));
 /**
  * This component allows a user to choose the medication taken after
@@ -81,7 +84,6 @@ const MedicationList = (props) => {
       }
     }
   };
- 
 
   return (
     <FormControl component="fieldset">
@@ -133,6 +135,15 @@ const MedicationList = (props) => {
           return null;
         })}
       </FormGroup>
+      <Button
+        color="primary"
+        variant="contained"
+        onClick={props.toMedicationMenu}
+        size={"large"}
+        className={classes.addButton}
+      >
+        ADD MEDICATIONS
+      </Button>
     </FormControl>
   );
 };

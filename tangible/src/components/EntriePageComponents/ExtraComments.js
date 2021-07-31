@@ -4,8 +4,15 @@ import { entryTreatments } from "./treatment/TreatmentList";
 import { entryMedications } from "./medication/MedicationList";
 import { Button, TextField, Grid, makeStyles } from "@material-ui/core";
 const useStyles = makeStyles((theme) => ({
-  dose: {
+  textBox: {
     minWidth: 400,
+  },
+  submitButton: {
+    marginTop: theme.spacing(2),
+  },
+  extraComments: {
+    padding: theme.spacing(4),
+    paddingTop: theme.spacing(6),
   },
 }));
 /**
@@ -19,8 +26,6 @@ const ExtraComments = (props) => {
   const submitPainEntryHandler = () => {
     const comment = commentToAddInput.current.value;
     // swaps forward to the next page
-    console.log(`Meds`, entryMedications);
-    console.log(`Treats`, entryTreatments);
     props.getMedication(entryMedications);
     props.getTreatment(entryTreatments);
     props.getComment(comment);
@@ -28,9 +33,14 @@ const ExtraComments = (props) => {
 
   return (
     <>
-      <Grid container direction="column" alignItems="center">
+      <Grid
+        container
+        direction="column"
+        alignItems="center"
+        className={classes.extraComments}
+      >
         <TextField
-          className={classes.dose}
+          className={classes.textBox}
           id="filled-multiline-static"
           label="Extra Comments"
           autoFocus={true}
@@ -42,7 +52,9 @@ const ExtraComments = (props) => {
         <Button
           variant="contained"
           color="primary"
+          size="large"
           onClick={submitPainEntryHandler}
+          className={classes.submitButton}
         >
           Submit
         </Button>

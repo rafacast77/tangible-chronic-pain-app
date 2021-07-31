@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
     margin: theme.spacing(1),
   },
   addBack: {
-    marginTop: theme.spacing(1),
+    marginTop: theme.spacing(2),
   },
 }));
 

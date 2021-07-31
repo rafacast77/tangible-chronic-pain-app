@@ -1,11 +1,17 @@
 import React, { useCallback } from "react";
 import {
   FormControl,
-  FormLabel,
+  Button,
   Checkbox,
   FormControlLabel,
   FormGroup,
+  makeStyles,
 } from "@material-ui/core";
+const useStyles = makeStyles((theme) => ({
+  addButton: {
+    marginTop: theme.spacing(2),
+  },
+}));
 const entryPainLocations = [];
 /**
  * This component allows a user to choose the location of their pain.
@@ -13,6 +19,7 @@ const entryPainLocations = [];
  * Selected Items are sent to the painEntries.js
  */
 const LocationList = (props) => {
+  const classes = useStyles();
   // Updates the pain locations list that is sent to PainEntries.js
   const painLocationCheckboxHandler = useCallback(
     (event) => {
@@ -52,6 +59,15 @@ const LocationList = (props) => {
           }
         })}
       </FormGroup>
+      <Button
+        variant="contained"
+        onClick={props.toLocationMenu}
+        size={"large"}
+        className={classes.addButton}
+        color="primary"
+      >
+        ADD LOCATIONS
+      </Button>
     </FormControl>
   );
 };
