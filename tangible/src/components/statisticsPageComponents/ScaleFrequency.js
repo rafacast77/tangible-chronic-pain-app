@@ -41,7 +41,7 @@ const ScaleFrequency = (props) => {
   const [currentScale] = useState(scaleFrequency);
 
   return (
-    <Card newStyle={{ padding: "3rem" }}>
+    <Card newStyle={{ padding: "4.5rem" }}>
       <h2>Pain Intensity - Scale Frequency</h2>
       <h3>
         Total pain records: {props.listOfPainEntries.listOfEntries.length}

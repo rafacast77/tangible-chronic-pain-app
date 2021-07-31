@@ -2,13 +2,14 @@ import IconButton from "@material-ui/core/IconButton";
 import DeleteTwoTone from "@material-ui/icons/DeleteTwoTone";
 import { makeStyles } from "@material-ui/core/styles";
 import BorderColorTwoToneIcon from "@material-ui/icons/BorderColorTwoTone";
+import Grid from "@material-ui/core/Grid";
 import React from "react";
 import {
   FormControl,
   FormLabel,
-  ButtonGroup,
   Button,
   Switch,
+  ButtonGroup,
   FormControlLabel,
   FormGroup,
 } from "@material-ui/core";
@@ -17,8 +18,8 @@ const useStyles = makeStyles((theme) => ({
   margin: {
     margin: theme.spacing(1),
   },
-  extendedIcon: {
-    marginRight: theme.spacing(1),
+  addBack: {
+    marginTop: theme.spacing(1),
   },
 }));
 
@@ -60,50 +61,66 @@ const MedicationMenu = (props) => {
       <FormGroup aria-label="medication" name="medication1">
         {props.listMedications.map((medication) => {
           return (
-            <ButtonGroup
-              key={medication.fireBaseId}
-              variant="contained"
-              color="primary"
-              aria-label="split button"
+            <Grid
+              container
+              direction="row"
+              justifyContent="space-between"
+              alignItems="center"
             >
-              <FormControlLabel
-                label={medication.medicationName}
-                control={
-                  <Switch
-                    p={0.5}
-                    onChange={SelectedMedicationHandler}
-                    name={medication.medicationName}
-                    checked={medication.selected}
-                  />
-                }
-              />
-
-              <IconButton
-                aria-label="delete"
-                className={classes.margin}
-                onClick={() => editMedicationHandler(medication)}
-              >
-                <BorderColorTwoToneIcon fontSize="medium" color="primary" />
-              </IconButton>
-              <IconButton
-                aria-label="delete"
-                className={classes.margin}
-                onClick={() => deleteMedicationHandler(medication)}
-              >
-                <DeleteTwoTone fontSize="medium" color="secondary" />
-              </IconButton>
-            </ButtonGroup>
+              <Grid xs={8}>
+                <FormControlLabel
+                  label={medication.medicationName}
+                  control={
+                    <Switch
+                      p={0.5}
+                      onChange={SelectedMedicationHandler}
+                      name={medication.medicationName}
+                      checked={medication.selected}
+                    />
+                  }
+                />
+              </Grid>
+              <Grid xs={2}>
+                <IconButton
+                  aria-label="delete"
+                  className={classes.margin}
+                  onClick={() => editMedicationHandler(medication)}
+                >
+                  <BorderColorTwoToneIcon fontSize="medium" color="primary" />
+                </IconButton>
+              </Grid>
+              <Grid xs={2}>
+                <IconButton
+                  aria-label="delete"
+                  className={classes.margin}
+                  onClick={() => deleteMedicationHandler(medication)}
+                >
+                  <DeleteTwoTone fontSize="medium" color="secondary" />
+                </IconButton>
+              </Grid>
+            </Grid>
           );
         })}
       </FormGroup>
-      <Button
-        size="large"
-        variant="contained"
-        onClick={addMedicationHandler}
-        color="primary"
-      >
-        Add New
-      </Button>
+      <Grid container direction="column">
+        <Button
+          size="large"
+          variant="contained"
+          onClick={addMedicationHandler}
+          color="primary"
+          className={classes.addBack}
+        >
+          Add New
+        </Button>
+        <Button
+          size="large"
+          variant="contained"
+          onClick={() => props.toMedicationList()}
+          className={classes.addBack}
+        >
+          Back
+        </Button>
+      </Grid>
     </FormControl>
   );
 };

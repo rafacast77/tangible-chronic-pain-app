@@ -4,6 +4,7 @@ import PainEntries from "./pages/PainEntries";
 import Profile from "./pages/Profile";
 import Stats from "./pages/Stats";
 import Layout from "./components/layout/Layout";
+import "@fontsource/roboto";
 
 function App() {
   return (

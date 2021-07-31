@@ -12,7 +12,7 @@ import {
   FormHelperText,
   Button,
 } from "@material-ui/core";
-const entryMedications = [];
+export const entryMedications = [];
 const useStyles = makeStyles((theme) => ({
   formControl: {
     paddingLeft: 20,
@@ -81,11 +81,7 @@ const MedicationList = (props) => {
       }
     }
   };
-  // swaps forward to the next page
-  const toTreatmentHandler = () => {
-    // Sends updated list to PainEntries for submission
-    props.getMedication(entryMedications);
-  };
+ 
 
   return (
     <FormControl component="fieldset">
@@ -137,9 +133,6 @@ const MedicationList = (props) => {
           return null;
         })}
       </FormGroup>
-      <Button variant="contained" onClick={toTreatmentHandler}>
-        Next
-      </Button>
     </FormControl>
   );
 };

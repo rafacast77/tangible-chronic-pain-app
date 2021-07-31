@@ -8,6 +8,7 @@ const MODERATE_PAIN =
   "Interferes significantly with daily living activities. Requires lifestyle changes but patient remains independant. Patient unable to adapt pain.";
 const SEVERE_PAIN =
   "Disabling; Unable to perform daily living activities.\n Unable to engage in normal activities Patient is disable and unable to function independently";
+
 export const MARKS = [
   {
     value: 0,
@@ -77,4 +78,29 @@ export const MARKS = [
   },
 ];
 
-
+export const PAGESWAPTITLES = [
+  {
+    question: "What was the day and time of your pain episode?",
+    title: "Date and Time",
+  },
+  {
+    question: "Where does it hurts?",
+    title: "Pain Location",
+  },
+  {
+    question: "How painful was the pain episode?",
+    title: "Pain Scale",
+  },
+  {
+    question: "What medicine did you take to ease the pain ?",
+    title: "Medication",
+  },
+  {
+    question: "Did you tried any treatment-method to ease the pain?",
+    title: "Treatments",
+  },
+  {
+    question: "Is there anything else you would like to add?",
+    title: "Extra Comments",
+  },
+];

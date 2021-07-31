@@ -1,7 +1,9 @@
 .card {
-  padding: 4rem 7rem !important;
+  padding: 2rem;
   margin: 2rem;
   background-color: white;
   border-radius: 6px;
+  height: inherit;
+  width: inherit;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }

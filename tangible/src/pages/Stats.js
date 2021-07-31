@@ -7,11 +7,19 @@ import {
   factorEffectAverage,
 } from "../components/statisticsPageComponents/StatisticHelperFunctions";
 import CircularProgress from "@material-ui/core/CircularProgress";
-
+import Card from "../components/ui/Card";
 import { Container } from "@material-ui/core";
 import Grid from "@material-ui/core/Grid";
-
+const useStyles = {
+  card: {
+    height: "400",
+    width: "90%",
+    textAlign: "center",
+    padding: "2.5rem ",
+  },
+};
 const Stats = () => {
+  const classes = useStyles;
   // List of all pain entries
   const [painEntriesStats, setPainEntriesStats] = useState({
     listOfEntries: null,
@@ -85,29 +93,49 @@ const Stats = () => {
 
   return (
     <Container maxWidth="lg">
-      <Grid>
-        <ScaleFrequency listOfPainEntries={painEntriesStats} />
-        <TimePeriods listOfPainEntries={painEntriesStats} />
-        <AffectingFactors
-          statsTitle="Pain Locations"
-          frequencyData={painEntriesStats.locationFrequency}
-          barColor="#004777"
-        />
-        <AffectingFactors
-          statsTitle="Negative Effects"
-          frequencyData={painEntriesStats.negativeEffectFrequency}
-          barColor="#A30000"
-        />
-        <AffectingFactors
-          statsTitle="Positive Effects"
-          frequencyData={painEntriesStats.positiveEffectFrequency}
-          barColor="#8AEA92"
-        />
-        <AffectingFactors
-          statsTitle="Ineffectual Factors"
-          frequencyData={painEntriesStats.ineffectualFactorFrequency}
-          barColor="#946E83"
-        />
+      <Grid container>
+        <Grid item xs={12}>
+          <ScaleFrequency listOfPainEntries={painEntriesStats} />
+        </Grid>
+        <Grid item xs={12}>
+          <TimePeriods listOfPainEntries={painEntriesStats} />
+        </Grid>
+        <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
+          <Card newStyle={classes.card}>
+            <AffectingFactors
+              statsTitle="Pain Locations"
+              frequencyData={painEntriesStats.locationFrequency}
+              barColor="#83E8FF"
+            />
+          </Card>
+        </Grid>
+        <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
+          <Card newStyle={classes.card}>
+            <AffectingFactors
+              statsTitle="Negative Effects"
+              frequencyData={painEntriesStats.negativeEffectFrequency}
+              barColor="#FF6262"
+            />
+          </Card>
+        </Grid>
+        <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
+          <Card newStyle={classes.card}>
+            <AffectingFactors
+              statsTitle="Positive Effects"
+              frequencyData={painEntriesStats.positiveEffectFrequency}
+              barColor="#84FF97"
+            />
+          </Card>
+        </Grid>
+        <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
+          <Card newStyle={classes.card}>
+            <AffectingFactors
+              statsTitle="Ineffectual Factors"
+              frequencyData={painEntriesStats.ineffectualFactorFrequency}
+              barColor="#946E83"
+            />
+          </Card>
+        </Grid>
       </Grid>
     </Container>
   );

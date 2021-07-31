@@ -1,6 +1,7 @@
 import React from "react";
 import { useRef } from "react";
-import Card from "../ui/Card";
+import { entryTreatments } from "./treatment/TreatmentList";
+import { entryMedications } from "./medication/MedicationList";
 import { Button, TextField, Grid, makeStyles } from "@material-ui/core";
 const useStyles = makeStyles((theme) => ({
   dose: {
@@ -17,11 +18,16 @@ const ExtraComments = (props) => {
   // Submits the extra comments and entire pain entry form.
   const submitPainEntryHandler = () => {
     const comment = commentToAddInput.current.value;
+    // swaps forward to the next page
+    console.log(`Meds`, entryMedications);
+    console.log(`Treats`, entryTreatments);
+    props.getMedication(entryMedications);
+    props.getTreatment(entryTreatments);
     props.getComment(comment);
   };
 
   return (
-    <Card>
+    <>
       <Grid container direction="column" alignItems="center">
         <TextField
           className={classes.dose}
@@ -41,7 +47,7 @@ const ExtraComments = (props) => {
           Submit
         </Button>
       </Grid>
-    </Card>
+    </>
   );
 };
 

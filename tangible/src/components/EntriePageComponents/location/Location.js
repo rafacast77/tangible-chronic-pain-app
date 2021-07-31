@@ -151,48 +151,48 @@ const Location = (props) => {
   // RETURN
   ////////////////////////////////////////////////////////////////////////////////
   return (
-    <Card>
-      <Grid container direction="column" alignItems="center">
-        {locationScreen.locationList && (
-          <>
+    <>
+      {locationScreen.locationList && (
+        <Grid>
+          <Grid>
             <LocationList
               listPainLocations={listPainLocations}
               getPainLocation={props.getPainLocation}
             />
+          </Grid>
+          <Grid>
             <Button variant="contained" onClick={toLocationMenuHandler}>
               ADD LOCATIONS
             </Button>
-          </>
-        )}
-        {locationScreen.locationMenu && (
-          <>
-            <Button variant="contained" onClick={toLocationListHandler}>
-              Back
-            </Button>
-            <LocationMenu
-              listPainLocations={listPainLocations}
-              getSelectedLocation={selectedLocationHandler}
-              swaptoLocationEdit={toLocationEditHandler}
-              swapToAddNewLocation={toAddNewLocationHandler}
-              getLocationToDelete={locationToDeleteHandler}
-            />
-          </>
-        )}
-        {locationScreen.editLocation && (
-          <EditLocation
-            toLocationMenu={toLocationMenuHandler}
-            editLocationName={editLocationNameHandler}
-            painLocationToEdit={painLocationToEdit}
+          </Grid>
+        </Grid>
+      )}
+      {locationScreen.locationMenu && (
+        <Grid>
+          <LocationMenu
+            toLocationList={toLocationListHandler}
+            listPainLocations={listPainLocations}
+            getSelectedLocation={selectedLocationHandler}
+            swaptoLocationEdit={toLocationEditHandler}
+            swapToAddNewLocation={toAddNewLocationHandler}
+            getLocationToDelete={locationToDeleteHandler}
           />
-        )}
-        {locationScreen.addLocation && (
-          <AddNewLocation
-            toLocationMenu={toLocationMenuHandler}
-            addNewLocation={addNewLocationHandler}
-          />
-        )}
-      </Grid>
-    </Card>
+        </Grid>
+      )}
+      {locationScreen.editLocation && (
+        <EditLocation
+          toLocationMenu={toLocationMenuHandler}
+          editLocationName={editLocationNameHandler}
+          painLocationToEdit={painLocationToEdit}
+        />
+      )}
+      {locationScreen.addLocation && (
+        <AddNewLocation
+          toLocationMenu={toLocationMenuHandler}
+          addNewLocation={addNewLocationHandler}
+        />
+      )}
+    </>
   );
 };
 

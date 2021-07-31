@@ -32,7 +32,6 @@ const LocationList = (props) => {
 
   return (
     <FormControl component="fieldset">
-      <FormLabel component="legend">Location</FormLabel>
       <FormGroup aria-label="location" name="location1">
         {props.listPainLocations.map((location) => {
           if (location.selected) {

@@ -11,7 +11,7 @@ import {
   FormHelperText,
   Button,
 } from "@material-ui/core";
-const entryTreatments = [];
+export const entryTreatments = [];
 const useStyles = makeStyles((theme) => ({
   formControl: {
     paddingLeft: 20,
@@ -118,9 +118,6 @@ const TreatmentList = (props) => {
           return null;
         })}
       </FormGroup>
-      <Button variant="contained" onClick={toTreatmentHandler}>
-        Next
-      </Button>
     </FormControl>
   );
 };

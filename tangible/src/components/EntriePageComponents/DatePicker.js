@@ -56,30 +56,34 @@ const DatesPicker = (props) => {
   const user = "Conor McGregor";
 
   return (
-    <Card>
-      <Grid container direction="column" alignItems="center">
-        <h1 style={{ marginBottom: ".5rem" }}>Hello {user}! </h1>
-        <p style={{ marginBottom: "1.2rem" }}>
-          Which part of your leg hurts today?
-        </p>
-        <Calendar utcOffset={0} onChange={dateChangeHandler} value={date} />
-
-        <TextField
-          id="time"
-          label="Time of the pain"
-          type="time"
-          defaultValue={`${currentTime}`}
-          className={classes.textField}
-          onChange={timeChangeHandler}
-          InputLabelProps={{
-            shrink: true,
-          }}
-          inputProps={{
-            step: 300, // 5 min
-          }}
-        />
+    <>
+      <Grid>
+        <Grid>
+          <Calendar
+            utcOffset={0}
+            onChange={dateChangeHandler}
+            value={date}
+            minDate={new Date("1 Jan 2019")}
+          />
+        </Grid>
+        <Grid>
+          <TextField
+            id="time"
+            label="Time of the pain"
+            type="time"
+            defaultValue={`${currentTime}`}
+            className={classes.textField}
+            onChange={timeChangeHandler}
+            InputLabelProps={{
+              shrink: true,
+            }}
+            inputProps={{
+              step: 300, // 5 min
+            }}
+          />
+        </Grid>
       </Grid>
-    </Card>
+    </>
   );
 };
 

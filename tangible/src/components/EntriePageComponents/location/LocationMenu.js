@@ -3,10 +3,10 @@ import DeleteTwoTone from "@material-ui/icons/DeleteTwoTone";
 import { makeStyles } from "@material-ui/core/styles";
 import BorderColorTwoToneIcon from "@material-ui/icons/BorderColorTwoTone";
 import React from "react";
+import Grid from "@material-ui/core/Grid";
 import {
   FormControl,
   FormLabel,
-  ButtonGroup,
   Button,
   Switch,
   FormControlLabel,
@@ -19,6 +19,9 @@ const useStyles = makeStyles((theme) => ({
   },
   extendedIcon: {
     marginRight: theme.spacing(1),
+  },
+  addBackButton: {
+    marginTop: theme.spacing(1),
   },
 }));
 /**
@@ -59,50 +62,65 @@ const LocationMenu = (props) => {
       <FormGroup aria-label="location" name="location1">
         {props.listPainLocations.map((location) => {
           return (
-            <ButtonGroup
-              key={location.fireBaseId}
-              variant="contained"
-              color="primary"
-              aria-label="split button"
+            <Grid
+              container
+              direction="row"
+              justifyContent="space-between"
+              alignItems="center"
             >
-              <FormControlLabel
-                label={location.locationName}
-                control={
-                  <Switch
-                    p={0.5}
-                    onChange={SelectedPainLocationHandler}
-                    name={location.locationName}
-                    checked={location.selected}
-                  />
-                }
-              />
-
-              <IconButton
-                aria-label="delete"
-                className={classes.margin}
-                onClick={() => editPainLocationHandler(location)}
-              >
-                <BorderColorTwoToneIcon fontSize="medium" color="primary" />
-              </IconButton>
-              <IconButton
-                aria-label="delete"
-                className={classes.margin}
-                onClick={() => deletePainLocationHandler(location)}
-              >
-                <DeleteTwoTone fontSize="medium" color="secondary" />
-              </IconButton>
-            </ButtonGroup>
+              <Grid xs={8}>
+                <FormControlLabel
+                  label={location.locationName}
+                  control={
+                    <Switch
+                      p={0.5}
+                      onChange={SelectedPainLocationHandler}
+                      name={location.locationName}
+                      checked={location.selected}
+                    />
+                  }
+                />
+              </Grid>
+              <Grid xs={2}>
+                <IconButton
+                  aria-label="delete"
+                  className={classes.margin}
+                  onClick={() => editPainLocationHandler(location)}
+                >
+                  <BorderColorTwoToneIcon fontSize="medium" color="primary" />
+                </IconButton>
+              </Grid>
+              <Grid xs={2}>
+                <IconButton
+                  aria-label="delete"
+                  className={classes.margin}
+                  onClick={() => deletePainLocationHandler(location)}
+                >
+                  <DeleteTwoTone fontSize="medium" color="secondary" />
+                </IconButton>
+              </Grid>
+            </Grid>
           );
         })}
       </FormGroup>
-      <Button
-        size="large"
-        variant="contained"
-        onClick={addPainLocationHandler}
-        color="primary"
-      >
-        Add New
-      </Button>
+      <Grid container direction="column">
+        <Button
+          size="large"
+          variant="contained"
+          onClick={addPainLocationHandler}
+          color="primary"
+          className={classes.addBackButton}
+        >
+          Add New
+        </Button>
+        <Button
+          variant="contained"
+          onClick={() => props.toLocationList()}
+          className={classes.addBackButton}
+        >
+          Back
+        </Button>
+      </Grid>
     </FormControl>
   );
 };

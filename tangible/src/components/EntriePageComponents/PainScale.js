@@ -7,7 +7,7 @@ import { MARKS } from "./PainEntriesPainRangeText";
 let currentPainLevel = { value: 0, painIntensity: "Pain Free" };
 
 /**
- * This component allows the user to scale the intensity of their pain
+ * This component allows the user to indicate the intensity of their pain
  * from 0 to 10.
  */
 const PainScale = (props) => {
@@ -27,7 +27,7 @@ const PainScale = (props) => {
   };
 
   return (
-    <Card>
+    <>
       <Grid container direction="column" alignItems="center"></Grid>
       <h1>Pain Scale</h1>
       <h4>Indicate your current pain level</h4>
@@ -49,7 +49,7 @@ const PainScale = (props) => {
 
       <h2>{currentPain}</h2>
       <p style={{ height: "50px" }}>{painDescription}</p>
-    </Card>
+    </>
   );
 };
 

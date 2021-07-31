@@ -162,52 +162,55 @@ const Medication = (props) => {
   // RETURN
   ////////////////////////////////////////////////////////////////////////////////
   return (
-    <Card>
-      <Grid container direction="column" alignItems="center">
-        {medicationScreen.medicationList && (
-          <>
-            <MedicationList
-              listMedications={listMedications}
-              getMedication={props.getMedication}
-            />
-            <Button
-              color="primary"
-              variant="contained"
-              onClick={toMedicationMenuHandler}
-            >
-              ADD MEDICATIONS
-            </Button>
-          </>
-        )}
-        {medicationScreen.medicationMenu && (
-          <>
-            <Button variant="contained" onClick={toMedicationListHandler}>
-              Back
-            </Button>
-            <MedicationMenu
-              listMedications={listMedications}
-              getSelectedMedication={selectedMedicationHandler}
-              swaptoMedicationEdit={toMedicationEditHandler}
-              swapToAddNewMedication={toAddNewMedicationHandler}
-              getMedicationToDelete={medicationToDeleteHandler}
-            />
-          </>
-        )}
-        {medicationScreen.editMedication && (
-          <EditMedication
-            toMedicationMenu={toMedicationMenuHandler}
-            editMedicationName={editMedicationNameHandler}
-            medicationToEdit={medicationToEdit}
+    <>
+      {medicationScreen.medicationList && (
+        <>
+          <Grid>
+            <Grid>
+              <MedicationList
+                listMedications={listMedications}
+                getMedication={props.getMedication}
+              />
+            </Grid>
+            <Grid>
+              <Button
+                color="primary"
+                variant="contained"
+                onClick={toMedicationMenuHandler}
+                size={"large"}
+              >
+                ADD MEDICATIONS
+              </Button>
+            </Grid>
+          </Grid>
+        </>
+      )}
+      {medicationScreen.medicationMenu && (
+        <>
+          <MedicationMenu
+            listMedications={listMedications}
+            toMedicationList={toMedicationListHandler}
+            getSelectedMedication={selectedMedicationHandler}
+            swaptoMedicationEdit={toMedicationEditHandler}
+            swapToAddNewMedication={toAddNewMedicationHandler}
+            getMedicationToDelete={medicationToDeleteHandler}
           />
-        )}
-        {medicationScreen.addMedication && (
-          <AddNewMedication
-            toMedicationMenu={toMedicationMenuHandler}
-            addNewMedication={addNewMedicationHandler}
-          />
-        )}
-      </Grid>
-    </Card>
+        </>
+      )}
+      {medicationScreen.editMedication && (
+        <EditMedication
+          toMedicationMenu={toMedicationMenuHandler}
+          editMedicationName={editMedicationNameHandler}
+          medicationToEdit={medicationToEdit}
+        />
+      )}
+      {medicationScreen.addMedication && (
+        <AddNewMedication
+          toMedicationMenu={toMedicationMenuHandler}
+          addNewMedication={addNewMedicationHandler}
+        />
+      )}
+    </>
   );
 };
 

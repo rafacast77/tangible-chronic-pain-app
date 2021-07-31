@@ -57,7 +57,7 @@ const TimePeriods = (props) => {
   };
 
   return (
-    <Card newStyle={{ padding: "3rem" }}>
+    <Card newStyle={{ padding: "4.5rem" }}>
       <h2>Pain Intensity - Time Periods Average</h2>
       <div className={styles["time-periods-container"]}>
         <div className={styles["time-container"]}>

@@ -151,52 +151,51 @@ const Treatment = (props) => {
   // RETURN
   ///////////////////////////////////////////////////////////////////////////////
   return (
-    <Card>
-      <Grid container direction="column" alignItems="center">
-        {treatmentScreen.treatmentList && (
-          <>
-            <TreatmentList
-              listTreatments={listTreatments}
-              getTreatment={props.getTreatment}
-            />
-            <Button
-              color="primary"
-              variant="contained"
-              onClick={toTreatmentMenuHandler}
-            >
-              ADD TREATMENTS
-            </Button>
-          </>
-        )}
-        {treatmentScreen.treatmentMenu && (
-          <>
-            <Button variant="contained" onClick={toTreatmentListHandler}>
-              Back
-            </Button>
-            <TreatmentMenu
-              listTreatments={listTreatments}
-              getSelectedTreatment={selectedTreatmentHandler}
-              swaptoTreatmentEdit={toTreatmentEditHandler}
-              swapToAddNewTreatment={toAddNewTreatmentHandler}
-              getTreatmentToDelete={treatmentToDeleteHandler}
-            />
-          </>
-        )}
-        {treatmentScreen.editTreatment && (
-          <EditTreatment
-            toTreatmentMenu={toTreatmentMenuHandler}
-            editTreatmentName={editTreatmentNameHandler}
-            treatmentToEdit={treatmentToEdit}
+    <>
+      {treatmentScreen.treatmentList && (
+        <>
+          <TreatmentList
+            listTreatments={listTreatments}
+            getTreatment={props.getTreatment}
+            submitMedication={props.submitMedication}
           />
-        )}
-        {treatmentScreen.addTreatment && (
-          <AddNewTreatment
-            toTreatmentMenu={toTreatmentMenuHandler}
-            addNewTreatment={addNewTreatmentHandler}
+          <Button
+            color="primary"
+            variant="contained"
+            onClick={toTreatmentMenuHandler}
+          >
+            ADD TREATMENTS
+          </Button>
+        </>
+      )}
+      {treatmentScreen.treatmentMenu && (
+        <>
+          <Button variant="contained" onClick={toTreatmentListHandler}>
+            Back
+          </Button>
+          <TreatmentMenu
+            listTreatments={listTreatments}
+            getSelectedTreatment={selectedTreatmentHandler}
+            swaptoTreatmentEdit={toTreatmentEditHandler}
+            swapToAddNewTreatment={toAddNewTreatmentHandler}
+            getTreatmentToDelete={treatmentToDeleteHandler}
           />
-        )}
-      </Grid>
-    </Card>
+        </>
+      )}
+      {treatmentScreen.editTreatment && (
+        <EditTreatment
+          toTreatmentMenu={toTreatmentMenuHandler}
+          editTreatmentName={editTreatmentNameHandler}
+          treatmentToEdit={treatmentToEdit}
+        />
+      )}
+      {treatmentScreen.addTreatment && (
+        <AddNewTreatment
+          toTreatmentMenu={toTreatmentMenuHandler}
+          addNewTreatment={addNewTreatmentHandler}
+        />
+      )}
+    </>
   );
 };
 

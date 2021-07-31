@@ -1,6 +1,5 @@
 import React from "react";
-import Card from "../ui/Card";
-import Grid from "@material-ui/core/Grid";
+import { Typography, makeStyles } from "@material-ui/core";
 import {
   BarChart,
   Bar,
@@ -9,24 +8,34 @@ import {
   YAxis,
   Tooltip,
   Legend,
+  ResponsiveContainer,
 } from "recharts";
+const useStyles = makeStyles((theme) => ({
+  graphMargin: {
+    left: "10",
+  },
+  graphTitle: {
+    paddingBottom: "2rem",
+  },
+}));
 /**
  * This reusable component renders the graphs showing treatment and medication
  * effects.
  */
 const AffectingFactors = (props) => {
+  const classes = useStyles();
   // tickFormatter function for showing percentages with 0 decimal places
   const toPercent = (decimal) => {
     return `${decimal.toFixed(0)}%`;
   };
   return (
-    <Card>
-      <Grid>
-        <h2>{props.statsTitle}</h2>
-
+    <>
+      <Typography variant="h4" className={classes.graphTitle}>
+        {props.statsTitle}
+      </Typography>
+      <ResponsiveContainer width="100%" height={400}>
         <BarChart
-          width={930}
-          height={450}
+          margin={{ left: 20 }}
           data={props.frequencyData}
           layout="vertical"
           stackOffset="expand"
@@ -37,7 +46,7 @@ const AffectingFactors = (props) => {
             dataKey="factorAverage"
             tickFormatter={toPercent}
           />
-          <YAxis type="category" dataKey="name" />
+          <YAxis type="category" dataKey="name" angle="-45" />
           <Tooltip
             cursor={{ stroke: "green", strokeWidth: 2 }}
             formatter={toPercent}
@@ -45,8 +54,8 @@ const AffectingFactors = (props) => {
           <Legend />
           <Bar dataKey="factorAverage" fill={props.barColor} />
         </BarChart>
-      </Grid>
-    </Card>
+      </ResponsiveContainer>
+    </>
   );
 };
 

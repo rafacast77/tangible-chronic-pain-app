@@ -21,6 +21,7 @@ export function locationCounter(recordedLocations, entriesLength) {
       count,
     });
   }
+  locationArray.sort(compare);
   return locationArray;
 }
 
@@ -78,6 +79,16 @@ const createListFactorEffects = (treatAndMed, effect) => {
   });
   return medAndTreatBetterAndTotal;
 };
+// Arranges array of objects
+function compare(a, b) {
+  if (a.factorAverage > b.factorAverage) {
+    return -1;
+  }
+  if (a.factorAverage < b.factorAverage) {
+    return 1;
+  }
+  return 0;
+}
 
 // Returns an array containing  the factor name and average of effects
 export function factorEffectAverage(
@@ -103,5 +114,8 @@ export function factorEffectAverage(
       });
     }
   });
+  // Arranges effects in decreasing order
+  factorAndEffectAverage.sort(compare);
+
   return factorAndEffectAverage;
 }
