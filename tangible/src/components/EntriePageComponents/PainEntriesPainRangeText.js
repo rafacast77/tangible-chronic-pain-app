@@ -5,7 +5,7 @@
 const MINOR_PAIN =
   "Nagging, annoying, but doesn't interfere with most daily living activities. Patient able to adapt to pain psychologically and with medication or devices such as cushions.";
 const MODERATE_PAIN =
-  "Interferes significantly with daily living activities. Requires lifestyle changes but patient remains independant. Patient unable to adapt pain.";
+  "Interferes significantly with daily living activities. Requires lifestyle changes but patient remains independent. Patient unable to adapt pain.";
 const SEVERE_PAIN =
   "Disabling; Unable to perform daily living activities.\n Unable to engage in normal activities Patient is disable and unable to function independently";
 
@@ -84,7 +84,7 @@ export const PAGESWAPTITLES = [
     title: "Date and Time",
   },
   {
-    question: "Where does it hurts?",
+    question: "Where does it hurt?",
     title: "Pain Location",
   },
   {
@@ -92,11 +92,11 @@ export const PAGESWAPTITLES = [
     title: "Pain Scale",
   },
   {
-    question: "What medicine did you take to ease the pain ?",
+    question: "What medicine did you take to ease the pain?",
     title: "Medication",
   },
   {
-    question: "Did you tried any treatment-method to ease the pain?",
+    question: "Did you try any treatment-method to ease the pain?",
     title: "Treatments",
   },
   {

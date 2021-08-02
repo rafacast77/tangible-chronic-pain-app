@@ -4,6 +4,7 @@ import LocationMenu from "./LocationMenu";
 import Grid from "@material-ui/core/Grid";
 import EditLocation from "./EditLocation";
 import AddNewLocation from "./AddNewLocation";
+import OuterGrid from "../../ui/OuterGrid";
 
 const Location = (props) => {
   ////////////////////////////////////////////////////////////////////////////////
@@ -149,7 +150,7 @@ const Location = (props) => {
   // RETURN
   ////////////////////////////////////////////////////////////////////////////////
   return (
-    <>
+    <OuterGrid>
       {locationScreen.locationList && (
         <LocationList
           listPainLocations={listPainLocations}
@@ -174,15 +175,17 @@ const Location = (props) => {
           toLocationMenu={toLocationMenuHandler}
           editLocationName={editLocationNameHandler}
           painLocationToEdit={painLocationToEdit}
+          toLocationMenu={toLocationMenuHandler}
         />
       )}
       {locationScreen.addLocation && (
         <AddNewLocation
           toLocationMenu={toLocationMenuHandler}
           addNewLocation={addNewLocationHandler}
+          toLocationMenu={toLocationMenuHandler}
         />
       )}
-    </>
+    </OuterGrid>
   );
 };
 

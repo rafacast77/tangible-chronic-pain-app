@@ -56,6 +56,7 @@ const TreatmentList = (props) => {
         "display: none;"
       );
     }
+    props.getTreatment(entryTreatments);
   };
 
   // Adds effect after medicine to the corresponding medicine
@@ -69,6 +70,7 @@ const TreatmentList = (props) => {
         entryTreatments[i].effect = event.target.value;
       }
     }
+    props.getTreatment(entryTreatments);
   };
 
   // swaps forward to the next page

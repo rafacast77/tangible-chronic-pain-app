@@ -1,32 +1,82 @@
-import Card from "../ui/Card";
-import React, { useState, useEffect } from "react";
+import React, { useState, useCallback, useEffect, useMemo } from "react";
+import { Container, Typography, makeStyles, Button } from "@material-ui/core";
+import Card from "../../components/ui/Card";
+import RecordEntry from "./RecordEntry";
 import CircularProgress from "@material-ui/core/CircularProgress";
+import ChevronLeftTwoToneIcon from "@material-ui/icons/ChevronLeftTwoTone";
+import ChevronRightTwoToneIcon from "@material-ui/icons/ChevronRightTwoTone";
+
+const useStyles = makeStyles((theme) => ({
+  container: {
+    display: "flex",
+    flexWrap: "wrap",
+    justifyContent: "center",
+  },
+  swapBar: {
+    marginLeft: theme.spacing(4.2),
+    marginRight: theme.spacing(4.2),
+  },
+}));
+
+// This function formats a date to "DD Month YYYY"
+const formatDate = (element) => {
+  return new Date(element).toLocaleDateString("en-gb", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
+};
+
+// This function takes in a date and returns its next calendar day
+const getNextDay = (currentDay, add = true) => {
+  const date = new Date(currentDay);
+  add ? date.setDate(date.getDate() + 1) : date.setDate(date.getDate() - 1);
+  return formatDate(date);
+};
+
+// This function takes in a date and returns its next calendar month
+const getNextMonth = (currentMonth, add = true) => {
+  let date = new Date(currentMonth);
+  date = add
+    ? new Date(date.getFullYear(), date.getMonth() + 1, 1).toLocaleDateString(
+        "en-GB",
+        {
+          month: "long",
+          year: "numeric",
+        }
+      )
+    : new Date(date.getFullYear(), date.getMonth() - 1, 1).toLocaleDateString(
+        "en-GB",
+        {
+          month: "long",
+          year: "numeric",
+        }
+      );
+  return date;
+};
+
+// Current day and month formatted to "Month YYYY"
+const currentFormattedMonth = new Date(
+  new Date().getFullYear(),
+  new Date().getMonth(),
+  1
+).toLocaleDateString("en-GB", {
+  month: "long",
+  year: "numeric",
+});
+
+let sortedDates = [];
+let millisecondDates = [];
 
 const Records = () => {
-  // boolean for the loading component
+  const classes = useStyles();
+  let currentPainEntries = useMemo(() => [], []);
+
+  // State management
   const [isloading, setIsloading] = useState(true);
-
-  const [painEntriesRecords, setPainEntriesRecords] = useState([]);
-  // Convert month num to name
-  function monthName(mon) {
-    return [
-      "January",
-      "February",
-      "March",
-      "April",
-      "May",
-      "June",
-      "July",
-      "August",
-      "September",
-      "October",
-      "November",
-      "December",
-    ][mon];
-  }
-
-  const sortedDates = [];
-  const millisecondDates = [];
+  const [currentMonth, setCurrentMonth] = useState(currentFormattedMonth);
+  const [currentEntries, setCurrentEntries] = useState([]);
+  const [monthHasEntries, setMonthHasEntries] = useState(false);
 
   // GET request for the list of dates
   useEffect(() => {
@@ -36,57 +86,110 @@ const Records = () => {
       .then((response) => response.json())
       .then((data) => {
         for (const el in data) {
-          // console.log(
-          //   monthName(new Date(data[el].date.date).getMonth()),
-          //   "test"
-          // );
-
-          // dates.push(new Date(data[el].date.date));
+          // Convert fetched dates to ms for easier sort
           millisecondDates.push(Date.parse(new Date(data[el].date.date)));
         }
 
+        // Sort ms dates array
         millisecondDates.sort(function (a, b) {
           return a - b;
         });
 
+        // Push array of converted ms dates to new array
         millisecondDates.forEach((element) => {
-          sortedDates.push(new Date(element));
+          sortedDates.push(formatDate(element));
         });
 
-        console.log(millisecondDates, "Sorted millisecond Dates");
-        console.log(sortedDates, "Sorted Dates");
+        // Verify whether a month contains any entries
+        const regex = new RegExp(`${currentMonth}`);
+        const monthContainsEntries = regex.test(sortedDates);
 
-        // dates.sort(function (a, b) {
-        //   return Date.parse(a) > Date.parse(b);
-        // });
-        // console.log(dates);
+        // Render entries fallback dynamically
+        setMonthHasEntries(monthContainsEntries);
 
+        // If the month contains entries, put those entries in an array
+        if (monthContainsEntries) {
+          for (const el in data) {
+            if (
+              regex.test(
+                new Date(data[el].date.date).toLocaleDateString("en-GB", {
+                  month: "long",
+                  year: "numeric",
+                })
+              )
+            ) {
+              console.log(data[el]);
+              currentPainEntries.push(data[el]);
+            }
+          }
+        }
+
+        // Resets
+        setCurrentEntries(currentPainEntries);
         setIsloading(false);
       });
-  }, []);
+
+    // useEffect clean-up function
+    return () => {
+      setCurrentEntries([]);
+      sortedDates = [];
+      millisecondDates = [];
+    };
+  }, [currentMonth, currentPainEntries]);
 
   // Shows a loader while the Fetching
   if (isloading) {
-    return (
-      <Card>
-        <CircularProgress />
-      </Card>
-    );
+    return <CircularProgress />;
   }
+
+  // console.log(currentEntries);
+
   return (
-    <Card newStyle={{ textAlign: "center" }}>
-      <h2>prev - DATE - next</h2>
-      <br />
-      <p>
-        I think I could, if I know all the things I used to know. Tell me that
-        first, and then, if I only know how to get dry again: they had a
-        consultation about this, and after a few minutes to see anything; then
-        she looked at the time it all seemed quite natural); but when the Rabbit
-        was no longer to be seen: she found she had put on your shoes and
-        stockings for you now, dears? `I wonder if I only know how to speak good
-        English); `now I'm opening out like the largest telescope that ever was!
-      </p>
-    </Card>
+    <Container maxWidth="lg">
+      <Grid container>
+        <Card>
+          <Grid item xs={12}>
+            <Typography align="center" variant="h4">
+              Pain records
+            </Typography>
+          </Grid>
+        </Card>
+        <Grid
+          container
+          direction="row"
+          justifyContent="space-between"
+          alignItems="center"
+          className={classes.swapBar}
+        >
+          <Button
+            size="large"
+            variant="contained"
+            color="primary"
+            startIcon={<ChevronLeftTwoToneIcon />}
+            onClick={() => setCurrentMonth(getNextMonth(currentMonth, false))}
+          >
+            Back
+          </Button>
+          <Typography variant="h4">{currentMonth}</Typography>
+          <Button
+            size="large"
+            variant="contained"
+            color="primary"
+            endIcon={<ChevronRightTwoToneIcon />}
+            onClick={() => setCurrentMonth(getNextMonth(currentMonth))}
+          >
+            Next
+          </Button>
+        </Grid>
+      </Grid>
+      <Grid>
+        <Card newStyle={{ textAlign: "center", padding: "5rem 0" }}>
+          {monthHasEntries &&
+            currentEntries.map((el) => <p>Pain scale: {el.painScale}</p>)}
+          {!monthHasEntries && <p>No pain was recorded this month</p>}
+        </Card>
+      </Grid>
+    </Container>
   );
 };
 

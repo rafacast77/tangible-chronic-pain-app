@@ -26,8 +26,6 @@ const ExtraComments = (props) => {
   const submitPainEntryHandler = () => {
     const comment = commentToAddInput.current.value;
     // swaps forward to the next page
-    props.getMedication(entryMedications);
-    props.getTreatment(entryTreatments);
     props.getComment(comment);
   };
 
@@ -44,10 +42,10 @@ const ExtraComments = (props) => {
           id="filled-multiline-static"
           label="Extra Comments"
           autoFocus={true}
+          variant="filled"
           multiline
           inputRef={commentToAddInput}
           rows={4}
-          variant="filled"
         />
         <Button
           variant="contained"

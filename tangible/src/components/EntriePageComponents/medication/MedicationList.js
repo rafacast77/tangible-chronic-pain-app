@@ -58,6 +58,7 @@ const MedicationList = (props) => {
         "display: none;"
       );
     }
+    props.getMedication(entryMedications);
   };
 
   // Adds effect after medicine to the corresponding medicine
@@ -71,6 +72,7 @@ const MedicationList = (props) => {
         entryMedications[i].effect = event.target.value;
       }
     }
+    props.getMedication(entryMedications);
   };
   // Adds the dose to the corresponding medicine
   const medicationDoseHandler = (event) => {
@@ -83,6 +85,7 @@ const MedicationList = (props) => {
         entryMedications[i].dose = event.target.value;
       }
     }
+    props.getMedication(entryMedications);
   };
 
   return (

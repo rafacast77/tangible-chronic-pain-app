@@ -6,21 +6,22 @@ import {
   AccordionDetails,
   makeStyles,
 } from "@material-ui/core";
+import Grid from "@material-ui/core/Grid";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 const useStyles = makeStyles((theme) => ({
   root: {
     width: "100%",
   },
   heading: {
-    fontSize: theme.typography.pxToRem(15),
-    fontWeight: theme.typography.fontWeightRegular,
+    fontWeight: theme.typography.fontWeightBold,
   },
   accordion: {
     width: "100%",
     display: "block",
   },
-  block: {
-    display: "block",
+  accordionText: {
+    marginLeft: theme.spacing(1),
+    marginBottom: theme.spacing(4),
   },
   mainAccordion: {
     backgroundColor: ({ accordionColor }) => accordionColor,
@@ -47,13 +48,17 @@ const CustomizedAccordion = (props) => {
         aria-controls="panel1a-content"
         id="panel1a-header"
       >
-        <Typography className={classes.heading}>
+        <Typography variant="h5" className={classes.heading}>
           {props.accordionTitle}
         </Typography>
       </AccordionSummary>
-      <AccordionDetails className={classes.block}>
-        <Typography className={classes.heading}>{props.bodyText}</Typography>
-        <main>{props.children}</main>
+      <AccordionDetails>
+        <Grid container direction="column">
+          <Typography variant="body1" className={classes.accordionText}>
+            {props.bodyText}
+          </Typography>
+          <main>{props.children}</main>
+        </Grid>
       </AccordionDetails>
     </Accordion>
   );

@@ -11,7 +11,6 @@ import Card from "../components/ui/Card";
 import ChevronLeftTwoToneIcon from "@material-ui/icons/ChevronLeftTwoTone";
 import ChevronRightTwoToneIcon from "@material-ui/icons/ChevronRightTwoTone";
 import { PAGESWAPTITLES } from "../components/EntriePageComponents/PainEntriesPainRangeText";
-import Slide from "@material-ui/core/Slide";
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -60,6 +59,7 @@ const PainEntries = () => {
   };
 
   const updateMedicationHandler = (entryMedicine) => {
+    console.log(`medicine`, entryMedicine);
     setPainEntry((prevState) => {
       return { ...prevState, medicine: entryMedicine };
     });
@@ -98,6 +98,7 @@ const PainEntries = () => {
       });
     });
     setPageSwap(0);
+    window.location.reload(false);
   }
 
   return (
@@ -150,7 +151,10 @@ const PainEntries = () => {
         <Card>
           <Grid item xs={12} className={classes.container}>
             {pageSwap === 0 && (
-              <DatePicker getDateTime={updateDateTimeHandler} />
+              <DatePicker
+                getDateTime={updateDateTimeHandler}
+                currentDateTime={painEntry.date}
+              />
             )}
             {pageSwap === 1 && (
               <Location getPainLocation={updatePainLocationHandler} />
@@ -158,14 +162,14 @@ const PainEntries = () => {
             {pageSwap === 2 && (
               <PainScale getPainScaleValue={updatePainScaleHandler} />
             )}
-            {pageSwap === 3 && <Medication />}
-            {pageSwap === 4 && <Treatment submitMedication={pageSwap} />}
+            {pageSwap === 3 && (
+              <Medication getMedication={updateMedicationHandler} />
+            )}
+            {pageSwap === 4 && (
+              <Treatment getTreatment={updateTreatmentHandler} />
+            )}
             {pageSwap === 5 && (
-              <ExtraComments
-                getComment={updatePainCommentsHandler}
-                getMedication={updateMedicationHandler}
-                getTreatment={updateTreatmentHandler}
-              />
+              <ExtraComments getComment={updatePainCommentsHandler} />
             )}
           </Grid>
         </Card>

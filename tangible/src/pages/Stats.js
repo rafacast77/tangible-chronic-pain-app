@@ -10,6 +10,7 @@ import CircularProgress from "@material-ui/core/CircularProgress";
 import Card from "../components/ui/Card";
 import { Container } from "@material-ui/core";
 import Grid from "@material-ui/core/Grid";
+
 const useStyles = {
   card: {
     height: "400",
@@ -18,8 +19,10 @@ const useStyles = {
     padding: "2.5rem ",
   },
 };
+
 const Stats = () => {
   const classes = useStyles;
+
   // List of all pain entries
   const [painEntriesStats, setPainEntriesStats] = useState({
     listOfEntries: null,

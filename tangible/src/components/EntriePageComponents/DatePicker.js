@@ -14,13 +14,11 @@ const useStyles = makeStyles((theme) => ({
     marginTop: theme.spacing(4),
   },
   textField: {
-    marginLeft: theme.spacing(1),
-    marginRight: theme.spacing(1),
-    margin: "1rem 0",
-    width: 340,
+    marginLeft: theme.spacing(15),
+    width: 300,
   },
   calendar: {
-    height: "300px",
+    height: "320px",
     width: "550px",
     boxShadow: "0 6px 16px rgba(0, 0, 0, 0.2)",
   },
@@ -34,8 +32,14 @@ const useStyles = makeStyles((theme) => ({
 const DatesPicker = (props) => {
   const currentTime = new Date().toLocaleTimeString().substr(0, 5);
 
-  const [date, setDate] = useState(new Date());
-  const [time, setTime] = useState(`${currentTime}`);
+  if (props.currentDateTime.time === undefined) {
+    props.currentDateTime.time = currentTime;
+  }
+
+  const [date, setDate] = useState(props.currentDateTime.date || new Date());
+  const [time, setTime] = useState(
+    `${props.currentDateTime.time}` || `${currentTime}`
+  );
   const [dateTime, setDateTime] = useState({ date, time });
 
   const dateChangeHandler = (e) => {
@@ -67,7 +71,7 @@ const DatesPicker = (props) => {
             utcOffset={0}
             className={classes.calendar}
             onChange={dateChangeHandler}
-            value={date}
+            value={props.currentDateTime.date}
             minDate={new Date("1 Jan 2019")}
           />
         </Grid>
@@ -76,7 +80,7 @@ const DatesPicker = (props) => {
             id="time"
             label="Time of the pain"
             type="time"
-            defaultValue={`${currentTime}`}
+            defaultValue={`${props.currentDateTime.time}` || `${currentTime}`}
             className={classes.textField}
             onChange={timeChangeHandler}
             InputLabelProps={{

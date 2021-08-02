@@ -7,6 +7,7 @@ import Grid from "@material-ui/core/Grid";
 import EditMedication from "./EditMedication";
 import AddNewMedication from "./AddNewMedication";
 import CircularProgress from "@material-ui/core/CircularProgress";
+import OuterGrid from "../../ui/OuterGrid";
 
 const Medication = (props) => {
   ////////////////////////////////////////////////////////////////////////////////
@@ -162,7 +163,7 @@ const Medication = (props) => {
   // RETURN
   ////////////////////////////////////////////////////////////////////////////////
   return (
-    <>
+    <OuterGrid>
       {medicationScreen.medicationList && (
         <>
           <MedicationList
@@ -189,15 +190,17 @@ const Medication = (props) => {
           toMedicationMenu={toMedicationMenuHandler}
           editMedicationName={editMedicationNameHandler}
           medicationToEdit={medicationToEdit}
+          toMedicationMenu={toMedicationMenuHandler}
         />
       )}
       {medicationScreen.addMedication && (
         <AddNewMedication
           toMedicationMenu={toMedicationMenuHandler}
           addNewMedication={addNewMedicationHandler}
+          toMedicationMenu={toMedicationMenuHandler}
         />
       )}
-    </>
+    </OuterGrid>
   );
 };
 

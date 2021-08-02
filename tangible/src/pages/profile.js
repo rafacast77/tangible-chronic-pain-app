@@ -2,9 +2,9 @@ import React from "react";
 import Grid from "@material-ui/core/Grid";
 import { Container } from "@material-ui/core";
 import CustomizedAccordion from "../components/profileComponents/CustomizedAccordion";
-// import Signin from "../components/ProfilePageComponents/Signin";
-const userGuideIntroText =
-  "s simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.";
+import UserGuideFormat from "../components/profileComponents/UserGuideFormat";
+import { userGuide } from "../components/profileComponents/TextUserGuide";
+
 const Profile = () => {
   return (
     <Container maxWidth="lg">
@@ -24,19 +24,37 @@ const Profile = () => {
             accordionTitle={"User Guide"}
             accordionColor={"#F5F5F5"}
             panel={"panel3"}
-            bodyText={userGuideIntroText}
+            bodyText={userGuide.userGuideDesc}
           >
             <CustomizedAccordion
-              panel={"panel4"}
+              panel={"panelUser1"}
               accordionTitle={"Entries Screen Guide"}
               accordionColor={"#fff"}
-            />
-            <CustomizedAccordion accordionTitle={"Stats Screen Guide"} />
-            <CustomizedAccordion accordionTitle={"Records Screen Guide"} />
-            <CustomizedAccordion accordionTitle={"Profile Screen Guide"} />
+            >
+              <UserGuideFormat userGuideText={userGuide.entries} />
+            </CustomizedAccordion>
+
+            <CustomizedAccordion
+              accordionTitle={"Stats Screen Guide"}
+              panel={"panelUser2"}
+            >
+              <UserGuideFormat userGuideText={userGuide.stats} />
+            </CustomizedAccordion>
+            <CustomizedAccordion
+              accordionTitle={"Records Screen Guide"}
+              panel={"panelUser3"}
+            >
+              <UserGuideFormat userGuideText={userGuide.records} />
+            </CustomizedAccordion>
+            <CustomizedAccordion
+              accordionTitle={"Profile Screen Guide"}
+              panel={"panelUser4"}
+            >
+              <UserGuideFormat userGuideText={userGuide.profile} />
+            </CustomizedAccordion>
           </CustomizedAccordion>
           <CustomizedAccordion
-            panel={"panel5"}
+            panel={"panel4"}
             accordionTitle={"Customize Scale"}
             accordionColor={"#F5F5F5"}
           ></CustomizedAccordion>

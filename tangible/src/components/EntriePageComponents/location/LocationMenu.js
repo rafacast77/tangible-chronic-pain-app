@@ -23,6 +23,9 @@ const useStyles = makeStyles((theme) => ({
   addBackButton: {
     marginTop: theme.spacing(1),
   },
+  switchText: {
+    textAlign: "left",
+  },
 }));
 /**
  * This component is used for the user to enable or disable existant Locations.
@@ -68,7 +71,7 @@ const LocationMenu = (props) => {
               justifyContent="space-between"
               alignItems="center"
             >
-              <Grid xs={8}>
+              <Grid xs={8} className={classes.switchText}>
                 <FormControlLabel
                   label={location.locationName}
                   control={
