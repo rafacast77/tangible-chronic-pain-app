@@ -1,5 +1,6 @@
 import Card from "../ui/Card";
 import styles from "./ScaleFrequency.module.css";
+import Typography from "@material-ui/core/Typography";
 
 import { useState } from "react";
 
@@ -41,11 +42,12 @@ const ScaleFrequency = (props) => {
   const [currentScale] = useState(scaleFrequency);
 
   return (
-    <Card newStyle={{ padding: "4.5rem" }}>
-      <h2>Pain Intensity - Scale Frequency</h2>
-      <h3>
+    <Card newStyle={{ padding: "4.5rem", marginTop: "4rem" }}>
+      <Typography variant="h4">Pain Intensity - Scale Frequency</Typography>
+      <Typography variant="body1">
         Total pain records: {props.listOfPainEntries.listOfEntries.length}
-      </h3>
+      </Typography>
+
       <div className={styles["pain-records-container"]}>
         <div className={`${styles.none} scale-container`}>
           {currentScale.none}

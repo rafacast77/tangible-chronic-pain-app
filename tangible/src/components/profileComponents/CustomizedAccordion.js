@@ -4,6 +4,7 @@ import {
   AccordionSummary,
   Typography,
   AccordionDetails,
+  Badge,
   makeStyles,
 } from "@material-ui/core";
 import Grid from "@material-ui/core/Grid";
@@ -48,9 +49,16 @@ const CustomizedAccordion = (props) => {
         aria-controls="panel1a-content"
         id="panel1a-header"
       >
-        <Typography variant="h5" className={classes.heading}>
-          {props.accordionTitle}
-        </Typography>
+        <Badge
+          color="secondary"
+          badgeContent={4}
+          variant="dot"
+          invisible={!props.showBadge}
+        >
+          <Typography variant="h5" className={classes.heading}>
+            {props.accordionTitle}
+          </Typography>
+        </Badge>
       </AccordionSummary>
       <AccordionDetails>
         <Grid container direction="column">

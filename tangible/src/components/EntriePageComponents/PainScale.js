@@ -25,6 +25,7 @@ const useStyles = makeStyles((theme) => ({
     marginTop: theme.spacing(2),
   },
 }));
+
 const PainScale = (props) => {
   const classes = useStyles();
   const [currentPain, setCurrentPain] = useState(MARKS[0].painIntensity);

@@ -1,10 +1,12 @@
-import React, { useState, useCallback, useEffect, useMemo } from "react";
+import React, { useState, useEffect, useContext, useMemo } from "react";
 import { Container, Typography, makeStyles, Button } from "@material-ui/core";
 import Card from "../../components/ui/Card";
-import RecordEntry from "./RecordEntry";
+import RecordDays from "./RecordDays";
+import Grid from "@material-ui/core/Grid";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import ChevronLeftTwoToneIcon from "@material-ui/icons/ChevronLeftTwoTone";
 import ChevronRightTwoToneIcon from "@material-ui/icons/ChevronRightTwoTone";
+import AuthContext from "../../store/Auth-context";
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -65,89 +67,172 @@ const currentFormattedMonth = new Date(
   year: "numeric",
 });
 
-let sortedDates = [];
-let millisecondDates = [];
-
+// let currentPainEntries = [];
 const Records = () => {
+  const authCtx = useContext(AuthContext);
+  let userID;
+  if (authCtx.isPainUser) {
+    userID = authCtx.userUID;
+  } else {
+    userID = authCtx.userToSpectUID;
+  }
+
+  // This state is used to re-render the page after selectedLocationHandler
+  const [forceUpdate, setForceUpdate] = useState(0);
+
+  // let millisecondDates = [];
+  let millisecondDates = useMemo(() => [], []);
+
   const classes = useStyles();
-  let currentPainEntries = useMemo(() => [], []);
 
   // State management
-  const [isloading, setIsloading] = useState(true);
+  const [rawData, setRawData] = useState([]);
+
   const [currentMonth, setCurrentMonth] = useState(currentFormattedMonth);
   const [currentEntries, setCurrentEntries] = useState([]);
-  const [monthHasEntries, setMonthHasEntries] = useState(false);
+  const [monthHasEntries, setMonthHasEntries] = useState();
+  const [isMount, setIsMount] = useState(true);
+  const [isloading, setIsloading] = useState(true);
 
-  // GET request for the list of dates
+  const goToNextPage = () => {
+    setCurrentMonth(getNextMonth(currentMonth));
+  };
+  const goToPrevPage = () => {
+    setCurrentMonth(getNextMonth(currentMonth, false));
+  };
+
+  // Takes in data from fetch and sorts
+  const dataHandler = (data) => {
+    const millisecondDates = [];
+    const sortedStringDates = [];
+    const sortedDates = [];
+    const currentPainEntries = [];
+
+    for (const el in data) {
+      // Convert fetched dates to ms for easier sort
+      millisecondDates.push(Date.parse(new Date(data[el].date.date)));
+    }
+
+    // Sort ms dates array
+    millisecondDates.sort(function (a, b) {
+      return a - b;
+    });
+
+    // Push array of converted ms dates to new array
+    millisecondDates.forEach((element) => {
+      sortedStringDates.push(formatDate(element));
+      sortedDates.push(element);
+    });
+
+    // console.log(sortedStringDates, "All dates sorted");
+    // console.log(sortedDates, "All dates sorted");
+
+    const regex = new RegExp(`${currentMonth}`);
+    const monthContainsEntries = regex.test(sortedStringDates);
+    setMonthHasEntries(monthContainsEntries);
+
+    // If the month contains entries
+    if (monthContainsEntries) {
+      // For each object entry
+      // for (const el in data) {
+      //   // If that entry contains the current month
+      //   if (
+      //     regex.test(
+      //       new Date(data[el].date.date).toLocaleDateString("en-GB", {
+      //         month: "long",
+      //         year: "numeric",
+      //       })
+      //     )
+      //   ) {
+      //     // console.log(data[el]);
+      //     currentPainEntries.push(data[el]);
+      //   }
+      // }
+      let sortedEverything = data.map((el) => {
+        console.log("data", data);
+        const dayNumber = new Date(el.date.date).toLocaleDateString("en-GB", {
+          day: "numeric",
+        });
+        const monthNumber = new Date(el.date.date).toLocaleDateString("en-GB", {
+          month: "numeric",
+        });
+        const yearNumber = new Date(el.date.date).toLocaleDateString("en-GB", {
+          year: "numeric",
+        });
+
+        const monthName = new Date(el.date.date).toLocaleDateString("en-GB", {
+          month: "long",
+          year: "numeric",
+        });
+
+        if (regex.test(monthName)) {
+          // console.log(data[el]);
+          //currentPainEntries.push(data[el]);
+          return { [monthName]: el };
+        }
+      });
+
+      console.log(sortedEverything);
+      // sortedEverything.sort(function (a, b) {
+      //   return a - b;
+      // });
+      // console.log(`sortedEverything2`, sortedEverything);
+
+      setCurrentEntries(currentPainEntries, "currentPainEntries");
+    }
+  };
+
+  // This first of two effects handles fetching the data only one time
+  // this will only run once, as it has no dependencies
   useEffect(() => {
+    console.count("FIRST USEEFFECT");
+
     fetch(
-      "https://tangible-47447-default-rtdb.europe-west1.firebasedatabase.app/pain-entries.json"
+      `https://tangible-47447-default-rtdb.europe-west1.firebasedatabase.app/${userID}/pain-entries.json`
     )
       .then((response) => response.json())
       .then((data) => {
+        const that = [];
         for (const el in data) {
-          // Convert fetched dates to ms for easier sort
-          millisecondDates.push(Date.parse(new Date(data[el].date.date)));
+          const thiss = {
+            ...data[el],
+          };
+          that.push(thiss);
         }
-
-        // Sort ms dates array
-        millisecondDates.sort(function (a, b) {
-          return a - b;
-        });
-
-        // Push array of converted ms dates to new array
-        millisecondDates.forEach((element) => {
-          sortedDates.push(formatDate(element));
-        });
-
-        // Verify whether a month contains any entries
-        const regex = new RegExp(`${currentMonth}`);
-        const monthContainsEntries = regex.test(sortedDates);
-
-        // Render entries fallback dynamically
-        setMonthHasEntries(monthContainsEntries);
-
-        // If the month contains entries, put those entries in an array
-        if (monthContainsEntries) {
-          for (const el in data) {
-            if (
-              regex.test(
-                new Date(data[el].date.date).toLocaleDateString("en-GB", {
-                  month: "long",
-                  year: "numeric",
-                })
-              )
-            ) {
-              console.log(data[el]);
-              currentPainEntries.push(data[el]);
-            }
-          }
-        }
-
-        // Resets
-        setCurrentEntries(currentPainEntries);
-        setIsloading(false);
+        setRawData(that);
       });
+  }, []);
 
-    // useEffect clean-up function
-    return () => {
-      setCurrentEntries([]);
-      sortedDates = [];
-      millisecondDates = [];
-    };
-  }, [currentMonth, currentPainEntries]);
+  // The second effect handles the data we get in the first effect's fetch
+  // We skip the first mount, and change it every time a dependency changes
+  useEffect(() => {
+    console.count("SECOND USEEFFECT");
 
-  // Shows a loader while the Fetching
+    // This isMount state allows to skip the first render
+    // of this effect and run it starting from the second.
+    if (isMount) {
+      setIsMount(false);
+      return;
+    }
+
+    // This handler receives the data extracted from Firebase,
+    // and handles and renders it by setting the relevant states
+    dataHandler(rawData);
+
+    setIsloading(false);
+  }, [rawData, currentMonth]);
+
   if (isloading) {
     return <CircularProgress />;
   }
 
-  // console.log(currentEntries);
+  // Test current entries value
+  // console.log(currentEntries, "currentEntries");
 
   return (
     <Container maxWidth="lg">
       <Grid container>
-        <Card>
+        <Card newStyle={{ marginTop: "4rem" }}>
           <Grid item xs={12}>
             <Typography align="center" variant="h4">
               Pain records
@@ -166,7 +251,7 @@ const Records = () => {
             variant="contained"
             color="primary"
             startIcon={<ChevronLeftTwoToneIcon />}
-            onClick={() => setCurrentMonth(getNextMonth(currentMonth, false))}
+            onClick={goToPrevPage}
           >
             Back
           </Button>
@@ -176,17 +261,21 @@ const Records = () => {
             variant="contained"
             color="primary"
             endIcon={<ChevronRightTwoToneIcon />}
-            onClick={() => setCurrentMonth(getNextMonth(currentMonth))}
+            onClick={goToNextPage}
           >
             Next
           </Button>
         </Grid>
       </Grid>
       <Grid>
-        <Card newStyle={{ textAlign: "center", padding: "5rem 0" }}>
-          {monthHasEntries &&
-            currentEntries.map((el) => <p>Pain scale: {el.painScale}</p>)}
-          {!monthHasEntries && <p>No pain was recorded this month</p>}
+        <Card newStyle={{ textAlign: "center", padding: "2.5rem 0" }}>
+          {monthHasEntries && <RecordDays monthEntries={currentEntries} />}
+
+          {!monthHasEntries && (
+            <Typography variant="h5">
+              No pain was recorded this month
+            </Typography>
+          )}
         </Card>
       </Grid>
     </Container>

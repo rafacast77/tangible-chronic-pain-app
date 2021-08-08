@@ -1,6 +1,7 @@
 import Card from "../ui/Card";
 import { useState } from "react";
 import styles from "./TimePeriods.module.css";
+import Typography from "@material-ui/core/Typography";
 
 const calculateAverage = (arr) => {
   if (arr.length === 0) {
@@ -53,7 +54,8 @@ const TimePeriods = (props) => {
 
   return (
     <Card newStyle={{ padding: "4.5rem" }}>
-      <h2>Pain Intensity - Time Periods</h2>
+      <Typography variant="h4">Pain Intensity - Time Periods</Typography>
+
       <div className={styles["time-periods-container"]}>
         <div className={styles["time-container"]}>
           <h4>Occurrences:</h4>

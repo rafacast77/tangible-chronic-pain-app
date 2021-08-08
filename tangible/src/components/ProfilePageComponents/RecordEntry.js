@@ -1,11 +1,9 @@
-import Card from "../../components/ui/Card";
+import { Typography } from "@material-ui/core";
 
 const RecordEntry = (props) => {
-  return (
-    <>
-      <h1>Pain Scale: {props.painScale || "none"}</h1>
-    </>
-  );
+  const classes = useStyles();
+
+  return <></>;
 };
 
 export default RecordEntry;

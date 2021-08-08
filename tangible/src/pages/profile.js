@@ -1,15 +1,23 @@
-import React from "react";
+import React, { useContext, useState } from "react";
+import { spacing } from "@material-ui/system";
 import Grid from "@material-ui/core/Grid";
-import { Container } from "@material-ui/core";
+import { Badge, Container } from "@material-ui/core";
 import CustomizedAccordion from "../components/profileComponents/CustomizedAccordion";
+import Card from "../components/ui/Card";
 import UserGuideFormat from "../components/profileComponents/UserGuideFormat";
 import { userGuide } from "../components/profileComponents/TextUserGuide";
+import Spectator from "../components/profileComponents/spectator/Spectator";
+import AuthContext from "../store/Auth-context";
+import Spected from "../components/profileComponents/spectedUser/Spected";
 
 const Profile = () => {
+  const authCtx = useContext(AuthContext);
+  const [state, setstate] = useState(false);
+
   return (
     <Container maxWidth="lg">
-      <Grid>
-        <div>
+      <Card newStyle={{ marginTop: "4rem", padding: "4rem 10rem" }}>
+        <Grid>
           <CustomizedAccordion
             accordionTitle={"Account Information"}
             accordionColor={"#F5F5F5"}
@@ -17,9 +25,16 @@ const Profile = () => {
           ></CustomizedAccordion>
           <CustomizedAccordion
             accordionTitle={"Spectators"}
+            showBadge={state}
             accordionColor={"#F5F5F5"}
             panel={"panel2"}
-          ></CustomizedAccordion>
+          >
+            {authCtx.isPainUser && <Spected />}
+            {!authCtx.isPainUser && (
+              <Spectator showBadge={(shodbadge) => setstate(shodbadge)} />
+            )}
+          </CustomizedAccordion>
+
           <CustomizedAccordion
             accordionTitle={"User Guide"}
             accordionColor={"#F5F5F5"}
@@ -58,8 +73,8 @@ const Profile = () => {
             accordionTitle={"Customize Scale"}
             accordionColor={"#F5F5F5"}
           ></CustomizedAccordion>
-        </div>
-      </Grid>
+        </Grid>
+      </Card>
     </Container>
   );
 };

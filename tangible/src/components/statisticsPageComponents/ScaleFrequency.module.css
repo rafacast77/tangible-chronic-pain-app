@@ -1,6 +1,8 @@
 .pain-records-container {
   display: flex;
   justify-content: space-around;
+  font-family: "Roboto", sans-serif !important;
+  font-weight: 400;
   margin: 5rem;
 }
 
@@ -10,10 +12,14 @@
   height: 80px;
   padding: 17px;
   background: #fff;
-  color: #000;
+  color: rgb(0, 0, 0);
   text-align: center;
   font-size: 2.5rem;
   user-select: none;
+}
+
+.scale-container {
+  color: rgb(255, 255, 255);
 }
 
 .pain-records-container > div::after {

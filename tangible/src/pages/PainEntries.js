@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from "react";
+import React, { useState, useCallback, useContext } from "react";
 import DatePicker from "../components/EntriePageComponents/DatePicker";
 import PainScale from "../components/EntriePageComponents/PainScale";
 import { Container, Typography, makeStyles, Button } from "@material-ui/core";
@@ -11,6 +11,7 @@ import Card from "../components/ui/Card";
 import ChevronLeftTwoToneIcon from "@material-ui/icons/ChevronLeftTwoTone";
 import ChevronRightTwoToneIcon from "@material-ui/icons/ChevronRightTwoTone";
 import { PAGESWAPTITLES } from "../components/EntriePageComponents/PainEntriesPainRangeText";
+import AuthContext from "../store/Auth-context";
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -26,6 +27,9 @@ const useStyles = makeStyles((theme) => ({
 
 const PainEntries = () => {
   const classes = useStyles();
+
+  const authCtx = useContext(AuthContext);
+
   // -----------STATES-------------
   const [painEntry, setPainEntry] = useState({
     date: {},
@@ -59,7 +63,6 @@ const PainEntries = () => {
   };
 
   const updateMedicationHandler = (entryMedicine) => {
-    console.log(`medicine`, entryMedicine);
     setPainEntry((prevState) => {
       return { ...prevState, medicine: entryMedicine };
     });
@@ -79,7 +82,7 @@ const PainEntries = () => {
   // Sends the painEntry to firebase
   function sendPainEntryToFirebase(painEntry) {
     fetch(
-      "https://tangible-47447-default-rtdb.europe-west1.firebasedatabase.app/pain-entries.json",
+      `https://tangible-47447-default-rtdb.europe-west1.firebasedatabase.app/${authCtx.userUID}/pain-entries.json`,
       {
         method: "POST",
         body: JSON.stringify(painEntry),
@@ -104,7 +107,7 @@ const PainEntries = () => {
   return (
     <Container maxWidth="lg">
       <Grid container>
-        <Card>
+        <Card newStyle={{ marginTop: "4rem" }}>
           <Grid item xs={12}>
             <Typography align="center" display="block" variant="h4">
               {PAGESWAPTITLES[pageSwap].question}

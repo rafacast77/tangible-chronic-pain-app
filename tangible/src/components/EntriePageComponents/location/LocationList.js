@@ -1,4 +1,4 @@
-import React, { useCallback } from "react";
+import React, { useCallback, useState } from "react";
 import {
   FormControl,
   Button,
@@ -19,6 +19,13 @@ const entryPainLocations = [];
  * Selected Items are sent to the painEntries.js
  */
 const LocationList = (props) => {
+  // const [isChecked, setIsChecked] = useState(false);
+
+  // const changeHandler = (e) => {
+  //   console.log(e.target.checked);
+  //   setIsChecked(e.target.checked);
+  // };
+
   const classes = useStyles();
   // Updates the pain locations list that is sent to PainEntries.js
   const painLocationCheckboxHandler = useCallback(
@@ -50,6 +57,8 @@ const LocationList = (props) => {
                   <Checkbox
                     onChange={painLocationCheckboxHandler}
                     name={location.locationName}
+                    // onChange={changeHandler}
+                    // checked={isChecked}
                   />
                 }
               />

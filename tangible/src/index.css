@@ -4,8 +4,11 @@
 }
 
 body {
-  overflow: scroll;
   background-color: #dfdfdf;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
 
 .card {

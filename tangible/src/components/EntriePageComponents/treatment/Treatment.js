@@ -6,8 +6,11 @@ import TreatmentMenu from "./TreatmentMenu";
 import Grid from "@material-ui/core/Grid";
 import EditTreatment from "./EditTreatment";
 import AddNewTreatment from "./AddNewTreatment";
+import AuthContext from "../../../store/Auth-context";
+import { useContext } from "react";
 
 const Treatment = (props) => {
+  const authCtx = useContext(AuthContext);
   ////////////////////////////////////////////////////////////////////////////////
   // STATES
   ////////////////////////////////////////////////////////////////////////////////
@@ -71,7 +74,7 @@ const Treatment = (props) => {
   // PUT request to updates the 'selected' field of treatments in Firebase
   const selectedTreatmentHandler = (selectedTreatment) => {
     fetch(
-      `https://tangible-47447-default-rtdb.europe-west1.firebasedatabase.app/treatments/${selectedTreatment.fireBaseId}.json`,
+      `https://tangible-47447-default-rtdb.europe-west1.firebasedatabase.app/${authCtx.userUID}/treatments/${selectedTreatment.fireBaseId}.json`,
       {
         method: "PUT",
         body: JSON.stringify(selectedTreatment),
@@ -86,7 +89,7 @@ const Treatment = (props) => {
   // PUT request to updates the 'treatmentName' field of treatments in Firebase
   const editTreatmentNameHandler = (treatmentToEdit) => {
     fetch(
-      `https://tangible-47447-default-rtdb.europe-west1.firebasedatabase.app/treatments/${treatmentToEdit.fireBaseId}.json`,
+      `https://tangible-47447-default-rtdb.europe-west1.firebasedatabase.app/${authCtx.userUID}/treatments/${treatmentToEdit.fireBaseId}.json`,
       {
         method: "PUT",
         body: JSON.stringify(treatmentToEdit),
@@ -100,7 +103,7 @@ const Treatment = (props) => {
   // POST new  treatment to firebase
   function addNewTreatmentHandler(treatmentToAdd) {
     fetch(
-      `https://tangible-47447-default-rtdb.europe-west1.firebasedatabase.app/treatments.json`,
+      `https://tangible-47447-default-rtdb.europe-west1.firebasedatabase.app/${authCtx.userUID}/treatments.json`,
       {
         method: "POST",
         body: JSON.stringify(treatmentToAdd),
@@ -116,7 +119,7 @@ const Treatment = (props) => {
   // DELETE request to delete a  treatments in Firebase
   const treatmentToDeleteHandler = (treatmentToDelete) => {
     fetch(
-      `https://tangible-47447-default-rtdb.europe-west1.firebasedatabase.app/treatments/${treatmentToDelete.fireBaseId}.json`,
+      `https://tangible-47447-default-rtdb.europe-west1.firebasedatabase.app/${authCtx.userUID}/treatments/${treatmentToDelete.fireBaseId}.json`,
       { method: "DELETE" }
     ).then((response) => {
       getTreatmentList();
@@ -126,7 +129,7 @@ const Treatment = (props) => {
   // GET request to Firebase for  treatment list and updates state with it.
   const getTreatmentList = () => {
     fetch(
-      "https://tangible-47447-default-rtdb.europe-west1.firebasedatabase.app/treatments.json"
+      `https://tangible-47447-default-rtdb.europe-west1.firebasedatabase.app/${authCtx.userUID}/treatments.json`
     )
       .then((response) => response.json())
       .then((data) => {

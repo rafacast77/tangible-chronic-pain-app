@@ -1,12 +1,14 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import LocationList from "./LocationList";
 import LocationMenu from "./LocationMenu";
 import Grid from "@material-ui/core/Grid";
 import EditLocation from "./EditLocation";
 import AddNewLocation from "./AddNewLocation";
 import OuterGrid from "../../ui/OuterGrid";
+import AuthContext from "../../../store/Auth-context";
 
 const Location = (props) => {
+  const authCtx = useContext(AuthContext);
   ////////////////////////////////////////////////////////////////////////////////
   // STATES
   ////////////////////////////////////////////////////////////////////////////////
@@ -70,7 +72,7 @@ const Location = (props) => {
   // PUT request to updates the 'selected' field of locations in Firebase
   const selectedLocationHandler = (selectedLocation) => {
     fetch(
-      `https://tangible-47447-default-rtdb.europe-west1.firebasedatabase.app/pain-locations/${selectedLocation.fireBaseId}.json`,
+      `https://tangible-47447-default-rtdb.europe-west1.firebasedatabase.app/${authCtx.userUID}/pain-locations/${selectedLocation.fireBaseId}.json`,
       {
         method: "PUT",
         body: JSON.stringify(selectedLocation),
@@ -85,7 +87,7 @@ const Location = (props) => {
   // PUT request to updates the 'locationName' field of locations in Firebase
   const editLocationNameHandler = (locationToEdit) => {
     fetch(
-      `https://tangible-47447-default-rtdb.europe-west1.firebasedatabase.app/pain-locations/${locationToEdit.fireBaseId}.json`,
+      `https://tangible-47447-default-rtdb.europe-west1.firebasedatabase.app${authCtx.userUID}//pain-locations/${locationToEdit.fireBaseId}.json`,
       {
         method: "PUT",
         body: JSON.stringify(locationToEdit),
@@ -99,7 +101,7 @@ const Location = (props) => {
   // POST new pain location to firebase
   function addNewLocationHandler(locationToAdd) {
     fetch(
-      `https://tangible-47447-default-rtdb.europe-west1.firebasedatabase.app/pain-locations.json`,
+      `https://tangible-47447-default-rtdb.europe-west1.firebasedatabase.app/${authCtx.userUID}/pain-locations.json`,
       {
         method: "POST",
         body: JSON.stringify(locationToAdd),
@@ -115,7 +117,7 @@ const Location = (props) => {
   // DELETE request to delete a pain locations in Firebase
   const locationToDeleteHandler = (locationToDelete) => {
     fetch(
-      `https://tangible-47447-default-rtdb.europe-west1.firebasedatabase.app/pain-locations/${locationToDelete.fireBaseId}.json`,
+      `https://tangible-47447-default-rtdb.europe-west1.firebasedatabase.app/${authCtx.userUID}/pain-locations/${locationToDelete.fireBaseId}.json`,
       { method: "DELETE" }
     ).then((response) => {
       getLocationList();
@@ -124,13 +126,16 @@ const Location = (props) => {
 
   // GET request to Firebase for pain location list and updates state with it.
   const getLocationList = () => {
+    // ${authCtx.userUID}/
+    console.log("PainUserId", authCtx.userUID);
     fetch(
-      "https://tangible-47447-default-rtdb.europe-west1.firebasedatabase.app/pain-locations.json"
+      `https://tangible-47447-default-rtdb.europe-west1.firebasedatabase.app/${authCtx.userUID}/pain-locations.json`
     )
       .then((response) => response.json())
       .then((data) => {
+        console.log(data);
         const listLocations = [];
-
+        console.log(data);
         for (const key in data) {
           const location = {
             fireBaseId: key,

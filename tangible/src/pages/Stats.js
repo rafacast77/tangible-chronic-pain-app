@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import AffectingFactors from "../components/statisticsPageComponents/AffectingFactors";
 import ScaleFrequency from "../components/statisticsPageComponents/ScaleFrequency";
 import TimePeriods from "../components/statisticsPageComponents/TimePeriods";
@@ -10,6 +10,7 @@ import CircularProgress from "@material-ui/core/CircularProgress";
 import Card from "../components/ui/Card";
 import { Container } from "@material-ui/core";
 import Grid from "@material-ui/core/Grid";
+import AuthContext from "../store/Auth-context";
 
 const useStyles = {
   card: {
@@ -21,7 +22,14 @@ const useStyles = {
 };
 
 const Stats = () => {
+  const authCtx = useContext(AuthContext);
   const classes = useStyles;
+  let userID;
+  if (authCtx.isPainUser) {
+    userID = authCtx.userUID;
+  } else {
+    userID = authCtx.userToSpectUID;
+  }
 
   // List of all pain entries
   const [painEntriesStats, setPainEntriesStats] = useState({
@@ -38,7 +46,7 @@ const Stats = () => {
   // GET request for the list of locations when Page loads for the first time.
   useEffect(() => {
     fetch(
-      "https://tangible-47447-default-rtdb.europe-west1.firebasedatabase.app/pain-entries.json"
+      `https://tangible-47447-default-rtdb.europe-west1.firebasedatabase.app/${userID}/pain-entries.json`
     )
       .then((response) => response.json())
       .then((data) => {
@@ -88,7 +96,6 @@ const Stats = () => {
         setIsloading(false);
       });
   }, []);
-
   // Shows a loader while the Fetching
   if (isloading) {
     return <CircularProgress />;

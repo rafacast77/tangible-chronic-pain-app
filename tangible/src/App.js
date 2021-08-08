@@ -1,15 +1,16 @@
-import { Route, Switch } from "react-router-dom";
+import { Route, Switch, Redirect } from "react-router-dom";
 import Records from "./pages/Records";
 import PainEntries from "./pages/PainEntries";
 import Profile from "./pages/Profile";
 import Stats from "./pages/Stats";
-import Layout from "./components/layout/Layout";
 import NavBar from "./components/layout/NavBar";
-import Signin from "./pages/Signin";
+import Home from "./pages/Home";
 import "@fontsource/roboto";
-import { MuiThemeProvider, createMuiTheme } from "@material-ui/core";
+import { MuiThemeProvider, createTheme } from "@material-ui/core";
+import AuthContext from "./store/Auth-context";
+import { useContext } from "react";
 
-const theme = createMuiTheme({
+const theme = createTheme({
   palette: {
     primary: {
       light: "#33c9dc",
@@ -19,7 +20,7 @@ const theme = createMuiTheme({
     },
     secondary: {
       light: "#ff6333",
-      main: "#ff3d00",
+      main: "#FF9248",
       dark: "#b22a00",
       contrastText: "#fff",
     },
@@ -31,26 +32,55 @@ const theme = createMuiTheme({
   },
 });
 function App() {
+  const authCtx = useContext(AuthContext);
+  const renderEntryScreen = () => {
+    if (authCtx.isLoggedIn) {
+      if (authCtx.isPainUser) {
+        console.log(`authCtx.isPainUser`, authCtx.isPainUser);
+        return (
+          <Route path="/pain-entries" exact component={PainEntries}>
+            <PainEntries />
+          </Route>
+        );
+      }
+    }
+  };
   return (
     <MuiThemeProvider theme={theme}>
       <NavBar />
       <Switch fallback={<p>Loading...</p>}>
-        <Route path="/" exact component={Signin}></Route>
+        {!authCtx.isLoggedIn && <Route path="/" exact component={Home}></Route>}
 
-        <Route path="/records" exact component={Records}>
-          <Records />
-        </Route>
+        {authCtx.isLoggedIn && (
+          <Route path="/records" exact component={Records}>
+            <Records />
+          </Route>
+        )}
 
-        <Route path="/pain-entries" exact component={PainEntries}>
-          <PainEntries />
-        </Route>
+        {authCtx.isLoggedIn && (
+          <Route path="/stats" exact component={Stats}>
+            <Stats />
+          </Route>
+        )}
 
-        <Route path="/stats" exact component={Stats}>
-          <Stats />
-        </Route>
-
-        <Route path="/profile" exact component={Profile}>
-          <Profile />
+        {authCtx.isLoggedIn && (
+          <Route path="/profile" exact component={Profile}>
+            <Profile />
+          </Route>
+        )}
+        {authCtx.isLoggedIn && (
+          <Route path="*">
+            <Redirect to="/stats" />
+          </Route>
+        )}
+        {!authCtx.isPainUser && (
+          <Route path="/pain-entries">
+            <Redirect to="/stats" />
+          </Route>
+        )}
+        {renderEntryScreen()}
+        <Route path="*">
+          <Redirect to="/" />
         </Route>
       </Switch>
     </MuiThemeProvider>
