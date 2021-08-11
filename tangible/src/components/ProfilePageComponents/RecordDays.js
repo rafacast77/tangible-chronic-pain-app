@@ -1,5 +1,6 @@
 import { Typography } from "@material-ui/core";
-import { useState, useEffect } from "react";
+import { makeStyles } from "@material-ui/core/styles";
+import RecordEntry from "./RecordEntry";
 
 const days = [
   "Sunday",
@@ -11,41 +12,46 @@ const days = [
   "Saturday",
 ];
 
-const RecordDays = ({ monthEntries }) => {
-  const [entries, setEntries] = useState([]);
+const useStyles = makeStyles((theme) => ({
+  day: {
+    color: "#666",
+    margin: "auto",
+    marginBottom: "3rem",
+    width: 500,
+    textAlign: "center",
+    borderBottom: "2px solid #666",
+    lineHeight: "0.1em",
 
-  useEffect(() => {
-    console.log(monthEntries);
+    "&:first-child": {
+      marginTop: "1.8rem",
+    },
+    "& span": {
+      color: "#666",
+      margin: "auto",
+      background: "#fff",
+      padding: "0 10px",
+    },
+  },
+}));
 
-    let monthDays = [];
-    let whatsThis = [];
-    let daysOftheWeek = [];
+const dateToWeekday = (date) => {
+  return days[new Date(date).getDay()] + " " + new Date(date).getDate();
+};
 
-    const monthEntries2 = monthEntries.map((el) => {
-      return { ...el, dayOfWeek: days[new Date(el.date.date).getDay()] };
-      //monthDays.push(new Date(el.date.date).getDay());
-      // sortedMonthDays = monthDays.sort((a, b) => {
-      //   return a - b;
-      // });
+const RecordDays = ({ currentDay, entries }) => {
+  const classes = useStyles({});
 
-      daysOftheWeek.push(days[+new Date(el.date.date).getDay()]);
+  return (
+    <>
+      <Typography className={classes.day} variant="h5">
+        <span> {dateToWeekday(currentDay)}</span>
+      </Typography>
 
-      // monthDays = [days[];
-      // monthDays = sortedMonthDays;
-
-      // whatsThis = new Date(el.date.date).toLocaleDateString("en-GB", {
-      //   day: "numeric",
-      // });
-
-      days.push(whatsThis);
-    });
-
-    console.log("monthEntries2", monthEntries2);
-
-    // setEntries();
-  }, [monthEntries]);
-
-  return <Typography variant="h5">Month has entries</Typography>;
+      {entries.map((e) => {
+        return <RecordEntry entry={e} />;
+      })}
+    </>
+  );
 };
 
 export default RecordDays;

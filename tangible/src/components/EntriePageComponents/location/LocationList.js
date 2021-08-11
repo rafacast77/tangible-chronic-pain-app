@@ -75,7 +75,7 @@ const LocationList = (props) => {
         className={classes.addButton}
         color="primary"
       >
-        ADD LOCATIONS
+        EDIT LOCATIONS
       </Button>
     </FormControl>
   );

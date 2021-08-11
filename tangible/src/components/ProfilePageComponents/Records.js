@@ -29,13 +29,6 @@ const formatDate = (element) => {
   });
 };
 
-// This function takes in a date and returns its next calendar day
-const getNextDay = (currentDay, add = true) => {
-  const date = new Date(currentDay);
-  add ? date.setDate(date.getDate() + 1) : date.setDate(date.getDate() - 1);
-  return formatDate(date);
-};
-
 // This function takes in a date and returns its next calendar month
 const getNextMonth = (currentMonth, add = true) => {
   let date = new Date(currentMonth);
@@ -78,10 +71,7 @@ const Records = () => {
   }
 
   // This state is used to re-render the page after selectedLocationHandler
-  const [forceUpdate, setForceUpdate] = useState(0);
-
-  // let millisecondDates = [];
-  let millisecondDates = useMemo(() => [], []);
+  // const [forceUpdate, setForceUpdate] = useState(0);
 
   const classes = useStyles();
 
@@ -93,6 +83,7 @@ const Records = () => {
   const [monthHasEntries, setMonthHasEntries] = useState();
   const [isMount, setIsMount] = useState(true);
   const [isloading, setIsloading] = useState(true);
+  const [appHasEntries, setAppHasEntries] = useState(false);
 
   const goToNextPage = () => {
     setCurrentMonth(getNextMonth(currentMonth));
@@ -101,12 +92,21 @@ const Records = () => {
     setCurrentMonth(getNextMonth(currentMonth, false));
   };
 
+  const getDay = (entries) => {
+    const records = [];
+
+    for (const day in entries) {
+      records.push(<RecordDays currentDay={day} entries={entries[day]} />);
+    }
+
+    return records;
+  };
+
   // Takes in data from fetch and sorts
   const dataHandler = (data) => {
     const millisecondDates = [];
     const sortedStringDates = [];
     const sortedDates = [];
-    const currentPainEntries = [];
 
     for (const el in data) {
       // Convert fetched dates to ms for easier sort
@@ -133,52 +133,60 @@ const Records = () => {
 
     // If the month contains entries
     if (monthContainsEntries) {
-      // For each object entry
-      // for (const el in data) {
-      //   // If that entry contains the current month
-      //   if (
-      //     regex.test(
-      //       new Date(data[el].date.date).toLocaleDateString("en-GB", {
-      //         month: "long",
-      //         year: "numeric",
-      //       })
-      //     )
-      //   ) {
-      //     // console.log(data[el]);
-      //     currentPainEntries.push(data[el]);
-      //   }
-      // }
+      console.log(data, "ALLDATA");
       let sortedEverything = data.map((el) => {
-        console.log("data", data);
-        const dayNumber = new Date(el.date.date).toLocaleDateString("en-GB", {
-          day: "numeric",
-        });
-        const monthNumber = new Date(el.date.date).toLocaleDateString("en-GB", {
-          month: "numeric",
-        });
-        const yearNumber = new Date(el.date.date).toLocaleDateString("en-GB", {
-          year: "numeric",
-        });
-
         const monthName = new Date(el.date.date).toLocaleDateString("en-GB", {
+          day: "numeric",
           month: "long",
           year: "numeric",
         });
 
-        if (regex.test(monthName)) {
-          // console.log(data[el]);
+        console.log(regex.test(monthName), "REGEX MONTH NAME");
+
+        if (regex.test(currentMonth)) {
           //currentPainEntries.push(data[el]);
           return { [monthName]: el };
         }
       });
 
-      console.log(sortedEverything);
-      // sortedEverything.sort(function (a, b) {
-      //   return a - b;
-      // });
-      // console.log(`sortedEverything2`, sortedEverything);
+      const currentMonthEntries = [];
+      console.log(sortedEverything, "sortedEverything");
 
-      setCurrentEntries(currentPainEntries, "currentPainEntries");
+      sortedEverything.map((el) => {
+        if (regex.test(Object.keys(el))) {
+          currentMonthEntries.push(el);
+        }
+      });
+
+      console.log(`to Sort:`, currentMonthEntries);
+
+      const sortedMonthEntries = currentMonthEntries.reduce(
+        (accumulatorObject, thisEvent) => {
+          // here, we need to check if the accumulator object contains this key:
+          const key = Object.keys(thisEvent)[0];
+          if (accumulatorObject[key]) {
+            // if our object has this key, we've already
+            //  started an array for this date. Simply add
+            //  this object to that array.
+            accumulatorObject[key] = [
+              ...accumulatorObject[key],
+              thisEvent[key],
+            ];
+          } else {
+            // this is a new key. Create the property, and
+            //  create the array.
+            accumulatorObject[key] = [thisEvent[key]];
+          }
+          // and we have to return the object, so its
+          //  available for the next iteration of reduce.
+          return accumulatorObject;
+        },
+        {}
+      );
+
+      console.log("sorted:", sortedMonthEntries);
+
+      setCurrentEntries(sortedMonthEntries, "currentPainEntries");
     }
   };
 
@@ -190,16 +198,33 @@ const Records = () => {
     fetch(
       `https://tangible-47447-default-rtdb.europe-west1.firebasedatabase.app/${userID}/pain-entries.json`
     )
-      .then((response) => response.json())
+      .then((response) => {
+        // If the response of the http request is 200 (ok)
+        if (response.ok) {
+          // get the json of that response
+          return response.json();
+        } else {
+          // If the response status is bad, throw an error
+          throw new Error();
+        }
+      })
       .then((data) => {
-        const that = [];
+        const extractedData = [];
         for (const el in data) {
-          const thiss = {
+          const tempData = {
             ...data[el],
           };
-          that.push(thiss);
+          extractedData.push(tempData);
         }
-        setRawData(that);
+
+        setAppHasEntries(true);
+        setRawData(extractedData);
+        setIsloading(false);
+      })
+      .catch((e) => {
+        console.error(e);
+        setAppHasEntries(false);
+        setIsloading(false);
       });
   }, []);
 
@@ -217,9 +242,9 @@ const Records = () => {
 
     // This handler receives the data extracted from Firebase,
     // and handles and renders it by setting the relevant states
-    dataHandler(rawData);
-
-    setIsloading(false);
+    if (appHasEntries) {
+      dataHandler(rawData);
+    }
   }, [rawData, currentMonth]);
 
   if (isloading) {
@@ -229,57 +254,111 @@ const Records = () => {
   // Test current entries value
   // console.log(currentEntries, "currentEntries");
 
-  return (
-    <Container maxWidth="lg">
-      <Grid container>
-        <Card newStyle={{ marginTop: "4rem" }}>
-          <Grid item xs={12}>
-            <Typography align="center" variant="h4">
-              Pain records
-            </Typography>
-          </Grid>
-        </Card>
-        <Grid
-          container
-          direction="row"
-          justifyContent="space-between"
-          alignItems="center"
-          className={classes.swapBar}
-        >
-          <Button
-            size="large"
-            variant="contained"
-            color="primary"
-            startIcon={<ChevronLeftTwoToneIcon />}
-            onClick={goToPrevPage}
-          >
-            Back
-          </Button>
-          <Typography variant="h4">{currentMonth}</Typography>
-          <Button
-            size="large"
-            variant="contained"
-            color="primary"
-            endIcon={<ChevronRightTwoToneIcon />}
-            onClick={goToNextPage}
-          >
-            Next
-          </Button>
-        </Grid>
-      </Grid>
-      <Grid>
-        <Card newStyle={{ textAlign: "center", padding: "2.5rem 0" }}>
-          {monthHasEntries && <RecordDays monthEntries={currentEntries} />}
+  // console.log(currentEntries, "currentEntries");
 
-          {!monthHasEntries && (
+  if (appHasEntries) {
+    return (
+      <Container maxWidth="lg">
+        <Grid container>
+          <Card newStyle={{ marginTop: "4rem" }}>
+            <Grid item xs={12}>
+              <Typography align="center" variant="h4">
+                Pain records
+              </Typography>
+            </Grid>
+          </Card>
+          <Grid
+            container
+            direction="row"
+            justifyContent="space-between"
+            alignItems="center"
+            className={classes.swapBar}
+          >
+            <Button
+              size="large"
+              variant="contained"
+              color="primary"
+              startIcon={<ChevronLeftTwoToneIcon />}
+              onClick={goToPrevPage}
+            >
+              Back
+            </Button>
+            <Typography variant="h4">{currentMonth}</Typography>
+            <Button
+              size="large"
+              variant="contained"
+              color="primary"
+              endIcon={<ChevronRightTwoToneIcon />}
+              onClick={goToNextPage}
+            >
+              Next
+            </Button>
+          </Grid>
+        </Grid>
+        <Grid>
+          <Card newStyle={{ textAlign: "center", padding: "2.5rem 0" }}>
+            {monthHasEntries && getDay(currentEntries)}
+
+            {!monthHasEntries && (
+              <Typography variant="h5">
+                No pain was recorded this month
+              </Typography>
+            )}
+          </Card>
+        </Grid>
+      </Container>
+    );
+  }
+
+  if (!appHasEntries) {
+    return (
+      <Container maxWidth="lg">
+        <Grid container>
+          <Card newStyle={{ marginTop: "4rem" }}>
+            <Grid item xs={12}>
+              <Typography align="center" variant="h4">
+                Pain records
+              </Typography>
+            </Grid>
+          </Card>
+          <Grid
+            container
+            direction="row"
+            justifyContent="space-between"
+            alignItems="center"
+            className={classes.swapBar}
+          >
+            <Button
+              size="large"
+              variant="contained"
+              color="primary"
+              startIcon={<ChevronLeftTwoToneIcon />}
+              onClick={goToPrevPage}
+            >
+              Back
+            </Button>
+            <Typography variant="h4">{currentMonth}</Typography>
+            <Button
+              size="large"
+              variant="contained"
+              color="primary"
+              endIcon={<ChevronRightTwoToneIcon />}
+              onClick={goToNextPage}
+            >
+              Next
+            </Button>
+          </Grid>
+        </Grid>
+        <Grid>
+          <Card newStyle={{ textAlign: "center", padding: "2.5rem 0" }}>
             <Typography variant="h5">
               No pain was recorded this month
             </Typography>
-          )}
-        </Card>
-      </Grid>
-    </Container>
-  );
+          </Card>
+        </Grid>
+      </Container>
+    );
+  }
 };
 
 export default Records;

@@ -41,11 +41,16 @@ const ScaleFrequency = (props) => {
 
   const [currentScale] = useState(scaleFrequency);
 
+  console.log();
+
   return (
     <Card newStyle={{ padding: "4.5rem", marginTop: "4rem" }}>
       <Typography variant="h4">Pain Intensity - Scale Frequency</Typography>
       <Typography variant="body1">
-        Total pain records: {props.listOfPainEntries.listOfEntries.length}
+        Total pain records:{" "}
+        {props.listOfPainEntries.listOfEntries[0].date
+          ? props.listOfPainEntries.listOfEntries.length
+          : "0"}
       </Typography>
 
       <div className={styles["pain-records-container"]}>

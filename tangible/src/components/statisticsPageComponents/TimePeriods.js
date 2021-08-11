@@ -37,16 +37,18 @@ const TimePeriods = (props) => {
   };
 
   props.listOfPainEntries.listOfEntries.forEach((entry) => {
-    const curHr = getTimeFromHours(entry.date.time);
+    if (entry.date) {
+      const curHr = getTimeFromHours(entry.date.time);
 
-    if (curHr < 6) {
-      timePeriods.earlyMorning.push(entry.painScale);
-    } else if (curHr < 12) {
-      timePeriods.morning.push(entry.painScale);
-    } else if (curHr < 18) {
-      timePeriods.afternoon.push(entry.painScale);
-    } else {
-      timePeriods.evening.push(entry.painScale);
+      if (curHr < 6) {
+        timePeriods.earlyMorning.push(entry.painScale);
+      } else if (curHr < 12) {
+        timePeriods.morning.push(entry.painScale);
+      } else if (curHr < 18) {
+        timePeriods.afternoon.push(entry.painScale);
+      } else {
+        timePeriods.evening.push(entry.painScale);
+      }
     }
   });
 

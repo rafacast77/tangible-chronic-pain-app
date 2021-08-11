@@ -107,9 +107,7 @@ const Stats = () => {
         <Grid item xs={12}>
           <ScaleFrequency listOfPainEntries={painEntriesStats} />
         </Grid>
-        <Grid item xs={12}>
-          <TimePeriods listOfPainEntries={painEntriesStats} />
-        </Grid>
+
         <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
           <Card newStyle={classes.card}>
             <AffectingFactors
@@ -145,6 +143,9 @@ const Stats = () => {
               barColor="#946E83"
             />
           </Card>
+        </Grid>
+        <Grid item xs={12}>
+          <TimePeriods listOfPainEntries={painEntriesStats} />
         </Grid>
       </Grid>
     </Container>

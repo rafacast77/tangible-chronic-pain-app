@@ -130,7 +130,7 @@ const TreatmentList = (props) => {
         onClick={props.toTreatmentMenu}
         className={classes.addButton}
       >
-        ADD TREATMENTS
+        EDIT TREATMENTS
       </Button>
     </FormControl>
   );

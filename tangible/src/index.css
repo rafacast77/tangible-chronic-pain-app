@@ -5,6 +5,7 @@
 
 body {
   background-color: #dfdfdf;
+  font-family: "Roboto", sans-serif;
 }
 
 ::-webkit-scrollbar {

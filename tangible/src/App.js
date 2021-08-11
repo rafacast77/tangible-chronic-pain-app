@@ -29,6 +29,9 @@ const theme = createTheme({
     body1: {
       fontSize: 19,
     },
+    subtitle1: {
+      color: "#888",
+    },
   },
 });
 function App() {
@@ -68,17 +71,17 @@ function App() {
             <Profile />
           </Route>
         )}
-        {authCtx.isLoggedIn && (
-          <Route path="*">
-            <Redirect to="/stats" />
-          </Route>
-        )}
         {!authCtx.isPainUser && (
           <Route path="/pain-entries">
             <Redirect to="/stats" />
           </Route>
         )}
         {renderEntryScreen()}
+        {authCtx.isLoggedIn && (
+          <Route path="*">
+            <Redirect to="/stats" />
+          </Route>
+        )}
         <Route path="*">
           <Redirect to="/" />
         </Route>

@@ -44,8 +44,8 @@ const MedicationList = (props) => {
     if (medicationIndex === -1) {
       entryMedications.push({
         medicationName: event.target.name,
-        dose: "",
-        effect: "",
+        dose: ` - `,
+        effect: ` - `,
       });
       event.target.parentElement.parentElement.parentElement.nextSibling.setAttribute(
         "style",
@@ -145,7 +145,7 @@ const MedicationList = (props) => {
         size={"large"}
         className={classes.addButton}
       >
-        ADD MEDICATIONS
+        EDIT MEDICATIONS
       </Button>
     </FormControl>
   );
