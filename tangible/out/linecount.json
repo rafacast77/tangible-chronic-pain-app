@@ -5,11 +5,11 @@
     "linecount": [
         {
             "version": "0.1.7",
-            "counttime": "2021-07-22 21:34:04",
-            "filesum": 21,
-            "codesum": 865,
-            "commentsum": 38,
-            "blanksum": 101,
+            "counttime": "2021-08-12 02:02:22",
+            "filesum": 80,
+            "codesum": 4807,
+            "commentsum": 574,
+            "blanksum": 460,
             "filelist": [
                 {
                     "blank": 5,
@@ -18,2543 +18,159 @@
                     "filename": ".gitignore"
                 },
                 {
-                    "blank": 5,
-                    "code": 27,
+                    "blank": 1,
+                    "code": 24,
                     "comment": 0,
-                    "filename": "src\\App.js"
-                },
-                {
-                    "blank": 10,
-                    "code": 65,
-                    "comment": 1,
-                    "filename": "src\\components\\EntriePageComponents\\DatePicker.js"
-                },
-                {
-                    "blank": 3,
-                    "code": 35,
-                    "comment": 0,
-                    "filename": "src\\components\\EntriePageComponents\\location\\AddNewLocation.js"
-                },
-                {
-                    "blank": 3,
-                    "code": 29,
-                    "comment": 0,
-                    "filename": "src\\components\\EntriePageComponents\\location\\EditLocation.js"
-                },
-                {
-                    "blank": 19,
-                    "code": 157,
-                    "comment": 22,
-                    "filename": "src\\components\\EntriePageComponents\\location\\Location.js"
-                },
-                {
-                    "blank": 2,
-                    "code": 46,
-                    "comment": 2,
-                    "filename": "src\\components\\EntriePageComponents\\location\\LocationList.js"
-                },
-                {
-                    "blank": 6,
-                    "code": 94,
-                    "comment": 6,
-                    "filename": "src\\components\\EntriePageComponents\\location\\LocationMenu.js"
-                },
-                {
-                    "blank": 9,
-                    "code": 118,
-                    "comment": 0,
-                    "filename": "src\\components\\EntriePageComponents\\PainScale.js"
-                },
-                {
-                    "blank": 2,
-                    "code": 12,
-                    "comment": 0,
-                    "filename": "src\\components\\layout\\Layout.js"
+                    "filename": "build\\asset-manifest.json"
                 },
                 {
                     "blank": 0,
-                    "code": 3,
+                    "code": 1,
                     "comment": 0,
-                    "filename": "src\\components\\layout\\Layout.module.css"
-                },
-                {
-                    "blank": 1,
-                    "code": 27,
-                    "comment": 0,
-                    "filename": "src\\components\\layout\\MainNavigation.js"
-                },
-                {
-                    "blank": 6,
-                    "code": 44,
-                    "comment": 0,
-                    "filename": "src\\components\\layout\\MainNavigation.module.css"
-                },
-                {
-                    "blank": 1,
-                    "code": 10,
-                    "comment": 0,
-                    "filename": "src\\components\\ui\\Card.js"
+                    "filename": "build\\index.html"
                 },
                 {
                     "blank": 0,
-                    "code": 7,
-                    "comment": 0,
-                    "filename": "src\\components\\ui\\Card.module.css"
-                },
-                {
-                    "blank": 11,
-                    "code": 68,
-                    "comment": 0,
-                    "filename": "src\\index.css"
-                },
-                {
-                    "blank": 1,
-                    "code": 11,
-                    "comment": 0,
-                    "filename": "src\\index.js"
-                },
-                {
-                    "blank": 2,
-                    "code": 9,
-                    "comment": 0,
-                    "filename": "src\\pages\\Home.js"
-                },
-                {
-                    "blank": 11,
-                    "code": 67,
-                    "comment": 6,
-                    "filename": "src\\pages\\PainEntries.js"
-                },
-                {
-                    "blank": 2,
-                    "code": 9,
-                    "comment": 0,
-                    "filename": "src\\pages\\profile.js"
-                },
-                {
-                    "blank": 2,
-                    "code": 9,
-                    "comment": 0,
-                    "filename": "src\\pages\\Stats.js"
-                }
-            ]
-        },
-        {
-            "version": "0.1.7",
-            "counttime": "2021-07-24 16:29:26",
-            "filesum": 26,
-            "codesum": 1235,
-            "commentsum": 66,
-            "blanksum": 135,
-            "filelist": [
-                {
-                    "blank": 5,
-                    "code": 18,
+                    "code": 1,
                     "comment": 1,
-                    "filename": ".gitignore"
-                },
-                {
-                    "blank": 5,
-                    "code": 27,
-                    "comment": 0,
-                    "filename": "src\\App.js"
-                },
-                {
-                    "blank": 10,
-                    "code": 65,
-                    "comment": 1,
-                    "filename": "src\\components\\EntriePageComponents\\DatePicker.js"
-                },
-                {
-                    "blank": 3,
-                    "code": 35,
-                    "comment": 0,
-                    "filename": "src\\components\\EntriePageComponents\\location\\AddNewLocation.js"
-                },
-                {
-                    "blank": 3,
-                    "code": 29,
-                    "comment": 0,
-                    "filename": "src\\components\\EntriePageComponents\\location\\EditLocation.js"
-                },
-                {
-                    "blank": 18,
-                    "code": 157,
-                    "comment": 22,
-                    "filename": "src\\components\\EntriePageComponents\\location\\Location.js"
-                },
-                {
-                    "blank": 2,
-                    "code": 49,
-                    "comment": 2,
-                    "filename": "src\\components\\EntriePageComponents\\location\\LocationList.js"
-                },
-                {
-                    "blank": 6,
-                    "code": 94,
-                    "comment": 6,
-                    "filename": "src\\components\\EntriePageComponents\\location\\LocationMenu.js"
-                },
-                {
-                    "blank": 3,
-                    "code": 35,
-                    "comment": 0,
-                    "filename": "src\\components\\EntriePageComponents\\medication\\AddNewMedication.js"
-                },
-                {
-                    "blank": 3,
-                    "code": 33,
-                    "comment": 0,
-                    "filename": "src\\components\\EntriePageComponents\\medication\\EditMedication.js"
-                },
-                {
-                    "blank": 18,
-                    "code": 157,
-                    "comment": 22,
-                    "filename": "src\\components\\EntriePageComponents\\medication\\Medication.js"
-                },
-                {
-                    "blank": 2,
-                    "code": 46,
-                    "comment": 2,
-                    "filename": "src\\components\\EntriePageComponents\\medication\\MedicationList.js"
-                },
-                {
-                    "blank": 7,
-                    "code": 94,
-                    "comment": 4,
-                    "filename": "src\\components\\EntriePageComponents\\medication\\MedicationMenu.js"
-                },
-                {
-                    "blank": 9,
-                    "code": 118,
-                    "comment": 0,
-                    "filename": "src\\components\\EntriePageComponents\\PainScale.js"
-                },
-                {
-                    "blank": 2,
-                    "code": 12,
-                    "comment": 0,
-                    "filename": "src\\components\\layout\\Layout.js"
+                    "filename": "build\\static\\css\\2.ba083dbd.chunk.css"
                 },
                 {
                     "blank": 0,
-                    "code": 3,
+                    "code": 1,
                     "comment": 0,
-                    "filename": "src\\components\\layout\\Layout.module.css"
-                },
-                {
-                    "blank": 1,
-                    "code": 27,
-                    "comment": 0,
-                    "filename": "src\\components\\layout\\MainNavigation.js"
-                },
-                {
-                    "blank": 6,
-                    "code": 44,
-                    "comment": 0,
-                    "filename": "src\\components\\layout\\MainNavigation.module.css"
-                },
-                {
-                    "blank": 1,
-                    "code": 10,
-                    "comment": 0,
-                    "filename": "src\\components\\ui\\Card.js"
+                    "filename": "build\\static\\css\\2.ba083dbd.chunk.css.map"
                 },
                 {
                     "blank": 0,
-                    "code": 7,
-                    "comment": 0,
-                    "filename": "src\\components\\ui\\Card.module.css"
-                },
-                {
-                    "blank": 11,
-                    "code": 68,
-                    "comment": 0,
-                    "filename": "src\\index.css"
-                },
-                {
-                    "blank": 1,
-                    "code": 11,
-                    "comment": 0,
-                    "filename": "src\\index.js"
-                },
-                {
-                    "blank": 2,
-                    "code": 9,
-                    "comment": 0,
-                    "filename": "src\\pages\\Home.js"
-                },
-                {
-                    "blank": 13,
-                    "code": 69,
-                    "comment": 6,
-                    "filename": "src\\pages\\PainEntries.js"
-                },
-                {
-                    "blank": 2,
-                    "code": 9,
-                    "comment": 0,
-                    "filename": "src\\pages\\profile.js"
-                },
-                {
-                    "blank": 2,
-                    "code": 9,
-                    "comment": 0,
-                    "filename": "src\\pages\\Stats.js"
-                }
-            ]
-        },
-        {
-            "version": "0.1.7",
-            "counttime": "2021-07-25 19:45:58",
-            "filesum": 31,
-            "codesum": 1831,
-            "commentsum": 97,
-            "blanksum": 173,
-            "filelist": [
-                {
-                    "blank": 5,
-                    "code": 18,
+                    "code": 1,
                     "comment": 1,
-                    "filename": ".gitignore"
-                },
-                {
-                    "blank": 5,
-                    "code": 27,
-                    "comment": 0,
-                    "filename": "src\\App.js"
-                },
-                {
-                    "blank": 10,
-                    "code": 67,
-                    "comment": 1,
-                    "filename": "src\\components\\EntriePageComponents\\DatePicker.js"
-                },
-                {
-                    "blank": 3,
-                    "code": 35,
-                    "comment": 0,
-                    "filename": "src\\components\\EntriePageComponents\\location\\AddNewLocation.js"
-                },
-                {
-                    "blank": 3,
-                    "code": 29,
-                    "comment": 0,
-                    "filename": "src\\components\\EntriePageComponents\\location\\EditLocation.js"
-                },
-                {
-                    "blank": 18,
-                    "code": 156,
-                    "comment": 22,
-                    "filename": "src\\components\\EntriePageComponents\\location\\Location.js"
-                },
-                {
-                    "blank": 2,
-                    "code": 51,
-                    "comment": 2,
-                    "filename": "src\\components\\EntriePageComponents\\location\\LocationList.js"
-                },
-                {
-                    "blank": 6,
-                    "code": 94,
-                    "comment": 6,
-                    "filename": "src\\components\\EntriePageComponents\\location\\LocationMenu.js"
-                },
-                {
-                    "blank": 2,
-                    "code": 89,
-                    "comment": 0,
-                    "filename": "src\\components\\EntriePageComponents\\medication\\AddNewMedication.js"
-                },
-                {
-                    "blank": 3,
-                    "code": 33,
-                    "comment": 0,
-                    "filename": "src\\components\\EntriePageComponents\\medication\\EditMedication.js"
-                },
-                {
-                    "blank": 18,
-                    "code": 160,
-                    "comment": 22,
-                    "filename": "src\\components\\EntriePageComponents\\medication\\Medication.js"
-                },
-                {
-                    "blank": 5,
-                    "code": 127,
-                    "comment": 5,
-                    "filename": "src\\components\\EntriePageComponents\\medication\\MedicationList.js"
-                },
-                {
-                    "blank": 7,
-                    "code": 94,
-                    "comment": 4,
-                    "filename": "src\\components\\EntriePageComponents\\medication\\MedicationMenu.js"
-                },
-                {
-                    "blank": 9,
-                    "code": 118,
-                    "comment": 0,
-                    "filename": "src\\components\\EntriePageComponents\\PainScale.js"
-                },
-                {
-                    "blank": 2,
-                    "code": 58,
-                    "comment": 0,
-                    "filename": "src\\components\\EntriePageComponents\\treatment\\AddNewTreatment.js"
-                },
-                {
-                    "blank": 4,
-                    "code": 32,
-                    "comment": 0,
-                    "filename": "src\\components\\EntriePageComponents\\treatment\\EditTreatment.js"
-                },
-                {
-                    "blank": 18,
-                    "code": 160,
-                    "comment": 22,
-                    "filename": "src\\components\\EntriePageComponents\\treatment\\Treatment.js"
-                },
-                {
-                    "blank": 6,
-                    "code": 109,
-                    "comment": 4,
-                    "filename": "src\\components\\EntriePageComponents\\treatment\\TreatmentList.js"
-                },
-                {
-                    "blank": 7,
-                    "code": 94,
-                    "comment": 4,
-                    "filename": "src\\components\\EntriePageComponents\\treatment\\TreatmentMenu.js"
-                },
-                {
-                    "blank": 2,
-                    "code": 12,
-                    "comment": 0,
-                    "filename": "src\\components\\layout\\Layout.js"
+                    "filename": "build\\static\\css\\main.22b23d90.chunk.css"
                 },
                 {
                     "blank": 0,
-                    "code": 3,
+                    "code": 1,
                     "comment": 0,
-                    "filename": "src\\components\\layout\\Layout.module.css"
-                },
-                {
-                    "blank": 1,
-                    "code": 27,
-                    "comment": 0,
-                    "filename": "src\\components\\layout\\MainNavigation.js"
-                },
-                {
-                    "blank": 6,
-                    "code": 44,
-                    "comment": 0,
-                    "filename": "src\\components\\layout\\MainNavigation.module.css"
-                },
-                {
-                    "blank": 1,
-                    "code": 10,
-                    "comment": 0,
-                    "filename": "src\\components\\ui\\Card.js"
+                    "filename": "build\\static\\css\\main.22b23d90.chunk.css.map"
                 },
                 {
                     "blank": 0,
-                    "code": 7,
-                    "comment": 0,
-                    "filename": "src\\components\\ui\\Card.module.css"
-                },
-                {
-                    "blank": 11,
-                    "code": 68,
-                    "comment": 0,
-                    "filename": "src\\index.css"
-                },
-                {
-                    "blank": 1,
-                    "code": 11,
-                    "comment": 0,
-                    "filename": "src\\index.js"
-                },
-                {
-                    "blank": 2,
-                    "code": 9,
-                    "comment": 0,
-                    "filename": "src\\pages\\Home.js"
-                },
-                {
-                    "blank": 12,
-                    "code": 71,
-                    "comment": 4,
-                    "filename": "src\\pages\\PainEntries.js"
-                },
-                {
-                    "blank": 2,
-                    "code": 9,
-                    "comment": 0,
-                    "filename": "src\\pages\\profile.js"
-                },
-                {
-                    "blank": 2,
-                    "code": 9,
-                    "comment": 0,
-                    "filename": "src\\pages\\Stats.js"
-                }
-            ]
-        },
-        {
-            "version": "0.1.7",
-            "counttime": "2021-07-25 22:16:02",
-            "filesum": 32,
-            "codesum": 1881,
-            "commentsum": 107,
-            "blanksum": 178,
-            "filelist": [
-                {
-                    "blank": 5,
-                    "code": 18,
-                    "comment": 1,
-                    "filename": ".gitignore"
-                },
-                {
-                    "blank": 5,
-                    "code": 27,
-                    "comment": 0,
-                    "filename": "src\\App.js"
-                },
-                {
-                    "blank": 10,
-                    "code": 67,
-                    "comment": 1,
-                    "filename": "src\\components\\EntriePageComponents\\DatePicker.js"
-                },
-                {
-                    "blank": 5,
-                    "code": 50,
-                    "comment": 10,
-                    "filename": "src\\components\\EntriePageComponents\\ExtraComments.js"
-                },
-                {
-                    "blank": 3,
-                    "code": 35,
-                    "comment": 0,
-                    "filename": "src\\components\\EntriePageComponents\\location\\AddNewLocation.js"
-                },
-                {
-                    "blank": 3,
-                    "code": 29,
-                    "comment": 0,
-                    "filename": "src\\components\\EntriePageComponents\\location\\EditLocation.js"
-                },
-                {
-                    "blank": 18,
-                    "code": 156,
-                    "comment": 22,
-                    "filename": "src\\components\\EntriePageComponents\\location\\Location.js"
-                },
-                {
-                    "blank": 2,
-                    "code": 51,
-                    "comment": 2,
-                    "filename": "src\\components\\EntriePageComponents\\location\\LocationList.js"
-                },
-                {
-                    "blank": 6,
-                    "code": 94,
-                    "comment": 6,
-                    "filename": "src\\components\\EntriePageComponents\\location\\LocationMenu.js"
-                },
-                {
-                    "blank": 2,
-                    "code": 89,
-                    "comment": 0,
-                    "filename": "src\\components\\EntriePageComponents\\medication\\AddNewMedication.js"
-                },
-                {
-                    "blank": 3,
-                    "code": 33,
-                    "comment": 0,
-                    "filename": "src\\components\\EntriePageComponents\\medication\\EditMedication.js"
-                },
-                {
-                    "blank": 18,
-                    "code": 160,
-                    "comment": 22,
-                    "filename": "src\\components\\EntriePageComponents\\medication\\Medication.js"
-                },
-                {
-                    "blank": 5,
-                    "code": 128,
-                    "comment": 5,
-                    "filename": "src\\components\\EntriePageComponents\\medication\\MedicationList.js"
-                },
-                {
-                    "blank": 7,
-                    "code": 94,
-                    "comment": 4,
-                    "filename": "src\\components\\EntriePageComponents\\medication\\MedicationMenu.js"
-                },
-                {
-                    "blank": 9,
-                    "code": 118,
-                    "comment": 0,
-                    "filename": "src\\components\\EntriePageComponents\\PainScale.js"
-                },
-                {
-                    "blank": 2,
-                    "code": 58,
-                    "comment": 0,
-                    "filename": "src\\components\\EntriePageComponents\\treatment\\AddNewTreatment.js"
-                },
-                {
-                    "blank": 4,
-                    "code": 32,
-                    "comment": 0,
-                    "filename": "src\\components\\EntriePageComponents\\treatment\\EditTreatment.js"
-                },
-                {
-                    "blank": 18,
-                    "code": 160,
-                    "comment": 22,
-                    "filename": "src\\components\\EntriePageComponents\\treatment\\Treatment.js"
-                },
-                {
-                    "blank": 7,
-                    "code": 108,
-                    "comment": 4,
-                    "filename": "src\\components\\EntriePageComponents\\treatment\\TreatmentList.js"
-                },
-                {
-                    "blank": 7,
-                    "code": 94,
-                    "comment": 4,
-                    "filename": "src\\components\\EntriePageComponents\\treatment\\TreatmentMenu.js"
-                },
-                {
-                    "blank": 2,
-                    "code": 12,
-                    "comment": 0,
-                    "filename": "src\\components\\layout\\Layout.js"
-                },
-                {
-                    "blank": 0,
-                    "code": 3,
-                    "comment": 0,
-                    "filename": "src\\components\\layout\\Layout.module.css"
-                },
-                {
-                    "blank": 1,
-                    "code": 27,
-                    "comment": 0,
-                    "filename": "src\\components\\layout\\MainNavigation.js"
-                },
-                {
-                    "blank": 6,
-                    "code": 44,
-                    "comment": 0,
-                    "filename": "src\\components\\layout\\MainNavigation.module.css"
-                },
-                {
-                    "blank": 1,
-                    "code": 10,
-                    "comment": 0,
-                    "filename": "src\\components\\ui\\Card.js"
-                },
-                {
-                    "blank": 0,
-                    "code": 7,
-                    "comment": 0,
-                    "filename": "src\\components\\ui\\Card.module.css"
-                },
-                {
-                    "blank": 11,
-                    "code": 68,
-                    "comment": 0,
-                    "filename": "src\\index.css"
-                },
-                {
-                    "blank": 1,
-                    "code": 11,
-                    "comment": 0,
-                    "filename": "src\\index.js"
-                },
-                {
-                    "blank": 2,
-                    "code": 9,
-                    "comment": 0,
-                    "filename": "src\\pages\\Home.js"
-                },
-                {
-                    "blank": 11,
-                    "code": 71,
-                    "comment": 4,
-                    "filename": "src\\pages\\PainEntries.js"
-                },
-                {
-                    "blank": 2,
-                    "code": 9,
-                    "comment": 0,
-                    "filename": "src\\pages\\profile.js"
-                },
-                {
-                    "blank": 2,
-                    "code": 9,
-                    "comment": 0,
-                    "filename": "src\\pages\\Stats.js"
-                }
-            ]
-        },
-        {
-            "version": "0.1.7",
-            "counttime": "2021-07-27 14:34:20",
-            "filesum": 39,
-            "codesum": 2216,
-            "commentsum": 131,
-            "blanksum": 221,
-            "filelist": [
-                {
-                    "blank": 5,
-                    "code": 18,
-                    "comment": 1,
-                    "filename": ".gitignore"
-                },
-                {
-                    "blank": 5,
-                    "code": 27,
-                    "comment": 0,
-                    "filename": "src\\App.js"
-                },
-                {
-                    "blank": 10,
-                    "code": 67,
-                    "comment": 1,
-                    "filename": "src\\components\\EntriePageComponents\\DatePicker.js"
-                },
-                {
-                    "blank": 5,
-                    "code": 42,
-                    "comment": 10,
-                    "filename": "src\\components\\EntriePageComponents\\ExtraComments.js"
-                },
-                {
-                    "blank": 3,
-                    "code": 35,
-                    "comment": 0,
-                    "filename": "src\\components\\EntriePageComponents\\location\\AddNewLocation.js"
-                },
-                {
-                    "blank": 3,
-                    "code": 29,
-                    "comment": 0,
-                    "filename": "src\\components\\EntriePageComponents\\location\\EditLocation.js"
-                },
-                {
-                    "blank": 17,
-                    "code": 156,
-                    "comment": 22,
-                    "filename": "src\\components\\EntriePageComponents\\location\\Location.js"
-                },
-                {
-                    "blank": 2,
-                    "code": 51,
-                    "comment": 2,
-                    "filename": "src\\components\\EntriePageComponents\\location\\LocationList.js"
-                },
-                {
-                    "blank": 6,
-                    "code": 94,
-                    "comment": 6,
-                    "filename": "src\\components\\EntriePageComponents\\location\\LocationMenu.js"
-                },
-                {
-                    "blank": 2,
-                    "code": 89,
-                    "comment": 0,
-                    "filename": "src\\components\\EntriePageComponents\\medication\\AddNewMedication.js"
-                },
-                {
-                    "blank": 3,
-                    "code": 33,
-                    "comment": 0,
-                    "filename": "src\\components\\EntriePageComponents\\medication\\EditMedication.js"
-                },
-                {
-                    "blank": 20,
-                    "code": 166,
-                    "comment": 24,
-                    "filename": "src\\components\\EntriePageComponents\\medication\\Medication.js"
-                },
-                {
-                    "blank": 6,
-                    "code": 131,
-                    "comment": 5,
-                    "filename": "src\\components\\EntriePageComponents\\medication\\MedicationList.js"
-                },
-                {
-                    "blank": 7,
-                    "code": 94,
-                    "comment": 4,
-                    "filename": "src\\components\\EntriePageComponents\\medication\\MedicationMenu.js"
-                },
-                {
-                    "blank": 9,
-                    "code": 118,
-                    "comment": 0,
-                    "filename": "src\\components\\EntriePageComponents\\PainScale.js"
-                },
-                {
-                    "blank": 3,
-                    "code": 34,
-                    "comment": 0,
-                    "filename": "src\\components\\EntriePageComponents\\treatment\\AddNewTreatment.js"
-                },
-                {
-                    "blank": 4,
-                    "code": 32,
-                    "comment": 0,
-                    "filename": "src\\components\\EntriePageComponents\\treatment\\EditTreatment.js"
-                },
-                {
-                    "blank": 18,
-                    "code": 160,
-                    "comment": 22,
-                    "filename": "src\\components\\EntriePageComponents\\treatment\\Treatment.js"
-                },
-                {
-                    "blank": 7,
-                    "code": 112,
-                    "comment": 4,
-                    "filename": "src\\components\\EntriePageComponents\\treatment\\TreatmentList.js"
-                },
-                {
-                    "blank": 7,
-                    "code": 94,
-                    "comment": 4,
-                    "filename": "src\\components\\EntriePageComponents\\treatment\\TreatmentMenu.js"
-                },
-                {
-                    "blank": 2,
-                    "code": 12,
-                    "comment": 0,
-                    "filename": "src\\components\\layout\\Layout.js"
-                },
-                {
-                    "blank": 0,
-                    "code": 3,
-                    "comment": 0,
-                    "filename": "src\\components\\layout\\Layout.module.css"
-                },
-                {
-                    "blank": 1,
-                    "code": 27,
-                    "comment": 0,
-                    "filename": "src\\components\\layout\\MainNavigation.js"
-                },
-                {
-                    "blank": 6,
-                    "code": 44,
-                    "comment": 0,
-                    "filename": "src\\components\\layout\\MainNavigation.module.css"
-                },
-                {
-                    "blank": 1,
-                    "code": 4,
-                    "comment": 0,
-                    "filename": "src\\components\\ProfilePageComponents\\Records.js"
-                },
-                {
-                    "blank": 3,
-                    "code": 46,
-                    "comment": 1,
-                    "filename": "src\\components\\statisticsPageComponents\\AffectingFactors.js"
-                },
-                {
-                    "blank": 6,
-                    "code": 64,
-                    "comment": 0,
-                    "filename": "src\\components\\statisticsPageComponents\\ScaleFrequency.js"
-                },
-                {
-                    "blank": 4,
-                    "code": 55,
-                    "comment": 0,
-                    "filename": "src\\components\\statisticsPageComponents\\ScaleFrequency.module.css"
-                },
-                {
-                    "blank": 7,
-                    "code": 32,
-                    "comment": 16,
-                    "filename": "src\\components\\statisticsPageComponents\\statisticHelperFunctions.js"
-                },
-                {
-                    "blank": 8,
-                    "code": 62,
-                    "comment": 0,
-                    "filename": "src\\components\\statisticsPageComponents\\TimePeriods.js"
-                },
-                {
-                    "blank": 2,
-                    "code": 13,
-                    "comment": 0,
-                    "filename": "src\\components\\statisticsPageComponents\\TimePeriods.module.css"
-                },
-                {
-                    "blank": 3,
-                    "code": 11,
-                    "comment": 1,
-                    "filename": "src\\components\\ui\\Card.js"
-                },
-                {
-                    "blank": 0,
-                    "code": 7,
-                    "comment": 0,
-                    "filename": "src\\components\\ui\\Card.module.css"
-                },
-                {
-                    "blank": 11,
-                    "code": 68,
-                    "comment": 0,
-                    "filename": "src\\index.css"
-                },
-                {
-                    "blank": 1,
-                    "code": 11,
-                    "comment": 0,
-                    "filename": "src\\index.js"
-                },
-                {
-                    "blank": 2,
-                    "code": 9,
-                    "comment": 0,
-                    "filename": "src\\pages\\Home.js"
-                },
-                {
-                    "blank": 11,
-                    "code": 70,
-                    "comment": 4,
-                    "filename": "src\\pages\\PainEntries.js"
-                },
-                {
-                    "blank": 2,
-                    "code": 11,
-                    "comment": 0,
-                    "filename": "src\\pages\\profile.js"
-                },
-                {
-                    "blank": 9,
-                    "code": 85,
-                    "comment": 4,
-                    "filename": "src\\pages\\Stats.js"
-                }
-            ]
-        },
-        {
-            "version": "0.1.7",
-            "counttime": "2021-07-27 23:01:03",
-            "filesum": 39,
-            "codesum": 2287,
-            "commentsum": 136,
-            "blanksum": 231,
-            "filelist": [
-                {
-                    "blank": 5,
-                    "code": 18,
-                    "comment": 1,
-                    "filename": ".gitignore"
-                },
-                {
-                    "blank": 5,
-                    "code": 27,
-                    "comment": 0,
-                    "filename": "src\\App.js"
-                },
-                {
-                    "blank": 10,
-                    "code": 67,
-                    "comment": 1,
-                    "filename": "src\\components\\EntriePageComponents\\DatePicker.js"
-                },
-                {
-                    "blank": 5,
-                    "code": 42,
-                    "comment": 10,
-                    "filename": "src\\components\\EntriePageComponents\\ExtraComments.js"
-                },
-                {
-                    "blank": 3,
-                    "code": 35,
-                    "comment": 0,
-                    "filename": "src\\components\\EntriePageComponents\\location\\AddNewLocation.js"
-                },
-                {
-                    "blank": 3,
-                    "code": 29,
-                    "comment": 0,
-                    "filename": "src\\components\\EntriePageComponents\\location\\EditLocation.js"
-                },
-                {
-                    "blank": 17,
-                    "code": 156,
-                    "comment": 22,
-                    "filename": "src\\components\\EntriePageComponents\\location\\Location.js"
-                },
-                {
-                    "blank": 2,
-                    "code": 51,
-                    "comment": 2,
-                    "filename": "src\\components\\EntriePageComponents\\location\\LocationList.js"
-                },
-                {
-                    "blank": 6,
-                    "code": 94,
-                    "comment": 6,
-                    "filename": "src\\components\\EntriePageComponents\\location\\LocationMenu.js"
-                },
-                {
-                    "blank": 2,
-                    "code": 89,
-                    "comment": 0,
-                    "filename": "src\\components\\EntriePageComponents\\medication\\AddNewMedication.js"
-                },
-                {
-                    "blank": 3,
-                    "code": 33,
-                    "comment": 0,
-                    "filename": "src\\components\\EntriePageComponents\\medication\\EditMedication.js"
-                },
-                {
-                    "blank": 20,
-                    "code": 166,
-                    "comment": 24,
-                    "filename": "src\\components\\EntriePageComponents\\medication\\Medication.js"
-                },
-                {
-                    "blank": 6,
-                    "code": 131,
-                    "comment": 5,
-                    "filename": "src\\components\\EntriePageComponents\\medication\\MedicationList.js"
-                },
-                {
-                    "blank": 7,
-                    "code": 94,
-                    "comment": 4,
-                    "filename": "src\\components\\EntriePageComponents\\medication\\MedicationMenu.js"
-                },
-                {
-                    "blank": 9,
-                    "code": 118,
-                    "comment": 0,
-                    "filename": "src\\components\\EntriePageComponents\\PainScale.js"
-                },
-                {
-                    "blank": 3,
-                    "code": 34,
-                    "comment": 0,
-                    "filename": "src\\components\\EntriePageComponents\\treatment\\AddNewTreatment.js"
-                },
-                {
-                    "blank": 4,
-                    "code": 32,
-                    "comment": 0,
-                    "filename": "src\\components\\EntriePageComponents\\treatment\\EditTreatment.js"
-                },
-                {
-                    "blank": 18,
-                    "code": 160,
-                    "comment": 22,
-                    "filename": "src\\components\\EntriePageComponents\\treatment\\Treatment.js"
-                },
-                {
-                    "blank": 7,
-                    "code": 112,
-                    "comment": 4,
-                    "filename": "src\\components\\EntriePageComponents\\treatment\\TreatmentList.js"
-                },
-                {
-                    "blank": 7,
-                    "code": 94,
-                    "comment": 4,
-                    "filename": "src\\components\\EntriePageComponents\\treatment\\TreatmentMenu.js"
-                },
-                {
-                    "blank": 2,
-                    "code": 12,
-                    "comment": 0,
-                    "filename": "src\\components\\layout\\Layout.js"
-                },
-                {
-                    "blank": 0,
-                    "code": 3,
-                    "comment": 0,
-                    "filename": "src\\components\\layout\\Layout.module.css"
-                },
-                {
-                    "blank": 1,
-                    "code": 27,
-                    "comment": 0,
-                    "filename": "src\\components\\layout\\MainNavigation.js"
-                },
-                {
-                    "blank": 6,
-                    "code": 44,
-                    "comment": 0,
-                    "filename": "src\\components\\layout\\MainNavigation.module.css"
-                },
-                {
-                    "blank": 1,
-                    "code": 4,
-                    "comment": 0,
-                    "filename": "src\\components\\ProfilePageComponents\\Records.js"
-                },
-                {
-                    "blank": 3,
-                    "code": 46,
-                    "comment": 1,
-                    "filename": "src\\components\\statisticsPageComponents\\AffectingFactors.js"
-                },
-                {
-                    "blank": 6,
-                    "code": 64,
-                    "comment": 0,
-                    "filename": "src\\components\\statisticsPageComponents\\ScaleFrequency.js"
-                },
-                {
-                    "blank": 4,
-                    "code": 55,
-                    "comment": 0,
-                    "filename": "src\\components\\statisticsPageComponents\\ScaleFrequency.module.css"
-                },
-                {
-                    "blank": 9,
-                    "code": 76,
-                    "comment": 16,
-                    "filename": "src\\components\\statisticsPageComponents\\statisticHelperFunctions.js"
-                },
-                {
-                    "blank": 13,
-                    "code": 77,
-                    "comment": 4,
-                    "filename": "src\\components\\statisticsPageComponents\\TimePeriods.js"
-                },
-                {
-                    "blank": 2,
-                    "code": 13,
-                    "comment": 0,
-                    "filename": "src\\components\\statisticsPageComponents\\TimePeriods.module.css"
-                },
-                {
-                    "blank": 3,
-                    "code": 11,
-                    "comment": 1,
-                    "filename": "src\\components\\ui\\Card.js"
-                },
-                {
-                    "blank": 0,
-                    "code": 7,
-                    "comment": 0,
-                    "filename": "src\\components\\ui\\Card.module.css"
-                },
-                {
-                    "blank": 11,
-                    "code": 68,
-                    "comment": 0,
-                    "filename": "src\\index.css"
-                },
-                {
-                    "blank": 1,
-                    "code": 11,
-                    "comment": 0,
-                    "filename": "src\\index.js"
-                },
-                {
-                    "blank": 2,
-                    "code": 9,
-                    "comment": 0,
-                    "filename": "src\\pages\\Home.js"
-                },
-                {
-                    "blank": 11,
-                    "code": 70,
-                    "comment": 4,
-                    "filename": "src\\pages\\PainEntries.js"
-                },
-                {
-                    "blank": 2,
-                    "code": 11,
-                    "comment": 0,
-                    "filename": "src\\pages\\profile.js"
-                },
-                {
-                    "blank": 12,
-                    "code": 97,
-                    "comment": 5,
-                    "filename": "src\\pages\\Stats.js"
-                }
-            ]
-        },
-        {
-            "version": "0.1.7",
-            "counttime": "2021-07-29 13:30:27",
-            "filesum": 42,
-            "codesum": 2527,
-            "commentsum": 245,
-            "blanksum": 238,
-            "filelist": [
-                {
-                    "blank": 5,
-                    "code": 18,
-                    "comment": 1,
-                    "filename": ".gitignore"
-                },
-                {
-                    "blank": 5,
-                    "code": 27,
-                    "comment": 0,
-                    "filename": "src\\App.js"
-                },
-                {
-                    "blank": 10,
-                    "code": 67,
-                    "comment": 6,
-                    "filename": "src\\components\\EntriePageComponents\\DatePicker.js"
-                },
-                {
-                    "blank": 3,
-                    "code": 41,
-                    "comment": 4,
-                    "filename": "src\\components\\EntriePageComponents\\ExtraComments.js"
-                },
-                {
-                    "blank": 3,
-                    "code": 35,
-                    "comment": 4,
-                    "filename": "src\\components\\EntriePageComponents\\location\\AddNewLocation.js"
-                },
-                {
-                    "blank": 4,
-                    "code": 29,
-                    "comment": 4,
-                    "filename": "src\\components\\EntriePageComponents\\location\\EditLocation.js"
-                },
-                {
-                    "blank": 17,
-                    "code": 156,
-                    "comment": 30,
-                    "filename": "src\\components\\EntriePageComponents\\location\\Location.js"
-                },
-                {
-                    "blank": 2,
-                    "code": 51,
-                    "comment": 7,
-                    "filename": "src\\components\\EntriePageComponents\\location\\LocationList.js"
-                },
-                {
-                    "blank": 6,
-                    "code": 94,
-                    "comment": 9,
-                    "filename": "src\\components\\EntriePageComponents\\location\\LocationMenu.js"
-                },
-                {
-                    "blank": 3,
-                    "code": 89,
-                    "comment": 4,
-                    "filename": "src\\components\\EntriePageComponents\\medication\\AddNewMedication.js"
-                },
-                {
-                    "blank": 4,
-                    "code": 33,
-                    "comment": 4,
-                    "filename": "src\\components\\EntriePageComponents\\medication\\EditMedication.js"
-                },
-                {
-                    "blank": 20,
-                    "code": 166,
-                    "comment": 32,
-                    "filename": "src\\components\\EntriePageComponents\\medication\\Medication.js"
-                },
-                {
-                    "blank": 6,
-                    "code": 131,
-                    "comment": 10,
-                    "filename": "src\\components\\EntriePageComponents\\medication\\MedicationList.js"
-                },
-                {
-                    "blank": 8,
-                    "code": 94,
-                    "comment": 8,
-                    "filename": "src\\components\\EntriePageComponents\\medication\\MedicationMenu.js"
-                },
-                {
-                    "blank": 2,
-                    "code": 74,
-                    "comment": 4,
-                    "filename": "src\\components\\EntriePageComponents\\PainEntriesPainRangeText.js"
-                },
-                {
-                    "blank": 7,
-                    "code": 45,
-                    "comment": 4,
-                    "filename": "src\\components\\EntriePageComponents\\PainScale.js"
-                },
-                {
-                    "blank": 3,
-                    "code": 34,
-                    "comment": 4,
-                    "filename": "src\\components\\EntriePageComponents\\treatment\\AddNewTreatment.js"
-                },
-                {
-                    "blank": 5,
-                    "code": 32,
-                    "comment": 4,
-                    "filename": "src\\components\\EntriePageComponents\\treatment\\EditTreatment.js"
-                },
-                {
-                    "blank": 17,
-                    "code": 160,
-                    "comment": 30,
-                    "filename": "src\\components\\EntriePageComponents\\treatment\\Treatment.js"
-                },
-                {
-                    "blank": 7,
-                    "code": 112,
-                    "comment": 9,
-                    "filename": "src\\components\\EntriePageComponents\\treatment\\TreatmentList.js"
-                },
-                {
-                    "blank": 6,
-                    "code": 94,
-                    "comment": 8,
-                    "filename": "src\\components\\EntriePageComponents\\treatment\\TreatmentMenu.js"
-                },
-                {
-                    "blank": 2,
-                    "code": 12,
-                    "comment": 0,
-                    "filename": "src\\components\\layout\\Layout.js"
-                },
-                {
-                    "blank": 0,
-                    "code": 3,
-                    "comment": 0,
-                    "filename": "src\\components\\layout\\Layout.module.css"
-                },
-                {
-                    "blank": 1,
-                    "code": 27,
-                    "comment": 0,
-                    "filename": "src\\components\\layout\\MainNavigation.js"
-                },
-                {
-                    "blank": 6,
-                    "code": 41,
-                    "comment": 0,
-                    "filename": "src\\components\\layout\\MainNavigation.module.css"
-                },
-                {
-                    "blank": 5,
-                    "code": 57,
-                    "comment": 0,
-                    "filename": "src\\components\\profileComponents\\CustomizedAccordion.js"
-                },
-                {
-                    "blank": 1,
-                    "code": 14,
-                    "comment": 0,
-                    "filename": "src\\components\\ProfilePageComponents\\Records.js"
-                },
-                {
-                    "blank": 4,
-                    "code": 113,
-                    "comment": 1,
-                    "filename": "src\\components\\ProfilePageComponents\\Signin.js"
-                },
-                {
-                    "blank": 2,
-                    "code": 46,
-                    "comment": 5,
-                    "filename": "src\\components\\statisticsPageComponents\\AffectingFactors.js"
-                },
-                {
-                    "blank": 6,
-                    "code": 64,
-                    "comment": 0,
-                    "filename": "src\\components\\statisticsPageComponents\\ScaleFrequency.js"
-                },
-                {
-                    "blank": 4,
-                    "code": 55,
-                    "comment": 0,
-                    "filename": "src\\components\\statisticsPageComponents\\ScaleFrequency.module.css"
-                },
-                {
-                    "blank": 6,
-                    "code": 75,
-                    "comment": 26,
-                    "filename": "src\\components\\statisticsPageComponents\\StatisticHelperFunctions.js"
-                },
-                {
-                    "blank": 13,
-                    "code": 85,
-                    "comment": 4,
-                    "filename": "src\\components\\statisticsPageComponents\\TimePeriods.js"
-                },
-                {
-                    "blank": 3,
-                    "code": 19,
-                    "comment": 0,
-                    "filename": "src\\components\\statisticsPageComponents\\TimePeriods.module.css"
-                },
-                {
-                    "blank": 3,
-                    "code": 11,
-                    "comment": 1,
-                    "filename": "src\\components\\ui\\Card.js"
-                },
-                {
-                    "blank": 0,
-                    "code": 7,
-                    "comment": 0,
-                    "filename": "src\\components\\ui\\Card.module.css"
-                },
-                {
-                    "blank": 11,
-                    "code": 69,
-                    "comment": 0,
-                    "filename": "src\\index.css"
-                },
-                {
-                    "blank": 1,
-                    "code": 11,
-                    "comment": 0,
-                    "filename": "src\\index.js"
-                },
-                {
-                    "blank": 10,
-                    "code": 73,
-                    "comment": 4,
-                    "filename": "src\\pages\\PainEntries.js"
-                },
-                {
-                    "blank": 2,
-                    "code": 50,
-                    "comment": 14,
-                    "filename": "src\\pages\\Profile.js"
-                },
-                {
-                    "blank": 2,
-                    "code": 14,
-                    "comment": 0,
-                    "filename": "src\\pages\\Records.js"
-                },
-                {
-                    "blank": 13,
-                    "code": 99,
-                    "comment": 4,
-                    "filename": "src\\pages\\Stats.js"
-                }
-            ]
-        },
-        {
-            "version": "0.1.7",
-            "counttime": "2021-07-29 13:30:46",
-            "filesum": 42,
-            "codesum": 2527,
-            "commentsum": 245,
-            "blanksum": 238,
-            "filelist": [
-                {
-                    "blank": 5,
-                    "code": 18,
-                    "comment": 1,
-                    "filename": ".gitignore"
-                },
-                {
-                    "blank": 5,
-                    "code": 27,
-                    "comment": 0,
-                    "filename": "src\\App.js"
-                },
-                {
-                    "blank": 10,
-                    "code": 67,
-                    "comment": 6,
-                    "filename": "src\\components\\EntriePageComponents\\DatePicker.js"
-                },
-                {
-                    "blank": 3,
-                    "code": 41,
-                    "comment": 4,
-                    "filename": "src\\components\\EntriePageComponents\\ExtraComments.js"
-                },
-                {
-                    "blank": 3,
-                    "code": 35,
-                    "comment": 4,
-                    "filename": "src\\components\\EntriePageComponents\\location\\AddNewLocation.js"
-                },
-                {
-                    "blank": 4,
-                    "code": 29,
-                    "comment": 4,
-                    "filename": "src\\components\\EntriePageComponents\\location\\EditLocation.js"
-                },
-                {
-                    "blank": 17,
-                    "code": 156,
-                    "comment": 30,
-                    "filename": "src\\components\\EntriePageComponents\\location\\Location.js"
-                },
-                {
-                    "blank": 2,
-                    "code": 51,
-                    "comment": 7,
-                    "filename": "src\\components\\EntriePageComponents\\location\\LocationList.js"
-                },
-                {
-                    "blank": 6,
-                    "code": 94,
-                    "comment": 9,
-                    "filename": "src\\components\\EntriePageComponents\\location\\LocationMenu.js"
-                },
-                {
-                    "blank": 3,
-                    "code": 89,
-                    "comment": 4,
-                    "filename": "src\\components\\EntriePageComponents\\medication\\AddNewMedication.js"
-                },
-                {
-                    "blank": 4,
-                    "code": 33,
-                    "comment": 4,
-                    "filename": "src\\components\\EntriePageComponents\\medication\\EditMedication.js"
-                },
-                {
-                    "blank": 20,
-                    "code": 166,
-                    "comment": 32,
-                    "filename": "src\\components\\EntriePageComponents\\medication\\Medication.js"
-                },
-                {
-                    "blank": 6,
-                    "code": 131,
-                    "comment": 10,
-                    "filename": "src\\components\\EntriePageComponents\\medication\\MedicationList.js"
-                },
-                {
-                    "blank": 8,
-                    "code": 94,
-                    "comment": 8,
-                    "filename": "src\\components\\EntriePageComponents\\medication\\MedicationMenu.js"
-                },
-                {
-                    "blank": 2,
-                    "code": 74,
-                    "comment": 4,
-                    "filename": "src\\components\\EntriePageComponents\\PainEntriesPainRangeText.js"
-                },
-                {
-                    "blank": 7,
-                    "code": 45,
-                    "comment": 4,
-                    "filename": "src\\components\\EntriePageComponents\\PainScale.js"
-                },
-                {
-                    "blank": 3,
-                    "code": 34,
-                    "comment": 4,
-                    "filename": "src\\components\\EntriePageComponents\\treatment\\AddNewTreatment.js"
-                },
-                {
-                    "blank": 5,
-                    "code": 32,
-                    "comment": 4,
-                    "filename": "src\\components\\EntriePageComponents\\treatment\\EditTreatment.js"
-                },
-                {
-                    "blank": 17,
-                    "code": 160,
-                    "comment": 30,
-                    "filename": "src\\components\\EntriePageComponents\\treatment\\Treatment.js"
-                },
-                {
-                    "blank": 7,
-                    "code": 112,
-                    "comment": 9,
-                    "filename": "src\\components\\EntriePageComponents\\treatment\\TreatmentList.js"
-                },
-                {
-                    "blank": 6,
-                    "code": 94,
-                    "comment": 8,
-                    "filename": "src\\components\\EntriePageComponents\\treatment\\TreatmentMenu.js"
-                },
-                {
-                    "blank": 2,
-                    "code": 12,
-                    "comment": 0,
-                    "filename": "src\\components\\layout\\Layout.js"
-                },
-                {
-                    "blank": 0,
-                    "code": 3,
-                    "comment": 0,
-                    "filename": "src\\components\\layout\\Layout.module.css"
-                },
-                {
-                    "blank": 1,
-                    "code": 27,
-                    "comment": 0,
-                    "filename": "src\\components\\layout\\MainNavigation.js"
-                },
-                {
-                    "blank": 6,
-                    "code": 41,
-                    "comment": 0,
-                    "filename": "src\\components\\layout\\MainNavigation.module.css"
-                },
-                {
-                    "blank": 5,
-                    "code": 57,
-                    "comment": 0,
-                    "filename": "src\\components\\profileComponents\\CustomizedAccordion.js"
-                },
-                {
-                    "blank": 1,
-                    "code": 14,
-                    "comment": 0,
-                    "filename": "src\\components\\ProfilePageComponents\\Records.js"
-                },
-                {
-                    "blank": 4,
-                    "code": 113,
-                    "comment": 1,
-                    "filename": "src\\components\\ProfilePageComponents\\Signin.js"
-                },
-                {
-                    "blank": 2,
-                    "code": 46,
-                    "comment": 5,
-                    "filename": "src\\components\\statisticsPageComponents\\AffectingFactors.js"
-                },
-                {
-                    "blank": 6,
-                    "code": 64,
-                    "comment": 0,
-                    "filename": "src\\components\\statisticsPageComponents\\ScaleFrequency.js"
-                },
-                {
-                    "blank": 4,
-                    "code": 55,
-                    "comment": 0,
-                    "filename": "src\\components\\statisticsPageComponents\\ScaleFrequency.module.css"
-                },
-                {
-                    "blank": 6,
-                    "code": 75,
-                    "comment": 26,
-                    "filename": "src\\components\\statisticsPageComponents\\StatisticHelperFunctions.js"
-                },
-                {
-                    "blank": 13,
-                    "code": 85,
-                    "comment": 4,
-                    "filename": "src\\components\\statisticsPageComponents\\TimePeriods.js"
-                },
-                {
-                    "blank": 3,
-                    "code": 19,
-                    "comment": 0,
-                    "filename": "src\\components\\statisticsPageComponents\\TimePeriods.module.css"
-                },
-                {
-                    "blank": 3,
-                    "code": 11,
-                    "comment": 1,
-                    "filename": "src\\components\\ui\\Card.js"
-                },
-                {
-                    "blank": 0,
-                    "code": 7,
-                    "comment": 0,
-                    "filename": "src\\components\\ui\\Card.module.css"
-                },
-                {
-                    "blank": 11,
-                    "code": 69,
-                    "comment": 0,
-                    "filename": "src\\index.css"
-                },
-                {
-                    "blank": 1,
-                    "code": 11,
-                    "comment": 0,
-                    "filename": "src\\index.js"
-                },
-                {
-                    "blank": 10,
-                    "code": 73,
-                    "comment": 4,
-                    "filename": "src\\pages\\PainEntries.js"
-                },
-                {
-                    "blank": 2,
-                    "code": 50,
-                    "comment": 14,
-                    "filename": "src\\pages\\Profile.js"
-                },
-                {
-                    "blank": 2,
-                    "code": 14,
-                    "comment": 0,
-                    "filename": "src\\pages\\Records.js"
-                },
-                {
-                    "blank": 13,
-                    "code": 99,
-                    "comment": 4,
-                    "filename": "src\\pages\\Stats.js"
-                }
-            ]
-        },
-        {
-            "version": "0.1.7",
-            "counttime": "2021-07-29 13:31:51",
-            "filesum": 42,
-            "codesum": 2527,
-            "commentsum": 245,
-            "blanksum": 238,
-            "filelist": [
-                {
-                    "blank": 5,
-                    "code": 18,
-                    "comment": 1,
-                    "filename": ".gitignore"
-                },
-                {
-                    "blank": 5,
-                    "code": 27,
-                    "comment": 0,
-                    "filename": "src\\App.js"
-                },
-                {
-                    "blank": 10,
-                    "code": 67,
-                    "comment": 6,
-                    "filename": "src\\components\\EntriePageComponents\\DatePicker.js"
-                },
-                {
-                    "blank": 3,
-                    "code": 41,
-                    "comment": 4,
-                    "filename": "src\\components\\EntriePageComponents\\ExtraComments.js"
-                },
-                {
-                    "blank": 3,
-                    "code": 35,
-                    "comment": 4,
-                    "filename": "src\\components\\EntriePageComponents\\location\\AddNewLocation.js"
-                },
-                {
-                    "blank": 4,
-                    "code": 29,
-                    "comment": 4,
-                    "filename": "src\\components\\EntriePageComponents\\location\\EditLocation.js"
-                },
-                {
-                    "blank": 17,
-                    "code": 156,
-                    "comment": 30,
-                    "filename": "src\\components\\EntriePageComponents\\location\\Location.js"
-                },
-                {
-                    "blank": 2,
-                    "code": 51,
-                    "comment": 7,
-                    "filename": "src\\components\\EntriePageComponents\\location\\LocationList.js"
-                },
-                {
-                    "blank": 6,
-                    "code": 94,
-                    "comment": 9,
-                    "filename": "src\\components\\EntriePageComponents\\location\\LocationMenu.js"
-                },
-                {
-                    "blank": 3,
-                    "code": 89,
-                    "comment": 4,
-                    "filename": "src\\components\\EntriePageComponents\\medication\\AddNewMedication.js"
-                },
-                {
-                    "blank": 4,
-                    "code": 33,
-                    "comment": 4,
-                    "filename": "src\\components\\EntriePageComponents\\medication\\EditMedication.js"
-                },
-                {
-                    "blank": 20,
-                    "code": 166,
-                    "comment": 32,
-                    "filename": "src\\components\\EntriePageComponents\\medication\\Medication.js"
-                },
-                {
-                    "blank": 6,
-                    "code": 131,
-                    "comment": 10,
-                    "filename": "src\\components\\EntriePageComponents\\medication\\MedicationList.js"
-                },
-                {
-                    "blank": 8,
-                    "code": 94,
-                    "comment": 8,
-                    "filename": "src\\components\\EntriePageComponents\\medication\\MedicationMenu.js"
-                },
-                {
-                    "blank": 2,
-                    "code": 74,
-                    "comment": 4,
-                    "filename": "src\\components\\EntriePageComponents\\PainEntriesPainRangeText.js"
-                },
-                {
-                    "blank": 7,
-                    "code": 45,
-                    "comment": 4,
-                    "filename": "src\\components\\EntriePageComponents\\PainScale.js"
-                },
-                {
-                    "blank": 3,
-                    "code": 34,
-                    "comment": 4,
-                    "filename": "src\\components\\EntriePageComponents\\treatment\\AddNewTreatment.js"
-                },
-                {
-                    "blank": 5,
-                    "code": 32,
-                    "comment": 4,
-                    "filename": "src\\components\\EntriePageComponents\\treatment\\EditTreatment.js"
-                },
-                {
-                    "blank": 17,
-                    "code": 160,
-                    "comment": 30,
-                    "filename": "src\\components\\EntriePageComponents\\treatment\\Treatment.js"
-                },
-                {
-                    "blank": 7,
-                    "code": 112,
-                    "comment": 9,
-                    "filename": "src\\components\\EntriePageComponents\\treatment\\TreatmentList.js"
-                },
-                {
-                    "blank": 6,
-                    "code": 94,
-                    "comment": 8,
-                    "filename": "src\\components\\EntriePageComponents\\treatment\\TreatmentMenu.js"
-                },
-                {
-                    "blank": 2,
-                    "code": 12,
-                    "comment": 0,
-                    "filename": "src\\components\\layout\\Layout.js"
-                },
-                {
-                    "blank": 0,
-                    "code": 3,
-                    "comment": 0,
-                    "filename": "src\\components\\layout\\Layout.module.css"
-                },
-                {
-                    "blank": 1,
-                    "code": 27,
-                    "comment": 0,
-                    "filename": "src\\components\\layout\\MainNavigation.js"
-                },
-                {
-                    "blank": 6,
-                    "code": 41,
-                    "comment": 0,
-                    "filename": "src\\components\\layout\\MainNavigation.module.css"
-                },
-                {
-                    "blank": 5,
-                    "code": 57,
-                    "comment": 0,
-                    "filename": "src\\components\\profileComponents\\CustomizedAccordion.js"
-                },
-                {
-                    "blank": 1,
-                    "code": 14,
-                    "comment": 0,
-                    "filename": "src\\components\\ProfilePageComponents\\Records.js"
-                },
-                {
-                    "blank": 4,
-                    "code": 113,
-                    "comment": 1,
-                    "filename": "src\\components\\ProfilePageComponents\\Signin.js"
-                },
-                {
-                    "blank": 2,
-                    "code": 46,
-                    "comment": 5,
-                    "filename": "src\\components\\statisticsPageComponents\\AffectingFactors.js"
-                },
-                {
-                    "blank": 6,
-                    "code": 64,
-                    "comment": 0,
-                    "filename": "src\\components\\statisticsPageComponents\\ScaleFrequency.js"
-                },
-                {
-                    "blank": 4,
-                    "code": 55,
-                    "comment": 0,
-                    "filename": "src\\components\\statisticsPageComponents\\ScaleFrequency.module.css"
-                },
-                {
-                    "blank": 6,
-                    "code": 75,
-                    "comment": 26,
-                    "filename": "src\\components\\statisticsPageComponents\\StatisticHelperFunctions.js"
-                },
-                {
-                    "blank": 13,
-                    "code": 85,
-                    "comment": 4,
-                    "filename": "src\\components\\statisticsPageComponents\\TimePeriods.js"
-                },
-                {
-                    "blank": 3,
-                    "code": 19,
-                    "comment": 0,
-                    "filename": "src\\components\\statisticsPageComponents\\TimePeriods.module.css"
-                },
-                {
-                    "blank": 3,
-                    "code": 11,
-                    "comment": 1,
-                    "filename": "src\\components\\ui\\Card.js"
-                },
-                {
-                    "blank": 0,
-                    "code": 7,
-                    "comment": 0,
-                    "filename": "src\\components\\ui\\Card.module.css"
-                },
-                {
-                    "blank": 11,
-                    "code": 69,
-                    "comment": 0,
-                    "filename": "src\\index.css"
-                },
-                {
-                    "blank": 1,
-                    "code": 11,
-                    "comment": 0,
-                    "filename": "src\\index.js"
-                },
-                {
-                    "blank": 10,
-                    "code": 73,
-                    "comment": 4,
-                    "filename": "src\\pages\\PainEntries.js"
-                },
-                {
-                    "blank": 2,
-                    "code": 50,
-                    "comment": 14,
-                    "filename": "src\\pages\\Profile.js"
-                },
-                {
-                    "blank": 2,
-                    "code": 14,
-                    "comment": 0,
-                    "filename": "src\\pages\\Records.js"
-                },
-                {
-                    "blank": 13,
-                    "code": 99,
-                    "comment": 4,
-                    "filename": "src\\pages\\Stats.js"
-                }
-            ]
-        },
-        {
-            "version": "0.1.7",
-            "counttime": "2021-07-30 13:27:07",
-            "filesum": 44,
-            "codesum": 2757,
-            "commentsum": 256,
-            "blanksum": 248,
-            "filelist": [
-                {
-                    "blank": 5,
-                    "code": 18,
-                    "comment": 1,
-                    "filename": ".gitignore"
-                },
-                {
-                    "filename": "public\\tangerine.png",
-                    "isbinaryfile": true,
-                    "blank": 0,
-                    "code": 0,
-                    "comment": 0
-                },
-                {
-                    "filename": "public\\tangerine2.png",
-                    "isbinaryfile": true,
-                    "blank": 0,
-                    "code": 0,
-                    "comment": 0
-                },
-                {
-                    "blank": 5,
-                    "code": 28,
-                    "comment": 0,
-                    "filename": "src\\App.js"
-                },
-                {
-                    "blank": 10,
-                    "code": 75,
-                    "comment": 6,
-                    "filename": "src\\components\\EntriePageComponents\\DatePicker.js"
-                },
-                {
-                    "blank": 3,
-                    "code": 46,
-                    "comment": 5,
-                    "filename": "src\\components\\EntriePageComponents\\ExtraComments.js"
-                },
-                {
-                    "blank": 3,
-                    "code": 35,
-                    "comment": 4,
-                    "filename": "src\\components\\EntriePageComponents\\location\\AddNewLocation.js"
-                },
-                {
-                    "blank": 4,
-                    "code": 29,
-                    "comment": 4,
-                    "filename": "src\\components\\EntriePageComponents\\location\\EditLocation.js"
-                },
-                {
-                    "blank": 17,
-                    "code": 156,
-                    "comment": 30,
-                    "filename": "src\\components\\EntriePageComponents\\location\\Location.js"
-                },
-                {
-                    "blank": 2,
-                    "code": 50,
-                    "comment": 7,
-                    "filename": "src\\components\\EntriePageComponents\\location\\LocationList.js"
-                },
-                {
-                    "blank": 5,
-                    "code": 104,
-                    "comment": 9,
-                    "filename": "src\\components\\EntriePageComponents\\location\\LocationMenu.js"
-                },
-                {
-                    "blank": 3,
-                    "code": 89,
-                    "comment": 4,
-                    "filename": "src\\components\\EntriePageComponents\\medication\\AddNewMedication.js"
-                },
-                {
-                    "blank": 4,
-                    "code": 33,
-                    "comment": 4,
-                    "filename": "src\\components\\EntriePageComponents\\medication\\EditMedication.js"
-                },
-                {
-                    "blank": 20,
-                    "code": 162,
-                    "comment": 32,
-                    "filename": "src\\components\\EntriePageComponents\\medication\\Medication.js"
-                },
-                {
-                    "blank": 7,
-                    "code": 125,
-                    "comment": 8,
-                    "filename": "src\\components\\EntriePageComponents\\medication\\MedicationList.js"
-                },
-                {
-                    "blank": 7,
-                    "code": 112,
-                    "comment": 8,
-                    "filename": "src\\components\\EntriePageComponents\\medication\\MedicationMenu.js"
-                },
-                {
-                    "blank": 2,
-                    "code": 100,
-                    "comment": 4,
-                    "filename": "src\\components\\EntriePageComponents\\PainEntriesPainRangeText.js"
-                },
-                {
-                    "blank": 7,
-                    "code": 45,
-                    "comment": 4,
-                    "filename": "src\\components\\EntriePageComponents\\PainScale.js"
-                },
-                {
-                    "blank": 3,
-                    "code": 34,
-                    "comment": 4,
-                    "filename": "src\\components\\EntriePageComponents\\treatment\\AddNewTreatment.js"
-                },
-                {
-                    "blank": 5,
-                    "code": 32,
-                    "comment": 4,
-                    "filename": "src\\components\\EntriePageComponents\\treatment\\EditTreatment.js"
-                },
-                {
-                    "blank": 17,
-                    "code": 159,
-                    "comment": 30,
-                    "filename": "src\\components\\EntriePageComponents\\treatment\\Treatment.js"
-                },
-                {
-                    "blank": 7,
-                    "code": 109,
-                    "comment": 9,
-                    "filename": "src\\components\\EntriePageComponents\\treatment\\TreatmentList.js"
-                },
-                {
-                    "blank": 6,
-                    "code": 94,
-                    "comment": 8,
-                    "filename": "src\\components\\EntriePageComponents\\treatment\\TreatmentMenu.js"
-                },
-                {
-                    "blank": 2,
-                    "code": 12,
-                    "comment": 0,
-                    "filename": "src\\components\\layout\\Layout.js"
-                },
-                {
-                    "blank": 0,
-                    "code": 3,
-                    "comment": 0,
-                    "filename": "src\\components\\layout\\Layout.module.css"
-                },
-                {
-                    "blank": 1,
-                    "code": 27,
-                    "comment": 0,
-                    "filename": "src\\components\\layout\\MainNavigation.js"
-                },
-                {
-                    "blank": 6,
-                    "code": 41,
-                    "comment": 0,
-                    "filename": "src\\components\\layout\\MainNavigation.module.css"
-                },
-                {
-                    "blank": 5,
-                    "code": 57,
-                    "comment": 0,
-                    "filename": "src\\components\\profileComponents\\CustomizedAccordion.js"
-                },
-                {
-                    "blank": 12,
-                    "code": 62,
-                    "comment": 13,
-                    "filename": "src\\components\\ProfilePageComponents\\Records.js"
-                },
-                {
-                    "blank": 4,
-                    "code": 113,
-                    "comment": 1,
-                    "filename": "src\\components\\ProfilePageComponents\\Signin.js"
-                },
-                {
-                    "blank": 1,
-                    "code": 56,
-                    "comment": 5,
-                    "filename": "src\\components\\statisticsPageComponents\\AffectingFactors.js"
-                },
-                {
-                    "blank": 6,
-                    "code": 64,
-                    "comment": 0,
-                    "filename": "src\\components\\statisticsPageComponents\\ScaleFrequency.js"
-                },
-                {
-                    "blank": 4,
-                    "code": 55,
-                    "comment": 0,
-                    "filename": "src\\components\\statisticsPageComponents\\ScaleFrequency.module.css"
-                },
-                {
-                    "blank": 6,
-                    "code": 75,
-                    "comment": 26,
-                    "filename": "src\\components\\statisticsPageComponents\\StatisticHelperFunctions.js"
-                },
-                {
-                    "blank": 13,
-                    "code": 85,
-                    "comment": 4,
-                    "filename": "src\\components\\statisticsPageComponents\\TimePeriods.js"
-                },
-                {
-                    "blank": 3,
-                    "code": 19,
-                    "comment": 0,
-                    "filename": "src\\components\\statisticsPageComponents\\TimePeriods.module.css"
-                },
-                {
-                    "blank": 3,
-                    "code": 11,
-                    "comment": 0,
-                    "filename": "src\\components\\ui\\Card.js"
-                },
-                {
-                    "blank": 0,
-                    "code": 9,
-                    "comment": 0,
-                    "filename": "src\\components\\ui\\Card.module.css"
-                },
-                {
-                    "blank": 11,
-                    "code": 69,
-                    "comment": 0,
-                    "filename": "src\\index.css"
-                },
-                {
-                    "blank": 1,
-                    "code": 12,
-                    "comment": 0,
-                    "filename": "src\\index.js"
-                },
-                {
-                    "blank": 13,
-                    "code": 161,
+                    "code": 1,
                     "comment": 3,
-                    "filename": "src\\pages\\PainEntries.js"
+                    "filename": "build\\static\\js\\2.e844ed23.chunk.js"
                 },
                 {
-                    "blank": 2,
-                    "code": 49,
-                    "comment": 15,
-                    "filename": "src\\pages\\Profile.js"
+                    "blank": 81,
+                    "code": 0,
+                    "comment": 138,
+                    "filename": "build\\static\\js\\2.e844ed23.chunk.js.LICENSE.txt"
                 },
                 {
-                    "blank": 2,
-                    "code": 13,
+                    "blank": 0,
+                    "code": 1,
                     "comment": 0,
-                    "filename": "src\\pages\\Records.js"
+                    "filename": "build\\static\\js\\2.e844ed23.chunk.js.map"
                 },
                 {
-                    "blank": 11,
-                    "code": 129,
-                    "comment": 4,
-                    "filename": "src\\pages\\Stats.js"
-                }
-            ]
-        },
-        {
-            "version": "0.1.7",
-            "counttime": "2021-08-02 23:51:05",
-            "filesum": 46,
-            "codesum": 3249,
-            "commentsum": 263,
-            "blanksum": 259,
-            "filelist": [
-                {
-                    "blank": 5,
-                    "code": 18,
+                    "blank": 0,
+                    "code": 1,
                     "comment": 1,
-                    "filename": ".gitignore"
+                    "filename": "build\\static\\js\\main.3c9dc3c1.chunk.js"
                 },
                 {
-                    "filename": "public\\tangerine.png",
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "build\\static\\js\\main.3c9dc3c1.chunk.js.map"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 1,
+                    "filename": "build\\static\\js\\runtime-main.7850b3bd.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "build\\static\\js\\runtime-main.7850b3bd.js.map"
+                },
+                {
+                    "filename": "build\\static\\media\\roboto-all-400-normal.376ea5d9.woff",
                     "isbinaryfile": true,
                     "blank": 0,
                     "code": 0,
                     "comment": 0
                 },
                 {
-                    "filename": "public\\tangerine2.png",
+                    "filename": "build\\static\\media\\roboto-cyrillic-400-normal.5e493812.woff2",
                     "isbinaryfile": true,
                     "blank": 0,
                     "code": 0,
                     "comment": 0
                 },
                 {
-                    "blank": 6,
-                    "code": 53,
-                    "comment": 0,
-                    "filename": "src\\App.js"
-                },
-                {
-                    "blank": 10,
-                    "code": 84,
-                    "comment": 6,
-                    "filename": "src\\components\\EntriePageComponents\\DatePicker.js"
-                },
-                {
-                    "blank": 3,
-                    "code": 56,
-                    "comment": 5,
-                    "filename": "src\\components\\EntriePageComponents\\ExtraComments.js"
-                },
-                {
-                    "blank": 5,
-                    "code": 55,
-                    "comment": 4,
-                    "filename": "src\\components\\EntriePageComponents\\location\\AddNewLocation.js"
-                },
-                {
-                    "blank": 4,
-                    "code": 29,
-                    "comment": 4,
-                    "filename": "src\\components\\EntriePageComponents\\location\\EditLocation.js"
-                },
-                {
-                    "blank": 17,
-                    "code": 149,
-                    "comment": 30,
-                    "filename": "src\\components\\EntriePageComponents\\location\\Location.js"
-                },
-                {
-                    "blank": 4,
-                    "code": 66,
-                    "comment": 14,
-                    "filename": "src\\components\\EntriePageComponents\\location\\LocationList.js"
-                },
-                {
-                    "blank": 5,
-                    "code": 116,
-                    "comment": 9,
-                    "filename": "src\\components\\EntriePageComponents\\location\\LocationMenu.js"
-                },
-                {
-                    "blank": 3,
-                    "code": 89,
-                    "comment": 4,
-                    "filename": "src\\components\\EntriePageComponents\\medication\\AddNewMedication.js"
-                },
-                {
-                    "blank": 4,
-                    "code": 33,
-                    "comment": 4,
-                    "filename": "src\\components\\EntriePageComponents\\medication\\EditMedication.js"
-                },
-                {
-                    "blank": 20,
-                    "code": 159,
-                    "comment": 32,
-                    "filename": "src\\components\\EntriePageComponents\\medication\\Medication.js"
-                },
-                {
-                    "blank": 6,
-                    "code": 140,
-                    "comment": 8,
-                    "filename": "src\\components\\EntriePageComponents\\medication\\MedicationList.js"
-                },
-                {
-                    "blank": 7,
-                    "code": 112,
-                    "comment": 8,
-                    "filename": "src\\components\\EntriePageComponents\\medication\\MedicationMenu.js"
-                },
-                {
-                    "blank": 2,
-                    "code": 100,
-                    "comment": 4,
-                    "filename": "src\\components\\EntriePageComponents\\PainEntriesPainRangeText.js"
-                },
-                {
-                    "blank": 6,
-                    "code": 72,
-                    "comment": 4,
-                    "filename": "src\\components\\EntriePageComponents\\PainScale.js"
-                },
-                {
-                    "blank": 3,
-                    "code": 34,
-                    "comment": 4,
-                    "filename": "src\\components\\EntriePageComponents\\treatment\\AddNewTreatment.js"
-                },
-                {
-                    "blank": 5,
-                    "code": 32,
-                    "comment": 4,
-                    "filename": "src\\components\\EntriePageComponents\\treatment\\EditTreatment.js"
-                },
-                {
-                    "blank": 17,
-                    "code": 153,
-                    "comment": 30,
-                    "filename": "src\\components\\EntriePageComponents\\treatment\\Treatment.js"
-                },
-                {
-                    "blank": 7,
-                    "code": 123,
-                    "comment": 9,
-                    "filename": "src\\components\\EntriePageComponents\\treatment\\TreatmentList.js"
-                },
-                {
-                    "blank": 6,
-                    "code": 113,
-                    "comment": 8,
-                    "filename": "src\\components\\EntriePageComponents\\treatment\\TreatmentMenu.js"
-                },
-                {
-                    "blank": 2,
-                    "code": 84,
-                    "comment": 0,
-                    "filename": "src\\components\\layout\\NavBar.js"
-                },
-                {
-                    "blank": 5,
-                    "code": 62,
-                    "comment": 0,
-                    "filename": "src\\components\\profileComponents\\CustomizedAccordion.js"
-                },
-                {
-                    "blank": 0,
-                    "code": 170,
-                    "comment": 0,
-                    "filename": "src\\components\\profileComponents\\TextUserGuide.js"
-                },
-                {
-                    "blank": 1,
-                    "code": 45,
-                    "comment": 0,
-                    "filename": "src\\components\\profileComponents\\UserGuideFormat.js"
-                },
-                {
-                    "blank": 2,
-                    "code": 9,
-                    "comment": 0,
-                    "filename": "src\\components\\ProfilePageComponents\\RecordEntry.js"
-                },
-                {
-                    "blank": 23,
-                    "code": 161,
-                    "comment": 16,
-                    "filename": "src\\components\\ProfilePageComponents\\Records.js"
-                },
-                {
-                    "blank": 1,
-                    "code": 56,
-                    "comment": 5,
-                    "filename": "src\\components\\statisticsPageComponents\\AffectingFactors.js"
-                },
-                {
-                    "blank": 6,
-                    "code": 64,
-                    "comment": 0,
-                    "filename": "src\\components\\statisticsPageComponents\\ScaleFrequency.js"
-                },
-                {
-                    "blank": 4,
-                    "code": 55,
-                    "comment": 0,
-                    "filename": "src\\components\\statisticsPageComponents\\ScaleFrequency.module.css"
-                },
-                {
-                    "blank": 7,
-                    "code": 86,
-                    "comment": 28,
-                    "filename": "src\\components\\statisticsPageComponents\\StatisticHelperFunctions.js"
-                },
-                {
-                    "blank": 12,
-                    "code": 85,
-                    "comment": 0,
-                    "filename": "src\\components\\statisticsPageComponents\\TimePeriods.js"
-                },
-                {
-                    "blank": 3,
-                    "code": 19,
-                    "comment": 0,
-                    "filename": "src\\components\\statisticsPageComponents\\TimePeriods.module.css"
-                },
-                {
-                    "blank": 3,
-                    "code": 11,
-                    "comment": 0,
-                    "filename": "src\\components\\ui\\Card.js"
-                },
-                {
-                    "blank": 0,
-                    "code": 9,
-                    "comment": 0,
-                    "filename": "src\\components\\ui\\Card.module.css"
-                },
-                {
-                    "blank": 3,
-                    "code": 22,
-                    "comment": 0,
-                    "filename": "src\\components\\ui\\OuterGrid.js"
-                },
-                {
-                    "filename": "src\\images\\tangerine.png",
+                    "filename": "build\\static\\media\\roboto-cyrillic-ext-400-normal.493afe7a.woff2",
                     "isbinaryfile": true,
                     "blank": 0,
                     "code": 0,
                     "comment": 0
                 },
                 {
-                    "blank": 3,
-                    "code": 19,
-                    "comment": 0,
-                    "filename": "src\\index.css"
+                    "filename": "build\\static\\media\\roboto-greek-400-normal.1cbfc636.woff2",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
                 },
                 {
-                    "blank": 1,
-                    "code": 12,
-                    "comment": 0,
-                    "filename": "src\\index.js"
+                    "filename": "build\\static\\media\\roboto-greek-ext-400-normal.e769aa77.woff2",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
                 },
                 {
-                    "blank": 14,
-                    "code": 165,
-                    "comment": 3,
-                    "filename": "src\\pages\\PainEntries.js"
+                    "filename": "build\\static\\media\\roboto-latin-400-normal.4673b453.woff2",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
                 },
                 {
-                    "blank": 4,
-                    "code": 66,
-                    "comment": 14,
-                    "filename": "src\\pages\\Profile.js"
+                    "filename": "build\\static\\media\\roboto-latin-ext-400-normal.c3dcdbd5.woff2",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
                 },
                 {
-                    "blank": 2,
-                    "code": 5,
-                    "comment": 0,
-                    "filename": "src\\pages\\Records.js"
+                    "filename": "build\\static\\media\\roboto-vietnamese-400-normal.c0bec65d.woff2",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
                 },
                 {
-                    "blank": 4,
-                    "code": 129,
-                    "comment": 1,
-                    "filename": "src\\pages\\Signin.js"
+                    "filename": "build\\static\\media\\tangerine.14f98906.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
                 },
                 {
-                    "blank": 14,
-                    "code": 129,
-                    "comment": 4,
-                    "filename": "src\\pages\\Stats.js"
-                }
-            ]
-        },
-        {
-            "version": "0.1.7",
-            "counttime": "2021-08-09 09:35:11",
-            "filesum": 56,
-            "codesum": 4510,
-            "commentsum": 448,
-            "blanksum": 368,
-            "filelist": [
+                    "filename": "build\\tangerine.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
                 {
-                    "blank": 5,
-                    "code": 18,
-                    "comment": 1,
-                    "filename": ".gitignore"
+                    "filename": "build\\tangerine2.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
                 },
                 {
                     "filename": "public\\tangerine.png",
@@ -2572,7 +188,7 @@
                 },
                 {
                     "blank": 5,
-                    "code": 85,
+                    "code": 88,
                     "comment": 0,
                     "filename": "src\\App.js"
                 },
@@ -2745,21 +361,21 @@
                     "filename": "src\\components\\profileComponents\\UserGuideFormat.js"
                 },
                 {
-                    "blank": 13,
-                    "code": 28,
-                    "comment": 10,
+                    "blank": 8,
+                    "code": 49,
+                    "comment": 0,
                     "filename": "src\\components\\ProfilePageComponents\\RecordDays.js"
                 },
                 {
-                    "blank": 3,
-                    "code": 6,
+                    "blank": 9,
+                    "code": 158,
                     "comment": 0,
                     "filename": "src\\components\\ProfilePageComponents\\RecordEntry.js"
                 },
                 {
-                    "blank": 34,
-                    "code": 205,
-                    "comment": 47,
+                    "blank": 41,
+                    "code": 286,
+                    "comment": 38,
                     "filename": "src\\components\\ProfilePageComponents\\Records.js"
                 },
                 {
@@ -2781,8 +397,8 @@
                     "filename": "src\\components\\statisticsPageComponents\\AffectingFactors.js"
                 },
                 {
-                    "blank": 7,
-                    "code": 65,
+                    "blank": 8,
+                    "code": 69,
                     "comment": 0,
                     "filename": "src\\components\\statisticsPageComponents\\ScaleFrequency.js"
                 },
@@ -2796,7 +412,7 @@
                     "blank": 7,
                     "code": 86,
                     "comment": 28,
-                    "filename": "src\\components\\statisticsPageComponents\\StatisticHelperFunctions.js"
+                    "filename": "src\\components\\statisticsPageComponents\\StatisticFunctions.js"
                 },
                 {
                     "blank": 13,
@@ -2843,7 +459,7 @@
                 },
                 {
                     "blank": 4,
-                    "code": 21,
+                    "code": 22,
                     "comment": 0,
                     "filename": "src\\index.css"
                 },
@@ -2878,7 +494,511 @@
                     "filename": "src\\pages\\Records.js"
                 },
                 {
+                    "blank": 13,
+                    "code": 138,
+                    "comment": 5,
+                    "filename": "src\\pages\\Stats.js"
+                },
+                {
                     "blank": 12,
+                    "code": 76,
+                    "comment": 17,
+                    "filename": "src\\store\\Auth-context.js"
+                }
+            ]
+        },
+        {
+            "version": "0.1.7",
+            "counttime": "2021-08-12 02:02:42",
+            "filesum": 80,
+            "codesum": 4807,
+            "commentsum": 574,
+            "blanksum": 460,
+            "filelist": [
+                {
+                    "blank": 5,
+                    "code": 18,
+                    "comment": 1,
+                    "filename": ".gitignore"
+                },
+                {
+                    "blank": 1,
+                    "code": 24,
+                    "comment": 0,
+                    "filename": "build\\asset-manifest.json"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "build\\index.html"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 1,
+                    "filename": "build\\static\\css\\2.ba083dbd.chunk.css"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "build\\static\\css\\2.ba083dbd.chunk.css.map"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 1,
+                    "filename": "build\\static\\css\\main.22b23d90.chunk.css"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "build\\static\\css\\main.22b23d90.chunk.css.map"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 3,
+                    "filename": "build\\static\\js\\2.e844ed23.chunk.js"
+                },
+                {
+                    "blank": 81,
+                    "code": 0,
+                    "comment": 138,
+                    "filename": "build\\static\\js\\2.e844ed23.chunk.js.LICENSE.txt"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "build\\static\\js\\2.e844ed23.chunk.js.map"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 1,
+                    "filename": "build\\static\\js\\main.3c9dc3c1.chunk.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "build\\static\\js\\main.3c9dc3c1.chunk.js.map"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 1,
+                    "filename": "build\\static\\js\\runtime-main.7850b3bd.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "build\\static\\js\\runtime-main.7850b3bd.js.map"
+                },
+                {
+                    "filename": "build\\static\\media\\roboto-all-400-normal.376ea5d9.woff",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "build\\static\\media\\roboto-cyrillic-400-normal.5e493812.woff2",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "build\\static\\media\\roboto-cyrillic-ext-400-normal.493afe7a.woff2",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "build\\static\\media\\roboto-greek-400-normal.1cbfc636.woff2",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "build\\static\\media\\roboto-greek-ext-400-normal.e769aa77.woff2",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "build\\static\\media\\roboto-latin-400-normal.4673b453.woff2",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "build\\static\\media\\roboto-latin-ext-400-normal.c3dcdbd5.woff2",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "build\\static\\media\\roboto-vietnamese-400-normal.c0bec65d.woff2",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "build\\static\\media\\tangerine.14f98906.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "build\\tangerine.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "build\\tangerine2.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "public\\tangerine.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "public\\tangerine2.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 5,
+                    "code": 88,
+                    "comment": 0,
+                    "filename": "src\\App.js"
+                },
+                {
+                    "blank": 10,
+                    "code": 83,
+                    "comment": 6,
+                    "filename": "src\\components\\EntriePageComponents\\DatePicker.js"
+                },
+                {
+                    "blank": 3,
+                    "code": 56,
+                    "comment": 5,
+                    "filename": "src\\components\\EntriePageComponents\\ExtraComments.js"
+                },
+                {
+                    "blank": 5,
+                    "code": 55,
+                    "comment": 4,
+                    "filename": "src\\components\\EntriePageComponents\\location\\AddNewLocation.js"
+                },
+                {
+                    "blank": 5,
+                    "code": 52,
+                    "comment": 4,
+                    "filename": "src\\components\\EntriePageComponents\\location\\EditLocation.js"
+                },
+                {
+                    "blank": 15,
+                    "code": 155,
+                    "comment": 32,
+                    "filename": "src\\components\\EntriePageComponents\\location\\Location.js"
+                },
+                {
+                    "blank": 4,
+                    "code": 66,
+                    "comment": 14,
+                    "filename": "src\\components\\EntriePageComponents\\location\\LocationList.js"
+                },
+                {
+                    "blank": 5,
+                    "code": 116,
+                    "comment": 9,
+                    "filename": "src\\components\\EntriePageComponents\\location\\LocationMenu.js"
+                },
+                {
+                    "blank": 3,
+                    "code": 89,
+                    "comment": 4,
+                    "filename": "src\\components\\EntriePageComponents\\medication\\AddNewMedication.js"
+                },
+                {
+                    "blank": 6,
+                    "code": 52,
+                    "comment": 4,
+                    "filename": "src\\components\\EntriePageComponents\\medication\\EditMedication.js"
+                },
+                {
+                    "blank": 19,
+                    "code": 162,
+                    "comment": 33,
+                    "filename": "src\\components\\EntriePageComponents\\medication\\Medication.js"
+                },
+                {
+                    "blank": 6,
+                    "code": 140,
+                    "comment": 8,
+                    "filename": "src\\components\\EntriePageComponents\\medication\\MedicationList.js"
+                },
+                {
+                    "blank": 7,
+                    "code": 112,
+                    "comment": 8,
+                    "filename": "src\\components\\EntriePageComponents\\medication\\MedicationMenu.js"
+                },
+                {
+                    "blank": 2,
+                    "code": 100,
+                    "comment": 4,
+                    "filename": "src\\components\\EntriePageComponents\\PainEntriesPainRangeText.js"
+                },
+                {
+                    "blank": 7,
+                    "code": 72,
+                    "comment": 4,
+                    "filename": "src\\components\\EntriePageComponents\\PainScale.js"
+                },
+                {
+                    "blank": 3,
+                    "code": 34,
+                    "comment": 4,
+                    "filename": "src\\components\\EntriePageComponents\\treatment\\AddNewTreatment.js"
+                },
+                {
+                    "blank": 6,
+                    "code": 52,
+                    "comment": 4,
+                    "filename": "src\\components\\EntriePageComponents\\treatment\\EditTreatment.js"
+                },
+                {
+                    "blank": 16,
+                    "code": 157,
+                    "comment": 31,
+                    "filename": "src\\components\\EntriePageComponents\\treatment\\Treatment.js"
+                },
+                {
+                    "blank": 7,
+                    "code": 123,
+                    "comment": 9,
+                    "filename": "src\\components\\EntriePageComponents\\treatment\\TreatmentList.js"
+                },
+                {
+                    "blank": 6,
+                    "code": 113,
+                    "comment": 8,
+                    "filename": "src\\components\\EntriePageComponents\\treatment\\TreatmentMenu.js"
+                },
+                {
+                    "blank": 9,
+                    "code": 107,
+                    "comment": 0,
+                    "filename": "src\\components\\layout\\NavBar.js"
+                },
+                {
+                    "blank": 5,
+                    "code": 70,
+                    "comment": 0,
+                    "filename": "src\\components\\profileComponents\\CustomizedAccordion.js"
+                },
+                {
+                    "blank": 16,
+                    "code": 164,
+                    "comment": 36,
+                    "filename": "src\\components\\profileComponents\\spectator\\Spectator.js"
+                },
+                {
+                    "blank": 6,
+                    "code": 87,
+                    "comment": 8,
+                    "filename": "src\\components\\profileComponents\\spectator\\SpectatorMenu.js"
+                },
+                {
+                    "blank": 6,
+                    "code": 52,
+                    "comment": 4,
+                    "filename": "src\\components\\profileComponents\\spectedUser\\AddNewSpected.js"
+                },
+                {
+                    "blank": 15,
+                    "code": 158,
+                    "comment": 33,
+                    "filename": "src\\components\\profileComponents\\spectedUser\\Spected.js"
+                },
+                {
+                    "blank": 5,
+                    "code": 86,
+                    "comment": 8,
+                    "filename": "src\\components\\profileComponents\\spectedUser\\SpectedMenu.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 170,
+                    "comment": 0,
+                    "filename": "src\\components\\profileComponents\\TextUserGuide.js"
+                },
+                {
+                    "blank": 1,
+                    "code": 45,
+                    "comment": 0,
+                    "filename": "src\\components\\profileComponents\\UserGuideFormat.js"
+                },
+                {
+                    "blank": 8,
+                    "code": 49,
+                    "comment": 0,
+                    "filename": "src\\components\\ProfilePageComponents\\RecordDays.js"
+                },
+                {
+                    "blank": 9,
+                    "code": 158,
+                    "comment": 0,
+                    "filename": "src\\components\\ProfilePageComponents\\RecordEntry.js"
+                },
+                {
+                    "blank": 41,
+                    "code": 286,
+                    "comment": 38,
+                    "filename": "src\\components\\ProfilePageComponents\\Records.js"
+                },
+                {
+                    "blank": 4,
+                    "code": 109,
+                    "comment": 3,
+                    "filename": "src\\components\\SignIn.js"
+                },
+                {
+                    "blank": 5,
+                    "code": 204,
+                    "comment": 4,
+                    "filename": "src\\components\\SignUp.js"
+                },
+                {
+                    "blank": 1,
+                    "code": 56,
+                    "comment": 5,
+                    "filename": "src\\components\\statisticsPageComponents\\AffectingFactors.js"
+                },
+                {
+                    "blank": 8,
+                    "code": 69,
+                    "comment": 0,
+                    "filename": "src\\components\\statisticsPageComponents\\ScaleFrequency.js"
+                },
+                {
+                    "blank": 5,
+                    "code": 60,
+                    "comment": 0,
+                    "filename": "src\\components\\statisticsPageComponents\\ScaleFrequency.module.css"
+                },
+                {
+                    "blank": 7,
+                    "code": 86,
+                    "comment": 28,
+                    "filename": "src\\components\\statisticsPageComponents\\StatisticFunctions.js"
+                },
+                {
+                    "blank": 13,
+                    "code": 88,
+                    "comment": 0,
+                    "filename": "src\\components\\statisticsPageComponents\\TimePeriods.js"
+                },
+                {
+                    "blank": 3,
+                    "code": 20,
+                    "comment": 0,
+                    "filename": "src\\components\\statisticsPageComponents\\TimePeriods.module.css"
+                },
+                {
+                    "blank": 3,
+                    "code": 11,
+                    "comment": 0,
+                    "filename": "src\\components\\ui\\Card.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 9,
+                    "comment": 0,
+                    "filename": "src\\components\\ui\\Card.module.css"
+                },
+                {
+                    "blank": 2,
+                    "code": 118,
+                    "comment": 19,
+                    "filename": "src\\components\\ui\\LoginHttpRequests.js"
+                },
+                {
+                    "blank": 3,
+                    "code": 22,
+                    "comment": 0,
+                    "filename": "src\\components\\ui\\OuterGrid.js"
+                },
+                {
+                    "filename": "src\\images\\tangerine.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 4,
+                    "code": 22,
+                    "comment": 0,
+                    "filename": "src\\index.css"
+                },
+                {
+                    "blank": 1,
+                    "code": 15,
+                    "comment": 0,
+                    "filename": "src\\index.js"
+                },
+                {
+                    "blank": 5,
+                    "code": 92,
+                    "comment": 7,
+                    "filename": "src\\pages\\Home.js"
+                },
+                {
+                    "blank": 15,
+                    "code": 166,
+                    "comment": 4,
+                    "filename": "src\\pages\\PainEntries.js"
+                },
+                {
+                    "blank": 6,
+                    "code": 79,
+                    "comment": 14,
+                    "filename": "src\\pages\\Profile.js"
+                },
+                {
+                    "blank": 2,
+                    "code": 5,
+                    "comment": 0,
+                    "filename": "src\\pages\\Records.js"
+                },
+                {
+                    "blank": 13,
                     "code": 138,
                     "comment": 5,
                     "filename": "src\\pages\\Stats.js"

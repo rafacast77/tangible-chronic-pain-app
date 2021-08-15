@@ -1,14 +1,14 @@
 import React from "react";
 import { useRef } from "react";
 import {
+  TextField,
+  Button,
+  makeStyles,
+  Select,
   FormControl,
   InputLabel,
-  Input,
-  Button,
-  TextField,
-  Select,
-  makeStyles,
 } from "@material-ui/core";
+import Grid from "@material-ui/core/Grid";
 const useStyles = makeStyles((theme) => ({
   formControl: {
     paddingLeft: 20,
@@ -21,6 +21,12 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: 300,
   },
   selectEmpty: {
+    marginTop: theme.spacing(2),
+  },
+  innerGrid: {
+    maxWidth: "350px",
+  },
+  addBack: {
     marginTop: theme.spacing(2),
   },
 }));
@@ -44,14 +50,15 @@ const AddNewMedication = (props) => {
   };
 
   return (
-    <FormControl>
-      <InputLabel htmlFor="my-input">Add New medication</InputLabel>
-      <Input
-        autoFocus="true"
+    <Grid container direction="column" className={classes.innerGrid}>
+      <TextField
         inputRef={medicationToAddInput}
-        id="editMedication"
+        id="editLocation"
         type="text"
         aria-describedby="my-helper-text"
+        label="Add New Medication"
+        autoFocus={true}
+        variant="filled"
       />
       <form>
         <TextField
@@ -81,15 +88,24 @@ const AddNewMedication = (props) => {
           </Select>
         </FormControl>
       </form>
-      space
       <Button
         variant="contained"
         color="primary"
+        size="large"
         onClick={applyNewMedicationHandler}
+        className={classes.addBack}
       >
         Apply
       </Button>
-    </FormControl>
+      <Button
+        variant="contained"
+        size="large"
+        onClick={() => props.toMedicationMenu()}
+        className={classes.addBack}
+      >
+        Cancel
+      </Button>
+    </Grid>
   );
 };
 

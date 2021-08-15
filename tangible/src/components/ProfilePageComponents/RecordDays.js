@@ -16,7 +16,7 @@ const useStyles = makeStyles((theme) => ({
   day: {
     color: "#666",
     margin: "auto",
-    marginBottom: "3rem",
+    marginBottom: "3.1rem",
     width: 500,
     textAlign: "center",
     borderBottom: "2px solid #666",

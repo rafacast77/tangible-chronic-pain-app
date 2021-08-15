@@ -30,6 +30,7 @@ const formatDate = (element) => {
 };
 
 // This function takes in a date and returns its next calendar month
+// If second argument is set as false, it will return the prev month
 const getNextMonth = (currentMonth, add = true) => {
   let date = new Date(currentMonth);
   date = add
@@ -60,7 +61,7 @@ const currentFormattedMonth = new Date(
   year: "numeric",
 });
 
-// let currentPainEntries = [];
+// Beginning of the component
 const Records = () => {
   const authCtx = useContext(AuthContext);
   let userID;
@@ -70,14 +71,11 @@ const Records = () => {
     userID = authCtx.userToSpectUID;
   }
 
-  // This state is used to re-render the page after selectedLocationHandler
-  // const [forceUpdate, setForceUpdate] = useState(0);
-
+  // Material UI Styles
   const classes = useStyles();
 
   // State management
   const [rawData, setRawData] = useState([]);
-
   const [currentMonth, setCurrentMonth] = useState(currentFormattedMonth);
   const [currentEntries, setCurrentEntries] = useState([]);
   const [monthHasEntries, setMonthHasEntries] = useState();
@@ -85,6 +83,7 @@ const Records = () => {
   const [isloading, setIsloading] = useState(true);
   const [appHasEntries, setAppHasEntries] = useState(false);
 
+  // Page change handler
   const goToNextPage = () => {
     setCurrentMonth(getNextMonth(currentMonth));
   };
@@ -92,6 +91,7 @@ const Records = () => {
     setCurrentMonth(getNextMonth(currentMonth, false));
   };
 
+  // Get each day's entries from the data and return it as an array of JSX files
   const getDay = (entries) => {
     const records = [];
 
@@ -102,7 +102,7 @@ const Records = () => {
     return records;
   };
 
-  // Takes in data from fetch and sorts
+  // Takes in data from fetch and sorts it all in a dictionary of dates
   const dataHandler = (data) => {
     const millisecondDates = [];
     const sortedStringDates = [];
@@ -124,7 +124,7 @@ const Records = () => {
       sortedDates.push(element);
     });
 
-    // console.log(sortedStringDates, "All dates sorted");
+    // console.log(sortedStringDates, "All string dates sorted");
     // console.log(sortedDates, "All dates sorted");
 
     const regex = new RegExp(`${currentMonth}`);
@@ -133,7 +133,6 @@ const Records = () => {
 
     // If the month contains entries
     if (monthContainsEntries) {
-      console.log(data, "ALLDATA");
       let sortedEverything = data.map((el) => {
         const monthName = new Date(el.date.date).toLocaleDateString("en-GB", {
           day: "numeric",
@@ -141,16 +140,15 @@ const Records = () => {
           year: "numeric",
         });
 
-        console.log(regex.test(monthName), "REGEX MONTH NAME");
+        // console.log(regex.test(monthName), "REGEX MONTH NAME");
 
         if (regex.test(currentMonth)) {
-          //currentPainEntries.push(data[el]);
           return { [monthName]: el };
         }
       });
 
+      // console.log(sortedEverything, "sortedEverything");
       const currentMonthEntries = [];
-      console.log(sortedEverything, "sortedEverything");
 
       sortedEverything.map((el) => {
         if (regex.test(Object.keys(el))) {
@@ -158,14 +156,14 @@ const Records = () => {
         }
       });
 
-      console.log(`to Sort:`, currentMonthEntries);
+      // console.log(`to be sorted:`, currentMonthEntries);
 
       const sortedMonthEntries = currentMonthEntries.reduce(
         (accumulatorObject, thisEvent) => {
-          // here, we need to check if the accumulator object contains this key:
+          // Here, we need to check if the accumulator object contains this key:
           const key = Object.keys(thisEvent)[0];
           if (accumulatorObject[key]) {
-            // if our object has this key, we've already
+            // If our object has this key, we've already
             //  started an array for this date. Simply add
             //  this object to that array.
             accumulatorObject[key] = [
@@ -173,19 +171,18 @@ const Records = () => {
               thisEvent[key],
             ];
           } else {
-            // this is a new key. Create the property, and
+            // This is a new key. Create the property, and
             //  create the array.
             accumulatorObject[key] = [thisEvent[key]];
           }
-          // and we have to return the object, so its
-          //  available for the next iteration of reduce.
+          // And we have to return the object, so it's
+          // available for the next iteration of reduce.
           return accumulatorObject;
         },
         {}
       );
 
-      console.log("sorted:", sortedMonthEntries);
-
+      // console.log("sorted:", sortedMonthEntries);
       setCurrentEntries(sortedMonthEntries, "currentPainEntries");
     }
   };
@@ -193,7 +190,7 @@ const Records = () => {
   // This first of two effects handles fetching the data only one time
   // this will only run once, as it has no dependencies
   useEffect(() => {
-    console.count("FIRST USEEFFECT");
+    // console.count("FIRST USEEFFECT");
 
     fetch(
       `https://tangible-47447-default-rtdb.europe-west1.firebasedatabase.app/${userID}/pain-entries.json`
@@ -210,18 +207,24 @@ const Records = () => {
       })
       .then((data) => {
         const extractedData = [];
+        // For each element of the fetched data
         for (const el in data) {
+          // populate a temporary data array
           const tempData = {
             ...data[el],
           };
+          // and push its result to extracted data
           extractedData.push(tempData);
         }
 
+        // Handle states
         setAppHasEntries(true);
         setRawData(extractedData);
         setIsloading(false);
       })
       .catch((e) => {
+        // If there is an error, log it to the console
+        // and handle the loading and app entries states
         console.error(e);
         setAppHasEntries(false);
         setIsloading(false);
@@ -231,7 +234,7 @@ const Records = () => {
   // The second effect handles the data we get in the first effect's fetch
   // We skip the first mount, and change it every time a dependency changes
   useEffect(() => {
-    console.count("SECOND USEEFFECT");
+    // console.count("SECOND USEEFFECT");
 
     // This isMount state allows to skip the first render
     // of this effect and run it starting from the second.
@@ -252,8 +255,6 @@ const Records = () => {
   }
 
   // Test current entries value
-  // console.log(currentEntries, "currentEntries");
-
   // console.log(currentEntries, "currentEntries");
 
   if (appHasEntries) {
@@ -298,7 +299,6 @@ const Records = () => {
         <Grid>
           <Card newStyle={{ textAlign: "center", padding: "2.5rem 0" }}>
             {monthHasEntries && getDay(currentEntries)}
-
             {!monthHasEntries && (
               <Typography variant="h5">
                 No pain was recorded this month

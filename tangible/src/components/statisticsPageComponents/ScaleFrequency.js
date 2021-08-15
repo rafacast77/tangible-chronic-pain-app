@@ -41,16 +41,22 @@ const ScaleFrequency = (props) => {
 
   const [currentScale] = useState(scaleFrequency);
 
-  console.log();
+  const validatePainRecords = () => {
+    if (
+      props.listOfPainEntries.listOfEntries[0] === undefined ||
+      props.listOfPainEntries.listOfEntries[0][0] === "I"
+    ) {
+      return 0;
+    } else {
+      return props.listOfPainEntries.listOfEntries.length;
+    }
+  };
 
   return (
     <Card newStyle={{ padding: "4.5rem", marginTop: "4rem" }}>
       <Typography variant="h4">Pain Intensity - Scale Frequency</Typography>
       <Typography variant="body1">
-        Total pain records:{" "}
-        {props.listOfPainEntries.listOfEntries[0].date
-          ? props.listOfPainEntries.listOfEntries.length
-          : "0"}
+        Total pain records: {validatePainRecords()}
       </Typography>
 
       <div className={styles["pain-records-container"]}>
