@@ -1,25 +1,25 @@
 {
   "files": {
     "main.css": "/tangible-chronic-pain-app/static/css/main.22b23d90.chunk.css",
-    "main.js": "/tangible-chronic-pain-app/static/js/main.ea0a7268.chunk.js",
-    "main.js.map": "/tangible-chronic-pain-app/static/js/main.ea0a7268.chunk.js.map",
+    "main.js": "/tangible-chronic-pain-app/static/js/main.9a7bc7d8.chunk.js",
+    "main.js.map": "/tangible-chronic-pain-app/static/js/main.9a7bc7d8.chunk.js.map",
     "runtime-main.js": "/tangible-chronic-pain-app/static/js/runtime-main.7850b3bd.js",
     "runtime-main.js.map": "/tangible-chronic-pain-app/static/js/runtime-main.7850b3bd.js.map",
     "static/css/2.ba083dbd.chunk.css": "/tangible-chronic-pain-app/static/css/2.ba083dbd.chunk.css",
-    "static/js/2.e844ed23.chunk.js": "/tangible-chronic-pain-app/static/js/2.e844ed23.chunk.js",
-    "static/js/2.e844ed23.chunk.js.map": "/tangible-chronic-pain-app/static/js/2.e844ed23.chunk.js.map",
+    "static/js/2.218a5d54.chunk.js": "/tangible-chronic-pain-app/static/js/2.218a5d54.chunk.js",
+    "static/js/2.218a5d54.chunk.js.map": "/tangible-chronic-pain-app/static/js/2.218a5d54.chunk.js.map",
     "index.html": "/tangible-chronic-pain-app/index.html",
     "static/css/2.ba083dbd.chunk.css.map": "/tangible-chronic-pain-app/static/css/2.ba083dbd.chunk.css.map",
     "static/css/main.22b23d90.chunk.css.map": "/tangible-chronic-pain-app/static/css/main.22b23d90.chunk.css.map",
-    "static/js/2.e844ed23.chunk.js.LICENSE.txt": "/tangible-chronic-pain-app/static/js/2.e844ed23.chunk.js.LICENSE.txt",
+    "static/js/2.218a5d54.chunk.js.LICENSE.txt": "/tangible-chronic-pain-app/static/js/2.218a5d54.chunk.js.LICENSE.txt",
     "static/media/index.css": "/tangible-chronic-pain-app/static/media/roboto-vietnamese-400-normal.c0bec65d.woff2",
     "static/media/tangerine.14f98906.png": "/tangible-chronic-pain-app/static/media/tangerine.14f98906.png"
   },
   "entrypoints": [
     "static/js/runtime-main.7850b3bd.js",
     "static/css/2.ba083dbd.chunk.css",
-    "static/js/2.e844ed23.chunk.js",
+    "static/js/2.218a5d54.chunk.js",
     "static/css/main.22b23d90.chunk.css",
-    "static/js/main.ea0a7268.chunk.js"
+    "static/js/main.9a7bc7d8.chunk.js"
   ]
 }
