@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/tangible-chronic-pain-app/static/css/main.22b23d90.chunk.css",
-    "main.js": "/tangible-chronic-pain-app/static/js/main.9a7bc7d8.chunk.js",
-    "main.js.map": "/tangible-chronic-pain-app/static/js/main.9a7bc7d8.chunk.js.map",
+    "main.js": "/tangible-chronic-pain-app/static/js/main.775be71b.chunk.js",
+    "main.js.map": "/tangible-chronic-pain-app/static/js/main.775be71b.chunk.js.map",
     "runtime-main.js": "/tangible-chronic-pain-app/static/js/runtime-main.7850b3bd.js",
     "runtime-main.js.map": "/tangible-chronic-pain-app/static/js/runtime-main.7850b3bd.js.map",
     "static/css/2.ba083dbd.chunk.css": "/tangible-chronic-pain-app/static/css/2.ba083dbd.chunk.css",
@@ -20,6 +20,6 @@
     "static/css/2.ba083dbd.chunk.css",
     "static/js/2.218a5d54.chunk.js",
     "static/css/main.22b23d90.chunk.css",
-    "static/js/main.9a7bc7d8.chunk.js"
+    "static/js/main.775be71b.chunk.js"
   ]
 }
