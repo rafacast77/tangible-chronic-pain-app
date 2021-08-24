@@ -182,7 +182,6 @@ const Treatment = (props) => {
           toTreatmentMenu={toTreatmentMenuHandler}
           editTreatmentName={editTreatmentNameHandler}
           treatmentToEdit={treatmentToEdit}
-          toTreatmentMenu={toTreatmentMenuHandler}
         />
       )}
       {treatmentScreen.addTreatment && (

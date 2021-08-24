@@ -87,7 +87,7 @@ const Location = (props) => {
   // PUT request to updates the 'locationName' field of locations in Firebase
   const editLocationNameHandler = (locationToEdit) => {
     fetch(
-      `https://tangible-47447-default-rtdb.europe-west1.firebasedatabase.app${authCtx.userUID}//pain-locations/${locationToEdit.fireBaseId}.json`,
+      `https://tangible-47447-default-rtdb.europe-west1.firebasedatabase.app/${authCtx.userUID}/pain-locations/${locationToEdit.fireBaseId}.json`,
       {
         method: "PUT",
         body: JSON.stringify(locationToEdit),
@@ -180,7 +180,6 @@ const Location = (props) => {
           toLocationMenu={toLocationMenuHandler}
           editLocationName={editLocationNameHandler}
           painLocationToEdit={painLocationToEdit}
-          toLocationMenu={toLocationMenuHandler}
         />
       )}
       {locationScreen.addLocation && (

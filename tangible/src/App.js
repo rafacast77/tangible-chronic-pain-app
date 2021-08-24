@@ -28,6 +28,7 @@ const theme = createTheme({
   typography: {
     body1: {
       fontSize: 19,
+      lineHeight: 2,
     },
     subtitle1: {
       color: "#888",
@@ -41,7 +42,7 @@ function App() {
       if (authCtx.isPainUser) {
         console.log(`authCtx.isPainUser`, authCtx.isPainUser);
         return (
-          <Route path="/pain-entries" exact component={PainEntries}>
+          <Route path="/pain-entries" component={PainEntries}>
             <PainEntries />
           </Route>
         );
@@ -52,27 +53,45 @@ function App() {
     <MuiThemeProvider theme={theme}>
       <NavBar />
       <Switch fallback={<p>Loading...</p>}>
-        {!authCtx.isLoggedIn && <Route path="/" exact component={Home}></Route>}
+        {!authCtx.isLoggedIn && (
+          <Route
+            path="/tangible-chronic-pain-app"
+            exact
+            component={Home}
+          ></Route>
+        )}
 
         {authCtx.isLoggedIn && (
-          <Route path="/records" exact component={Records}>
+          <Route
+            basename="/tangible-chronic-pain-app/"
+            path="/records"
+            component={Records}
+          >
             <Records />
           </Route>
         )}
 
         {authCtx.isLoggedIn && (
-          <Route path="/stats" exact component={Stats}>
+          <Route
+            basename="/rafacast77.github.io/tangible-chronic-pain-app/"
+            path="/stats"
+            component={Stats}
+          >
             <Stats />
           </Route>
         )}
 
         {authCtx.isLoggedIn && (
-          <Route path="/profile" exact component={Profile}>
+          <Route
+            basename="/rafacast77.github.io/"
+            path="/profile"
+            component={Profile}
+          >
             <Profile />
           </Route>
         )}
         {!authCtx.isPainUser && (
-          <Route path="/pain-entries">
+          <Route basename="/rafacast77.github.io" path="/pain-entries">
             <Redirect to="/stats" />
           </Route>
         )}
@@ -83,7 +102,7 @@ function App() {
           </Route>
         )}
         <Route path="*">
-          <Redirect to="/" />
+          <Redirect to="/tangible-chronic-pain-app" />
         </Route>
       </Switch>
     </MuiThemeProvider>

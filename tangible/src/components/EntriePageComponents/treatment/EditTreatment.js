@@ -22,7 +22,7 @@ const EditTreatment = (props) => {
 
   const editTreatmentApplyHandler = () => {
     props.treatmentToEdit.treatmentName = treatmentToEditInput.current.value;
-    props.editTreatmentName(props.TreatmentToEdit);
+    props.editTreatmentName(props.treatmentToEdit);
     props.toTreatmentMenu();
   };
 
