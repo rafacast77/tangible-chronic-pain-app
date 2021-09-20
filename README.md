@@ -3,6 +3,8 @@ The investigation of the master project researches chronic pain and how a comput
  
 The master project contains the software specifications and documentation of the project software development life cycle featuring project management methodologies, design, architecture, development, evaluation, deployment and conclusions.
 
+Both Investigation and Project report can be found in this repository. A video explaining the investigation, project and app demo can also be found in the following link: https://www.youtube.com/watch?v=izNhRyNx424&t=549s
+
 ## Technologies and techniques used for this project
 * **HTML 5**
 * **CSS**
