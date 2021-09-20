@@ -6,9 +6,13 @@ The master project contains the software specifications and documentation of the
 Both Investigation and Project report can be found in this repository. A video explaining the investigation, project and app demo can also be found in the following link: https://www.youtube.com/watch?v=izNhRyNx424&t=549s
 
 ## Technologies and techniques used for this project
-* **HTML 5**
-* **CSS**
-* **DOM manipulation with vanilla JavaScript :** I have used Vanilla JavaScript to practice DOM manipulation and improve my skills owards the language.
+* **Figma**
+Design and created an interactive mock-up for the application which can be found in the following link: https://www.figma.com/file/LlgFvCSNwv7Rprq85bTHR3/Tangible-Chronic-Pain-Diary?node-id=0%3A1
+
+* **Trello**
+Trello was used as a project managment tool
+
+* **FERN** I have used Vanilla JavaScript to practice DOM manipulation and improve my skills owards the language.
    * Event delegation
    * Local Storage
    * DOM Stryles, Events, Element, Document, Window.
