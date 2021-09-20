@@ -1,9 +1,10 @@
 # tangible-chronic-pain-app
 
 # Tangible Chronic Pain App   :tangerine: 
-Robert Gordon University Master's Project
-This is a task list application, it allows you to add tasks which are saved in local storage in your browser. You can also filter to
-find specific tasks, delete sigle tasks and delete all tasks.
+The investigation of the master project researches chronic pain and how a computer-based pain diary can help sufferers manage their pain. During the research, paper-based and existing computer-based solutions were analysed, and several gaps were detected and included in the project specification to create a novel solution that fills those gaps.
+ 
+The master project contains the software specifications and documentation of the project software development life cycle featuring project management methodologies, design, architecture, development, evaluation, deployment and conclusions.
+
 ## Technologies and techniques used for this project
 * **HTML 5**
 * **CSS**
