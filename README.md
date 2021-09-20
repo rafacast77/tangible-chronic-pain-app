@@ -1,5 +1,3 @@
-# tangible-chronic-pain-app
-
 # Tangible Chronic Pain App   :tangerine: 
 The investigation of the master project researches chronic pain and how a computer-based pain diary can help sufferers manage their pain. During the research, paper-based and existing computer-based solutions were analysed, and several gaps were detected and included in the project specification to create a novel solution that fills those gaps.
  
